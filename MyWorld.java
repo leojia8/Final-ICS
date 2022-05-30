@@ -20,6 +20,6 @@ public class MyWorld extends World
         super(600, 400, 1); 
         System.out.println("Gello");
         System.out.println("test");
-        //eaet shit
+        //angus loves eaeting shit
     }
 }
