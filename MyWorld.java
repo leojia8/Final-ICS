@@ -5,6 +5,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * @author Benny
  * @version (a version number or a date)
+ * angus promises to do all the work
  */
 public class MyWorld extends World
 {
