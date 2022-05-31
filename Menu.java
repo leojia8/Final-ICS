@@ -13,7 +13,8 @@ public class Menu extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Menu(){
-        getImage.scale(800,100);
+        getImage().scale(800,100);
+        System.out.println("test");
     }
     public void act()
     {
