@@ -9,25 +9,39 @@ import greenfoot.*;
  */
 public class Player extends Actor  
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private int numStone;
+    private int numMetal;
+    private int numWood;
+    private GreenfootImage idleImage1;
+    private GreenfootImage idleImage2;
+    
     /**
      * Constructor for objects of class Dog
      */
     public Player()
     {
+        numStone = 5;
+        numMetal = 5;
+        numWood = 5;
+        
+        
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public void act()
     {
-        // put your code here
-        return x + y;
+        
+    }
+    
+    public void addStone()
+    {
+        numStone++;
+    }
+    public void addMetal()
+    {
+        numMetal++;
+    }
+    public void addWood()
+    {
+        numWood++;
     }
 }

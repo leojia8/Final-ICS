@@ -6,14 +6,16 @@
  */
 public class Ore extends Resources
 {
-   
+    
 
     /**
      * Constructor for objects of class Ore
      */
     public Ore()
     {
+        resourcesLeft = 10;
         
+                
         
     }
 

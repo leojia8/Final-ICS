@@ -10,14 +10,45 @@ import greenfoot.*;
 
 public abstract class Resources extends Actor
 {
-   
-    
-    private GreenfootImage image;
+    protected int resourcesLeft;
+    protected int resourceType;
+    protected GreenfootImage image;
     public Resources()
     {
         
         
     }
 
+    public void act()
+    {
+        
+        if(resourcesLeft <= 0)
+        {
+            getWorld().removeObject(this);
+        }
+    }
+    
+    public void takeResources()
+    {
+        
+        Player player = (Player)getOneIntersectingObject(Player.class);
+        if(player != null)
+        {
+            resourcesLeft = resourcesLeft;
+            if(resourceType == 0)
+            {
+                player.addWood();
+            }
+            else if(resourceType == 1)
+            {
+                player.addStone();
+            }
+            else if(resourceType == 2)
+            {
+                player.addMetal();
+            }
+        }
+    }
+    
     
 }
