@@ -30,7 +30,30 @@ public class Player extends Actor
     public void act()
     {
         
+        if(Greenfoot.isKeyDown("down") && getY() < 780)
+        {
+            setLocation(getX(), getY() + 1);
+            
+        }
+        else if(Greenfoot.isKeyDown("up") && getY() > 20)
+        {
+            setLocation(getX(), getY() - 1);
+            
+        }
+        else if(Greenfoot.isKeyDown("left") && getX() > 20)
+        {
+            setLocation(getX() - 1, getY());
+        }
+        else if(Greenfoot.isKeyDown("right") && getX() < 1180)
+        {
+            setLocation(getX() + 1, getY());
+        }
+        
+        
+        
     }
+    
+    
     
     public void addStone()
     {

@@ -17,6 +17,7 @@ public class BuildRadius extends Actor
         image = new GreenfootImage("radius.png");
         image.scale(100,100);
         setImage(image);
+        image.setTransparency(50);
     }
     
     

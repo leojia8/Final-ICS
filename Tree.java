@@ -1,3 +1,5 @@
+import greenfoot.*;
+
 /**
  * Write a description of class Tree here.
  * 
@@ -6,27 +8,22 @@
  */
 public class Tree extends Resources
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    
     /**
      * Constructor for objects of class Tree
      */
     public Tree()
     {
+        resourceType = 0;
+        resourcesLeft = 20;
+        image = new GreenfootImage("tree.png");
+        image.scale(64,64);
+        setImage(image);
+        
+        
         
         
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
 }

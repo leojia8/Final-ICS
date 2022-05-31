@@ -1,3 +1,5 @@
+import greenfoot.*;
+
 /**
  * Write a description of class Rock here.
  * 
@@ -14,6 +16,11 @@ public class Rock extends Resources
      */
     public Rock()
     {
+        resourceType = 1;
+        resourcesLeft = 20;
+        image = new GreenfootImage("rock.png");
+        image.scale(100,64);
+        setImage(image);
     }
 
     /**

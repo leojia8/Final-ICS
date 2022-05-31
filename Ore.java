@@ -1,3 +1,5 @@
+import greenfoot.*;
+
 /**
  * Write a description of class Ore here.
  * 
@@ -13,8 +15,11 @@ public class Ore extends Resources
      */
     public Ore()
     {
+        resourceType = 2;
         resourcesLeft = 10;
-        
+        image = new GreenfootImage("ore.png");
+        image.scale(100,64);
+        setImage(image);
                 
         
     }
