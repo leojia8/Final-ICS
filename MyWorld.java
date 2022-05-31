@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class MyWorld here.
  * 
- * @author Benny
+ * @author
  * @version (a version number or a date)
  * angus promises to do all the work
  */
