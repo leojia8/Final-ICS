@@ -50,5 +50,10 @@ public abstract class Resources extends Actor
         }
     }
     
+    public int getType()
+    {
+        return resourceType;
+    }
+    
     
 }

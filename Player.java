@@ -1,4 +1,5 @@
 import greenfoot.*;
+import java.util.*;
 
 /**
  * This class will be the player class who the user will control. 
@@ -15,7 +16,7 @@ public class Player extends Actor
     private GreenfootImage idleImage2;
     private int collectingCounter;
     private boolean collecting;
-
+    private ArrayList<Resources> resources;
     // 1 = up, 2 = right, 3 = down, 4 = left
     private int orientation;
     /**
@@ -63,53 +64,43 @@ public class Player extends Actor
         if (collecting && (Greenfoot.mouseDragEnded(null) || Greenfoot.mouseClicked(null))) collecting = false;
         if (!collecting && Greenfoot.mousePressed(null)) collecting = true;
 
-        
-        
-        
-        //THESE IF STATEMENTS HAVE A LIKELYHOOD OF BEING BUGGED.
         if(collecting && collectingCounter <= 0)
         {
-            
-            // 1 = up, 2 = right, 3 = down, 4 = left
-            
-            if(orientation == 1)
+            boolean woodType = false;
+            boolean stoneType = false;
+            boolean metalType = false;
+            resources = (ArrayList)getObjectsInRange(100, Resources.class);
+            if (resources.size() > 0)
             {
-                Resources r = (Resources)getOneObjectAtOffset(0, 20, Resources.class);
-                if(r != null)
+                Resources r = resources.get(0);
+                // Loop through the objects in the ArrayList to find the closest target
+                for (Resources o : resources)
                 {
-                    //Do animation of collecting here. 
-                    r.takeResources();
-                    collectingCounter = 20;
-                }
-            }
-            else if(orientation == 2)
-            {
-                Resources r = (Resources)getOneObjectAtOffset(10, 0, Resources.class);
-                if(r != null)
-                {
-                    r.takeResources();
-                    collectingCounter = 20;
-                }
-            }
-            else if(orientation == 3)
-            {
-                Resources r = (Resources)getOneObjectAtOffset(0, -20, Resources.class);
-                if(r != null)
-                {
-                    r.takeResources();
-                    collectingCounter = 20;
-                }
-            }
-            else if(orientation == 4)
-            {
-                Resources r = (Resources)getOneObjectAtOffset(-10, 0, Resources.class);
-                if(r != null)
-                {
-                    r.takeResources();
-                    collectingCounter = 20;
-                }
-            }
+                    r = o;
+                    if(r != null)
+                    {
+                        if(r.getType() == 0 && woodType == false) 
+                        {
+                            woodType = true;
+                            r.takeResources();
+                        }
+                        else if(r.getType() == 1 && stoneType == false)
+                        {
+                            stoneType = true;
+                             r.takeResources();
+                        }
+                        else if(r.getType() == 2 && metalType == false)
+                        {
+                            metalType = true;
+                             r.takeResources();
+                        }
+                    }
 
+                    
+                }
+
+            }
+            collectingCounter = 20;
         }
     }
 
