@@ -16,8 +16,13 @@ public class WaterTowerButton extends TowerButton
     {
         super();
         type = 0;
+        setLocation(300, 700);
+        
         
     }
+    
+    
+    
 
     
 }
