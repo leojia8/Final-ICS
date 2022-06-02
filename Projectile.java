@@ -29,16 +29,13 @@ public class Projectile extends Actor
     public Projectile()
     {
 
-        image = new GreenfootImage("bullet.png");
-        setImage(image);
-        image.scale(30,30);
-        image.rotate(90);
-        immuneTimer = 15;
+        
+        
+        
 
         //Makes sure the bullet searches for a new target. 
         target = true;
-        targetAwake = true;
-
+       
         //Plays a shoot sound when object is created. 
         shootSound = new GreenfootSound("shotgun.wav");
         shootSound.setVolume(50);
@@ -56,22 +53,30 @@ public class Projectile extends Actor
             target = false;
 
             //targets class
-
-            if(targetCat != null)
+            targetClosest();
+            if(targetCat != null && targetCat.getWorld() != null)
             {
                 turnTowardsTarget();
+                
+                //Important: Set image only after the target has been confirmed. 
+                setImage(image);
             }
-
+            else
+            {
+                target = true;
+            }
+            
+            
         }
         //makes the bullet move
-        move (9);
+        move (8);
 
         //If any of these objects are touching the bullet the bullet will kill them. 
 
         Cat c = (Cat)getOneIntersectingObject(Cat.class);
         if(target == true)
         {   
-
+                
             getWorld().removeObject(this);
         }
         else if(c != null)
@@ -86,12 +91,12 @@ public class Projectile extends Actor
         {
 
             //remove if outside world. 
-            if (getY() <= -10 || getY() >= 610 )
+            if (getY() <= -10 || getY() >= 810 )
             {
                 getWorld().removeObject(this);
 
             } 
-            else if (getX() >= 810 || getX() <= -10)
+            else if (getX() >= 1210 || getX() <= -10)
             {
                 getWorld().removeObject(this);
 
@@ -113,7 +118,7 @@ public class Projectile extends Actor
         double closestTargetDistance = 0;
         double distanceToActor;
         int numCats;
-        List neighbors = getNeighbours(300, true, Cat.class);
+        List neighbors = getNeighbours(100, true, Cat.class);
         World I = getWorld();
 
         if (!neighbors.isEmpty()) {
