@@ -11,6 +11,15 @@ public class GameWorld  extends World
     // instance variables - replace the example below with your own
     private int x;
     private int spawnNumber;
+    int path[][] = {{1,1,1,0,0,0,1,1,1,1,0,0},
+                    {0,0,1,0,1,1,1,0,0,1,0,0},
+                    {0,0,1,0,1,0,0,1,1,1,0,0},
+                    {0,1,1,0,1,1,0,1,0,0,0,0},
+                    {0,1,0,0,0,1,0,1,0,1,1,1},
+                    {0,1,1,1,1,1,0,1,0,1,0,1},
+                    {0,0,0,0,0,0,0,1,0,1,0,1},
+                    {0,0,0,0,0,0,0,1,1,1,0,1}};
+            
     /**
      * Constructor for objects of class GameWorld
      */
@@ -19,6 +28,7 @@ public class GameWorld  extends World
         super(1200, 800, 1);
         //addObject(new Player(), 400, 400);
         addObject(new NormalCat(), 400, 500);
+        levelConstructor();
     }
 
     
@@ -55,7 +65,16 @@ public class GameWorld  extends World
         }
     }
     
-    
+    public void levelConstructor(){
+        for (int i = 0; i<8; i++){
+            for (int j = 0; j<12; j++){
+                if (path[i][j] == 1){
+                    addObject(new Square(), 50 + 100 * j, 50 + 100 * i);
+                }
+                
+            }
+        }
+    }
     //Borrowed from Mr. Cohen. Method makes the world get the distance between two objects 
     public static float getDistance (Actor a, Actor b)
     {
