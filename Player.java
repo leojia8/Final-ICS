@@ -19,6 +19,8 @@ public class Player extends Actor
     private ArrayList<Resources> resources;
     // 1 = up, 2 = right, 3 = down, 4 = left
     private int orientation;
+    private Radius radius;
+    private boolean addedRadius;
     /**
      * Constructor for objects of class Dog
      */
@@ -31,11 +33,18 @@ public class Player extends Actor
         numWood = 5;
         collectingCounter = 20;
         orientation = 4;
+        addedRadius = false;
         //let the player start looking down 
     }
 
     public void act()
     {
+        if(addedRadius == false)
+        {
+            radius = new Radius();
+            getWorld().addObject(radius, getX(), getY());
+            addedRadius = true;
+        }
         // 1 = up, 2 = right, 3 = down, 4 = left
         collectingCounter--;
         if(Greenfoot.isKeyDown("down") && getY() < 780)
@@ -87,18 +96,16 @@ public class Player extends Actor
                         else if(r.getType() == 1 && stoneType == false)
                         {
                             stoneType = true;
-                             r.takeResources();
+                            r.takeResources();
                         }
                         else if(r.getType() == 2 && metalType == false)
                         {
                             metalType = true;
-                             r.takeResources();
+                            r.takeResources();
                         }
                     }
 
-                    
                 }
-
             }
             collectingCounter = 20;
         }

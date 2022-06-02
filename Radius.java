@@ -9,6 +9,8 @@ import greenfoot.*;
 public class Radius extends Actor 
 {
     private GreenfootImage image;
+    private boolean foundHost;
+    private Player player;
     /**
      * Constructor for objects of class BuildRadius
      */
@@ -20,7 +22,20 @@ public class Radius extends Actor
         image.setTransparency(50);
     }
     
-    
+    public void act()
+    {
+        if(!foundHost)
+        {
+            player = (Player)getOneIntersectingObject(Player.class);
+            foundHost = true;
+        }
+        else
+        {
+            setLocation(player.getX(), player.getY());
+        }
+        
+    }
+
 
     
 }
