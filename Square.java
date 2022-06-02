@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version April 2022
  * @Credit Jordan Cohen
  */
-public class Square 
+public class Square extends Actor
 {
     public static final Color TRANSPARENT_RED = new Color (255, 0, 0, 128);
     
@@ -31,7 +31,5 @@ public class Square
         setImage(image);
     }
     
-    public boolean isTouchingCharacter () {
-        return this.isTouching(Plants.class)||this.isTouching(Zombies.class);
-    }
+    
 }
