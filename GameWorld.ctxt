@@ -8,4 +8,6 @@ comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ spawnResources()
-numComments=4
+comment4.params=a\ b
+comment4.target=float\ getDistance(greenfoot.Actor,\ greenfoot.Actor)
+numComments=5

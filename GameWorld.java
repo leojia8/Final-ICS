@@ -17,6 +17,7 @@ public class GameWorld  extends World
     public GameWorld()
     {
         super(1200, 800, 1);
+        //addObject(new Player(), 400, 400);
     }
 
     

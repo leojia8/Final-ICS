@@ -43,7 +43,7 @@ public class Player extends Actor
 
     public void act()
     {
-        
+        //followMouse();
         // in act method (or method called by it) Taken from DanPost the legend
         if (collecting && (Greenfoot.mouseDragEnded(null) || Greenfoot.mouseClicked(null))) collecting = false;
         if (!collecting && Greenfoot.mousePressed(null)) collecting = true;
@@ -125,6 +125,14 @@ public class Player extends Actor
         
     }
 
+    /*
+    public void followMouse(){
+        if (Greenfoot.getMouseInfo() != null){
+            turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
+        }
+    }
+    */
+    
     public void addStone()
     {
         numStone++;
