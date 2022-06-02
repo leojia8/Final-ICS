@@ -11,8 +11,8 @@ public class GameWorld  extends World
     // instance variables - replace the example below with your own
     private int x;
     private int spawnNumber;
-    int path[][] = {{1,1,1,0,0,0,1,1,1,1,0,0},
-                    {0,0,1,0,1,1,1,0,0,1,0,0},
+    int path[][] = {{1,1,1,0,0,1,1,1,1,1,0,0},
+                    {0,0,1,0,1,1,0,0,0,1,0,0},
                     {0,0,1,0,1,0,0,1,1,1,0,0},
                     {0,1,1,0,1,1,0,1,0,0,0,0},
                     {0,1,0,0,0,1,0,1,0,1,1,1},
