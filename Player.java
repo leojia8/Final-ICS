@@ -23,6 +23,7 @@ public class Player extends Actor
     private boolean addedRadius;
     private int health;
     private boolean moving;
+
     /**
      * Constructor for objects of class Dog
      */
@@ -53,7 +54,7 @@ public class Player extends Actor
             getWorld().addObject(radius, getX(), getY());
             addedRadius = true;
         }
-        
+
         Cat c = (Cat)getOneIntersectingObject(Cat.class);
         if(c != null)
         {
@@ -61,27 +62,59 @@ public class Player extends Actor
         }
         // 1 = up, 2 = right, 3 = down, 4 = left
         collectingCounter--;
-        if(Greenfoot.isKeyDown("down") && getY() < 780)
-        {
 
-            setLocation(getX(), getY() + 1);
-            orientation = 3;
-            
+        if(Greenfoot.isKeyDown("down") && getY() < 780 )
+        {
+            Actor a = (Actor)getOneObjectAtOffset(-100, 0, Actor.class);
+            if(a != null)
+            {
+
+            }
+            else 
+            {
+                setLocation(getX(), getY() + 1);
+                orientation = 3;
+            }
+
         }
         else if(Greenfoot.isKeyDown("up") && getY() > 20)
         {
-            setLocation(getX(), getY() - 1);
-            orientation = 1;
+            Actor a = (Actor)getOneObjectAtOffset(100, 0, Actor.class);
+            if(a != null)
+            {
+
+            }
+            else 
+            {
+                setLocation(getX(), getY() - 1);
+                orientation = 1;
+            }
         }
         else if(Greenfoot.isKeyDown("left") && getX() > 20)
         {
-            setLocation(getX() - 1, getY());
-            orientation = 4;
+            Actor a = (Actor)getOneObjectAtOffset(0, -50, Actor.class);
+            if(a != null)
+            {
+
+            }
+            else 
+            {
+                setLocation(getX() - 1, getY());
+                orientation = 4;
+            }
         }
         else if(Greenfoot.isKeyDown("right") && getX() < 1180)
         {
-            setLocation(getX() + 1, getY());
-            orientation = 2;
+            Actor a = (Actor)getOneObjectAtOffset(0, 50, Actor.class);
+            if(a != null)
+            {
+
+            }
+            else 
+            {
+                setLocation(getX() + 1, getY());
+                orientation = 2;
+            }
         }
         else if(collecting && collectingCounter <= 0)
         {
@@ -120,19 +153,16 @@ public class Player extends Actor
             collectingCounter = 20;
         }
 
-        
-
-        
     }
 
     /*
     public void followMouse(){
-        if (Greenfoot.getMouseInfo() != null){
-            turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
-        }
+    if (Greenfoot.getMouseInfo() != null){
+    turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
     }
-    */
-    
+    }
+     */
+
     public void addStone()
     {
         numStone++;
