@@ -21,4 +21,9 @@ public abstract class Cat extends Actor
     {
         // Add your action code here.
     }
+    
+    public void hit()
+    {
+        health--;
+    }
 }

@@ -53,4 +53,15 @@ public class GameWorld  extends World
         }
     }
     
+    
+    //Borrowed from Mr. Cohen. Method makes the world get the distance between two objects 
+    public static float getDistance (Actor a, Actor b)
+    {
+        double distance;
+        double xLength = a.getX() - b.getX();
+        double yLength = a.getY() - b.getY();
+        distance = Math.sqrt(Math.pow(xLength, 2) + Math.pow(yLength, 2));
+        return (float)distance;
+
+    }
 }
