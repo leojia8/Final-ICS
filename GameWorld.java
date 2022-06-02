@@ -18,6 +18,7 @@ public class GameWorld  extends World
     {
         super(1200, 800, 1);
         //addObject(new Player(), 400, 400);
+        addObject(new NormalCat(), 400, 500);
     }
 
     

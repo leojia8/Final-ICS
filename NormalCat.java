@@ -11,9 +11,14 @@ public class NormalCat extends Cat
     // instance variables - replace the example below with your own
     private static GifImage master = new GifImage("normalcatgif.gif");
     private GifImage gifImage;
+    private static final int HP = 70;
+    
     public NormalCat()
     {
-
+        
+        hpBar = new StatBar(HP, HP, this, 30, 5, 60, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
+        
+        
         gifImage = new GifImage(master);
         gifImage.resizeImages(120, 100);
     }
