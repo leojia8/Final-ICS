@@ -14,6 +14,7 @@ public class Tree extends Resources
      */
     public Tree()
     {
+        super();
         resourceType = 0;
         resourcesLeft = 20;
         image = new GreenfootImage("tree.png");

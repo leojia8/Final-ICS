@@ -8,7 +8,7 @@ import java.util.List;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Projectile extends Actor
+public abstract class Projectile extends Actor
 {
     private int xCoord;
     private int yCoord;
@@ -23,7 +23,7 @@ public class Projectile extends Actor
     private boolean target;
     private int immuneTimer;
     private boolean targetAwake;
-    private GreenfootSound shootSound;
+    protected GreenfootSound shootSound;
 
     //The bullet targets the actor that is in the parameter. 
     public Projectile()
@@ -37,9 +37,8 @@ public class Projectile extends Actor
         target = true;
        
         //Plays a shoot sound when object is created. 
-        shootSound = new GreenfootSound("shotgun.wav");
-        shootSound.setVolume(50);
-        shootSound.play();
+        
+        
     }
 
     public void act()

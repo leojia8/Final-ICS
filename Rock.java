@@ -16,6 +16,7 @@ public class Rock extends Resources
      */
     public Rock()
     {
+        super();
         resourceType = 1;
         resourcesLeft = 20;
         image = new GreenfootImage("rock.png");

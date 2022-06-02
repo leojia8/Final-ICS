@@ -15,6 +15,7 @@ public class Ore extends Resources
      */
     public Ore()
     {
+        super();
         resourceType = 2;
         resourcesLeft = 10;
         image = new GreenfootImage("ore.png");
