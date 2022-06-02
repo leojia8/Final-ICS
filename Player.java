@@ -22,7 +22,7 @@ public class Player extends Actor
     private Radius radius;
     private boolean addedRadius;
     private int health;
-    
+    private boolean moving;
     /**
      * Constructor for objects of class Dog
      */
@@ -37,13 +37,16 @@ public class Player extends Actor
         orientation = 4;
         addedRadius = false;
         health = 100;
+        moving = false;
         //let the player start looking down 
     }
 
     public void act()
     {
         
-        
+        // in act method (or method called by it) Taken from DanPost the legend
+        if (collecting && (Greenfoot.mouseDragEnded(null) || Greenfoot.mouseClicked(null))) collecting = false;
+        if (!collecting && Greenfoot.mousePressed(null)) collecting = true;
         if(addedRadius == false)
         {
             radius = new Radius();
@@ -63,6 +66,7 @@ public class Player extends Actor
 
             setLocation(getX(), getY() + 1);
             orientation = 3;
+            
         }
         else if(Greenfoot.isKeyDown("up") && getY() > 20)
         {
@@ -79,12 +83,7 @@ public class Player extends Actor
             setLocation(getX() + 1, getY());
             orientation = 2;
         }
-
-        // in act method (or method called by it) Taken from DanPost the legend
-        if (collecting && (Greenfoot.mouseDragEnded(null) || Greenfoot.mouseClicked(null))) collecting = false;
-        if (!collecting && Greenfoot.mousePressed(null)) collecting = true;
-
-        if(collecting && collectingCounter <= 0)
+        else if(collecting && collectingCounter <= 0)
         {
             boolean woodType = false;
             boolean stoneType = false;
@@ -120,6 +119,10 @@ public class Player extends Actor
             }
             collectingCounter = 20;
         }
+
+        
+
+        
     }
 
     public void addStone()
