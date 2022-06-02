@@ -15,12 +15,12 @@ public class Square extends Actor
     private GreenfootImage image;
     
     private boolean visible;
-    private int height, width;
+    private int height = 100;
+    private int width = 100;
     
-    public Square (int width, int height)
+    public Square ()
     {
-        this.height =height;
-        this.width = width;
+        
         // set this to true to see the Spawners - might help with understanding of how this works:
         visible = true;
         image = new GreenfootImage (width, height);
