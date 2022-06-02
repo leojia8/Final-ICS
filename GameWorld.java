@@ -23,7 +23,8 @@ public class GameWorld  extends World
     
     public void act()
     {
-        spawnNumber = Greenfoot.getRandomNumber(1000);
+        
+        spawnResources();
     }
     
     
@@ -32,6 +33,7 @@ public class GameWorld  extends World
     
     private void spawnResources()
     {
+        spawnNumber = Greenfoot.getRandomNumber(1000);
         if(spawnNumber == 500)
         {
             int type = Greenfoot.getRandomNumber(2);

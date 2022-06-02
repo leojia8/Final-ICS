@@ -21,6 +21,8 @@ public class Player extends Actor
     private int orientation;
     private Radius radius;
     private boolean addedRadius;
+    private int health;
+    
     /**
      * Constructor for objects of class Dog
      */
@@ -34,16 +36,25 @@ public class Player extends Actor
         collectingCounter = 20;
         orientation = 4;
         addedRadius = false;
+        health = 100;
         //let the player start looking down 
     }
 
     public void act()
     {
+        
+        
         if(addedRadius == false)
         {
             radius = new Radius();
             getWorld().addObject(radius, getX(), getY());
             addedRadius = true;
+        }
+        
+        Cat c = (Cat)getOneIntersectingObject(Cat.class);
+        if(c != null)
+        {
+            health = health - 5;
         }
         // 1 = up, 2 = right, 3 = down, 4 = left
         collectingCounter--;
