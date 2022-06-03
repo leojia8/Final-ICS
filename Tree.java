@@ -19,7 +19,9 @@ public class Tree extends Resources
         resourcesLeft = 20;
         image = new GreenfootImage("tree.png");
         image.scale(64,64);
-        setImage(image);
+        transImage = new GreenfootImage(64,64);
+        setImage(transImage);
+        //setImage(image);
         
         
         
