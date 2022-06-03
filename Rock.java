@@ -21,7 +21,9 @@ public class Rock extends Resources
         resourcesLeft = 20;
         image = new GreenfootImage("rock.png");
         image.scale(100,64);
-        setImage(image);
+        transImage = new GreenfootImage(100,64);
+        setImage(transImage);
+        //setImage(image);
     }
 
     /**
