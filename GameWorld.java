@@ -11,7 +11,7 @@ public class GameWorld  extends World
     // instance variables - replace the example below with your own
     private int x;
     private int spawnNumber;
-    int path[][] = {{1,1,1,0,0,1,1,1,1,1,0,0},
+    int path2[][] = {{1,1,1,0,0,1,1,1,1,1,0,0},
                     {0,0,1,0,1,1,0,0,0,1,0,0},
                     {0,0,1,0,1,0,0,1,1,1,0,0},
                     {0,0,1,0,1,1,0,1,0,0,0,0},
@@ -21,16 +21,16 @@ public class GameWorld  extends World
                     {0,0,0,0,0,0,0,1,1,1,0,1}};
                     
                     
-    int path2[][] = {{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    int path[][] = {{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                    {0,0,1,1,1,0,0,0,0,0,0,0,0,0,0},
+                    {0,0,1,0,1,0,0,0,1,0,0,0,0,0,0},
+                    {1,1,1,0,1,0,0,0,1,0,0,0,0,0,0},
+                    {0,0,0,0,1,0,0,0,1,0,0,0,0,0,0},
+                    {0,0,0,0,1,1,1,1,1,0,0,0,0,0,0},
                     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
             
     /**
@@ -61,7 +61,7 @@ public class GameWorld  extends World
         spawnNumber = Greenfoot.getRandomNumber(1000);
         if(spawnNumber == 500)
         {
-            int type = Greenfoot.getRandomNumber(2);
+            int type = Greenfoot.getRandomNumber(3);
             
             if(type == 0)
             {
@@ -80,8 +80,8 @@ public class GameWorld  extends World
     
     public void levelConstructor(){
         int spacing = 75;
-        for (int i = 0; i<8; i++){
-            for (int j = 0; j<12; j++){
+        for (int i = 0; i<10; i++){
+            for (int j = 0; j<15; j++){
                 if (path[i][j] == 1){
                     addObject(new Square(), 50 + spacing * j, 50 + spacing * i);
                 }
