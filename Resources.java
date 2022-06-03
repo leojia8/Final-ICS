@@ -23,26 +23,26 @@ public abstract class Resources extends Actor
         if(foundLocation == false)
         {
             //The rock will detect if it is touching the lane or any other resource or the player. 
-            //Square square = (Square)getOneIntersectingObject(Square.class);
+            Square square = (Square)getOneIntersectingObject(Square.class);
             Player player = (Player)getOneIntersectingObject(Player.class);
             Resources r = (Resources)getOneIntersectingObject(Resources.class);
-            //if(square != null)
-            //{
-            //    setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
-            //}
-            //else if(player != null)
-            //{
-            //    setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
-            //}
-            //else if(r != null)
-            //{
-            //    setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
-            //}
-            //else
-            //{
-            //    foundLocation = true;
-            //    setImage(image);
-            //}
+            if(square != null)
+            {
+                setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
+            }
+            else if(player != null)
+            {
+                setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
+            }
+            else if(r != null)
+            {
+               setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
+            }
+            else
+            {
+                foundLocation = true;
+                setImage(image);
+            }
         }
         else
         {
