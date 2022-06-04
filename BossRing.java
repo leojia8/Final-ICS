@@ -1,30 +1,54 @@
+import greenfoot.*;
+import java.util.List;
+import java.util.ArrayList;
 /**
  * Write a description of class BossRing here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BossRing  
+public class BossRing extends Actor
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
+    private static GifImage master = new GifImage("ring.gif");
+    private GifImage gifImage;
+    private boolean justSpawned;
+    private ArrayList<BossCat> cats;
+    private BossCat targetCat;
+    private int spawnCounter;
     /**
      * Constructor for objects of class BossRing
      */
     public BossRing()
     {
+        gifImage = new GifImage(master);
+        gifImage.resizeImages(160, 160);
+        spawnCounter = 10;
+        justSpawned = true;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void act(){
+        spawnCounter--;
+        if(justSpawned && spawnCounter <= 10)
+        {
+            targetCat = (BossCat)getOneIntersectingObject(BossCat.class);
+            justSpawned = false;
+        }
+        else if(justSpawned == false)
+        {
+            if(targetCat != null)
+            {
+                setLocation(targetCat.getX(), targetCat.getY());
+                setImage( gifImage.getCurrentImage() );
+            }
+            else
+            {
+                getWorld().removeObject(this);
+                System.out.println("hi");
+            }
+
+        }
+
     }
 }
+
