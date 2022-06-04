@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public abstract class Cat extends Actor
+public abstract class Cat extends SuperSmoothMover
 {
     protected int health;
     protected int speed;
