@@ -1,30 +1,44 @@
+import greenfoot.*;
+
+
 /**
  * Write a description of class BossAttack here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BossAttack  
+public class BossAttack extends Actor
 {
-    // instance variables - replace the example below with your own
-    private int x;
+
+    private int num;
+    private int counter;
+    private GreenfootImage image;
 
     /**
      * Constructor for objects of class BossAttack
      */
     public BossAttack()
     {
+
+        image = new GreenfootImage("stun.png");
+        counter = 0;
+        num = 0;
+        image.scale(120,120);
+        setImage(image);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public void act()
     {
-        // put your code here
-        return x + y;
+        num+= 20;
+        if(num % 10 == 0)
+        {
+            image.scale(120 + num, 120 + num);
+            setImage(image);
+        }
+        counter++;
+        if(counter >= 120)
+        {
+            getWorld().removeObject(this);
+        }
     }
 }

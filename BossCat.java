@@ -1,5 +1,8 @@
 
 import greenfoot.*;
+import java.util.List;
+import java.util.ArrayList;
+
 /**
  * Write a description of class BossCat here.
  * 
@@ -11,9 +14,11 @@ public class BossCat extends Cat
     private GreenfootImage image;
     private int speed;
     private boolean reverse; 
-    private static final int HP = 1200;
+    private int HP = 1200;
     private int counter;
     private boolean justSpawned;
+    private ArrayList<Tower> towers;
+    private Tower targetTower;
     /**
      * Constructor for objects of class BossCat
      */
@@ -30,15 +35,57 @@ public class BossCat extends Cat
 
     public void act()
     {
-        
+        if(HP % 10 == 0)
+        {
+            BossAttack b = new BossAttack();
+            getWorld().addObject(b, getX(), getY());
+            HP--;
+            int numTowers;
+            List neighbors = getNeighbours(2000, true, Tower.class);
+            World I = getWorld();
+
+            if (!neighbors.isEmpty()) {
+                numTowers = I.getObjects(Tower.class).size();
+
+                if(numTowers > 0)
+                {
+                    towers = (ArrayList)getObjectsInRange(300, Tower.class);
+                }
+                if (towers.size() > 0)
+                {
+                    // set the first one as my target
+                    targetTower = towers.get(0);
+                    // Use method to get distance to target. This will be used
+                    // to check if any other targets are closer
+                    if(targetTower != null)
+                    {
+                        targetTower.stun();
+                    }
+
+                    // Loop through the objects in the ArrayList to find the closest target
+                    for (Tower o : towers)
+                    {
+                        // Cast for use in generic method
+                        //Actor a = (Actor) o;
+                        // Measure distance from me
+                        if(o != null)
+                        {
+                            targetTower = o;
+                            o.stun();
+                        }
+                    }
+
+                }
+            }
+        }
         if(justSpawned)
         {
-            
+
         }
         counter--;
         if(counter <= 0)
         {
-            
+
             if(reverse)
             {
 
@@ -61,10 +108,6 @@ public class BossCat extends Cat
             counter = 15;
         }
 
-    
-    
     }
 
-    
-    
 }
