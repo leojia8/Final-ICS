@@ -96,7 +96,7 @@ public class BossCat extends Cat
             {
 
                 speed--;
-                setLocation(getX(), getY() + speed);
+                setLocation(getX(), getY() + speed/2);
                 if(speed == -5)
                 {
                     reverse = false;
@@ -105,7 +105,7 @@ public class BossCat extends Cat
             else if(reverse == false)
             {
                 speed++;
-                setLocation(getX(), getY() + speed);
+                setLocation(getX(), getY() + speed/2);
                 if(speed == 5)
                 {
                     reverse = true;
