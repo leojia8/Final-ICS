@@ -24,7 +24,7 @@ public abstract class Projectile extends Actor
     private int immuneTimer;
     private boolean targetAwake;
     protected GreenfootSound shootSound;
-
+    protected int damage;
     //The bullet targets the actor that is in the parameter. 
     public Projectile()
     {

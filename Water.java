@@ -18,6 +18,7 @@ public class Water extends Projectile
         shootSound = new GreenfootSound("watershootsound.wav");
         shootSound.setVolume(50);
         shootSound.play();
+        damage = 1;
     }
 
     
