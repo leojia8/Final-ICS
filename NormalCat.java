@@ -9,7 +9,7 @@ import greenfoot.*;
 public class NormalCat extends Cat 
 {
     // instance variables - replace the example below with your own
-    private static GifImage master = new GifImage("normalcatgif.gif");
+    private static GifImage master = new GifImage("flippednormalgif.gif");
     private GifImage gifImage;
     private static final int HP = 70;
     
@@ -20,7 +20,7 @@ public class NormalCat extends Cat
         
         
         gifImage = new GifImage(master);
-        gifImage.resizeImages(120, 100);
+        gifImage.resizeImages(100, 87);
     }
 
     public void act()
