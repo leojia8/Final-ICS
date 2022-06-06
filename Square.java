@@ -15,8 +15,8 @@ public class Square extends Actor
     private GreenfootImage image;
     
     private boolean visible;
-    private int height = 75;
-    private int width = 75;
+    private int height = 80;
+    private int width = 80;
     
     public Square ()
     {
