@@ -65,7 +65,7 @@ public class Player extends Actor
 
         if(Greenfoot.isKeyDown("down") && getY() < 780 )
         {
-            Actor a = (Actor)getOneObjectAtOffset(-100, 0, Actor.class);
+            TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
             if(a != null)
             {
 
@@ -79,7 +79,7 @@ public class Player extends Actor
         }
         else if(Greenfoot.isKeyDown("up") && getY() > 20)
         {
-            Actor a = (Actor)getOneObjectAtOffset(100, 0, Actor.class);
+            TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
             if(a != null)
             {
 
@@ -92,7 +92,7 @@ public class Player extends Actor
         }
         else if(Greenfoot.isKeyDown("left") && getX() > 20)
         {
-            Actor a = (Actor)getOneObjectAtOffset(0, -50, Actor.class);
+            TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
             if(a != null)
             {
 
@@ -105,7 +105,7 @@ public class Player extends Actor
         }
         else if(Greenfoot.isKeyDown("right") && getX() < 1180)
         {
-            Actor a = (Actor)getOneObjectAtOffset(0, 50, Actor.class);
+            TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
             if(a != null)
             {
 
