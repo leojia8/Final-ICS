@@ -49,13 +49,14 @@ public class GameWorld  extends World
         numStone = 5;
         numWood = 5;
         numMetal = 5;
+        
     }
 
     
     
     public void act()
     {
-        
+        showText("EHEHE" + numStone + "S" + numWood + "" + numMetal,600 ,50 );
         spawnResources();
     }
     
