@@ -30,16 +30,12 @@ public abstract class Projectile extends Actor
     public Projectile()
     {
 
-        
-        
-        
-
         //Makes sure the bullet searches for a new target. 
         target = true;
-       
+        image = new GreenfootImage("cactus.png");
+        image.scale(20,20);
         //Plays a shoot sound when object is created. 
-        
-        
+
     }
 
     public void act()
@@ -57,50 +53,58 @@ public abstract class Projectile extends Actor
             if(targetCat != null && targetCat.getWorld() != null)
             {
                 turnTowardsTarget();
-                
+
                 //Important: Set image only after the target has been confirmed. 
                 setImage(image);
+                
             }
             else
             {
                 target = true;
+                
             }
-            
-            
+
         }
         //makes the bullet move
-        move (8);
+        move (3);
 
         //If any of these objects are touching the bullet the bullet will kill them. 
 
-        Cat c = (Cat)getOneIntersectingObject(Cat.class);
         if(target == true)
         {   
-                
+
             getWorld().removeObject(this);
         }
-        else if(c != null)
+
+        else if(getWorld() != null)
         {
+            Cat c = (Cat)getOneIntersectingObject(Cat.class);
+            if(c != null)
+            {
+                c.hit();
+                getWorld().removeObject(this);
+            }
 
-            c.hit();
-            getWorld().removeObject(this);
+            if(getWorld() != null)
+            {
+                if (getY() <= -10 || getY() >= 810 )
+                {
+                    getWorld().removeObject(this);
 
+                } 
+                else if (getX() >= 1210 || getX() <= -10)
+                {
+                    getWorld().removeObject(this);
+
+                }
+            }
         }
 
         else
         {
 
             //remove if outside world. 
-            if (getY() <= -10 || getY() >= 810 )
-            {
-                getWorld().removeObject(this);
 
-            } 
-            else if (getX() >= 1210 || getX() <= -10)
-            {
-                getWorld().removeObject(this);
-
-            }
         }
 
     }
@@ -118,7 +122,7 @@ public abstract class Projectile extends Actor
         double closestTargetDistance = 0;
         double distanceToActor;
         int numCats;
-        List neighbors = getNeighbours(100, true, Cat.class);
+        List neighbors = getNeighbours(200, true, Cat.class);
         World I = getWorld();
 
         if (!neighbors.isEmpty()) {
@@ -126,7 +130,7 @@ public abstract class Projectile extends Actor
 
             if(numCats > 0)
             {
-                cats = (ArrayList)getObjectsInRange(300, Cat.class);
+                cats = (ArrayList)getObjectsInRange(200, Cat.class);
             }
             if (cats.size() > 0)
             {

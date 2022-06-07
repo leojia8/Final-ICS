@@ -15,7 +15,7 @@ public class Water extends Projectile
     public Water()
     {
         super();
-        shootSound = new GreenfootSound("watershootsound.wav");
+        shootSound = new GreenfootSound("shooting.mp3");
         shootSound.setVolume(50);
         shootSound.play();
         damage = 1;
