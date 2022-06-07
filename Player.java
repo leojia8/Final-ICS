@@ -162,13 +162,7 @@ public class Player extends Actor
 
     }
 
-    /*
-    public void followMouse(){
-    if (Greenfoot.getMouseInfo() != null){
-    turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
-    }
-    }
-     */
+   
 
     
 }
