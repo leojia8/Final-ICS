@@ -32,7 +32,7 @@ public abstract class Resources extends Actor
             if(square != null)
             {
                 setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
-                
+
             }
             else if(player != null)
             {
@@ -40,7 +40,7 @@ public abstract class Resources extends Actor
             }
             else if(r != null)
             {
-               setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
+                setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
             }
             else
             {
@@ -65,30 +65,13 @@ public abstract class Resources extends Actor
     public void takeResources()
     {
 
-        Player player = (Player)getOneIntersectingObject(Player.class);
-        if(player != null)
-        {
-            resourcesLeft = resourcesLeft;
-            if(resourceType == 0)
-            {
-                player.addWood();
-            }
-            else if(resourceType == 1)
-            {
-                player.addStone();
-            }
-            else if(resourceType == 2)
-            {
-                player.addMetal();
-            }
-        }
+        resourcesLeft--;
+
     }
 
     public int getType()
     {
         return resourceType;
     }
-    
-    
 
 }

@@ -46,8 +46,15 @@ public class Player extends Actor
     {
         //followMouse();
         // in act method (or method called by it) Taken from DanPost the legend
-        if (collecting && (Greenfoot.mouseDragEnded(null) || Greenfoot.mouseClicked(null))) collecting = false;
-        if (!collecting && Greenfoot.mousePressed(null)) collecting = true;
+        if(Greenfoot.isKeyDown("C"))
+        {
+            collecting = true;
+        }
+        else
+        {
+            collecting = false;
+        }
+        
         if(addedRadius == false)
         {
             radius = new Radius();
@@ -72,7 +79,7 @@ public class Player extends Actor
             }
             else 
             {
-                setLocation(getX(), getY() + 1);
+                setLocation(getX(), getY() + 2);
                 orientation = 3;
             }
 
@@ -86,7 +93,7 @@ public class Player extends Actor
             }
             else 
             {
-                setLocation(getX(), getY() - 1);
+                setLocation(getX(), getY() - 2);
                 orientation = 1;
             }
         }
@@ -99,7 +106,7 @@ public class Player extends Actor
             }
             else 
             {
-                setLocation(getX() - 1, getY());
+                setLocation(getX() - 2, getY());
                 orientation = 4;
             }
         }
@@ -112,7 +119,7 @@ public class Player extends Actor
             }
             else 
             {
-                setLocation(getX() + 1, getY());
+                setLocation(getX() + 2, getY());
                 orientation = 2;
             }
         }
@@ -125,6 +132,7 @@ public class Player extends Actor
             if (resources.size() > 0)
             {
                 Resources r = resources.get(0);
+                System.out.println("Working");
                 // Loop through the objects in the ArrayList to find the closest target
                 for (Resources o : resources)
                 {
@@ -135,16 +143,19 @@ public class Player extends Actor
                         {
                             woodType = true;
                             r.takeResources();
+                            numWood++;
                         }
                         else if(r.getType() == 1 && stoneType == false)
                         {
                             stoneType = true;
                             r.takeResources();
+                            numStone++;
                         }
                         else if(r.getType() == 2 && metalType == false)
                         {
                             metalType = true;
                             r.takeResources();
+                            numMetal++;
                         }
                     }
 
