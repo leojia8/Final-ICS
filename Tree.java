@@ -23,7 +23,7 @@ public class Tree extends Resources
         setImage(transImage);
         //setImage(image);
         
-        hpBar = new StatBar(resourcesLeft, resourcesLeft, this, 30, 5, 60, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
+        hpBar = new StatBar(resourcesLeft, resourcesLeft, this, 30, 5, 35, Color.GREEN, new Color(255, 204, 203), false, Color.WHITE, 1);
         
         
     }

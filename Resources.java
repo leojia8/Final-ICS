@@ -48,6 +48,7 @@ public abstract class Resources extends Actor
             {
                 foundLocation = true;
                 setImage(image);
+                getWorld().addObject(hpBar, getX(), getY() + 20);
             }
             if(timer >= 100)
             {
@@ -65,7 +66,7 @@ public abstract class Resources extends Actor
     }
 
     public void addedToWorld(World w){
-        w.addObject(hpBar, getX(), getY() + 20);
+        
     }
     
     public void takeResources()

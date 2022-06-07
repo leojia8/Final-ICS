@@ -35,6 +35,7 @@ public class GameWorld  extends World
     private static int numStone;
     private static int numWood;
     private static int numMetal;
+    private static int numCatFood;
     /**
      * Constructor for objects of class GameWorld
      */
@@ -49,7 +50,7 @@ public class GameWorld  extends World
         numStone = 5;
         numWood = 5;
         numMetal = 5;
-        
+        numCatFood = 0;
     }
 
     
@@ -73,15 +74,15 @@ public class GameWorld  extends World
             
             if(type == 0)
             {
-                this.addObject(new Rock(), Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
+                this.addObject(new Rock(), Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(500) + 100);
             }
             else if(type == 1)
             {
-                this.addObject(new Tree(), Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
+                this.addObject(new Tree(), Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(500) + 100);
             }
             else if(type == 2)
             {
-                this.addObject(new Ore(), Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
+                this.addObject(new Ore(), Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(500) + 100);
             }
         }
     }
@@ -111,6 +112,18 @@ public class GameWorld  extends World
     public static void addMetal()
     {
         numMetal++;
+    }
+    public static void addCatFood()
+    {
+        numCatFood++;
+    }
+    public static int getCatFood()
+    {
+        return numCatFood;
+    }
+    public static void takeCatFood()
+    {
+        numCatFood--;
     }
     public static void addWood()
     {

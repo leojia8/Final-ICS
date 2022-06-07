@@ -26,9 +26,8 @@ public class FactoryTower extends Tower
         counter--;
         if(counter <= 0)
         {
-            //add1Gold
-            //add1Wood
-            //add1Stone
+            
+           
             counter = 200;
         }
         
