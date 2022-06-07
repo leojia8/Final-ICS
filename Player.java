@@ -124,7 +124,7 @@ public class Player extends Actor
             boolean woodType = false;
             boolean stoneType = false;
             boolean metalType = false;
-            resources = (ArrayList)getObjectsInRange(100, Resources.class);
+            resources = (ArrayList)getObjectsInRange(200, Resources.class);
             if (resources.size() > 0)
             {
                 Resources r = resources.get(0);

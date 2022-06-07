@@ -17,7 +17,7 @@ public class Radius extends Actor
     public Radius()
     {
         image = new GreenfootImage("radius.png");
-        image.scale(100,100);
+        image.scale(200,200);
         setImage(image);
         image.setTransparency(50);
     }
