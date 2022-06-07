@@ -72,7 +72,8 @@ public abstract class Resources extends Actor
     {
 
         resourcesLeft--;
-
+        
+        hpBar.update((int)resourcesLeft);
     }
 
     public int getType()
