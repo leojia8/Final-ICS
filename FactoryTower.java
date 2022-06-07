@@ -8,25 +8,36 @@ import greenfoot.*;
  */
 public class FactoryTower extends Tower
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private int counter;
+    
     /**
      * Constructor for objects of class FactoryTower
      */
     public FactoryTower()
     {
+        
+        counter = 0;
+        
+        
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    
+    public void act()
     {
-        // put your code here
-        return x + y;
+        counter--;
+        if(counter <= 0)
+        {
+            //add1Gold
+            //add1Wood
+            //add1Stone
+            counter = 200;
+        }
+        
+        
+        
+        
     }
+    
+    
+    
+
 }
