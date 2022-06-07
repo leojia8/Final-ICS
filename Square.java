@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Checks if there are any actor on a certain piece of land
+ * Checks if there are any actors on a certain piece of land
  * 
  * @author Jessie Liu
  * @version April 2022

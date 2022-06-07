@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Square
-comment0.text=\r\n\ Checks\ if\ there\ are\ any\ actor\ on\ a\ certain\ piece\ of\ land\r\n\ \r\n\ @author\ Jessie\ Liu\r\n\ @version\ April\ 2022\r\n\ @Credit\ Jordan\ Cohen\r\n
+comment0.text=\r\n\ Checks\ if\ there\ are\ any\ actors\ on\ a\ certain\ piece\ of\ land\r\n\ \r\n\ @author\ Jessie\ Liu\r\n\ @version\ April\ 2022\r\n\ @Credit\ Jordan\ Cohen\r\n
 comment1.params=
 comment1.target=Square()
 numComments=2
