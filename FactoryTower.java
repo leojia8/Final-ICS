@@ -26,7 +26,7 @@ public class FactoryTower extends Tower
         counter--;
         if(counter <= 0)
         {
-            
+            GameWorld.addCatFood();
            
             counter = 200;
         }
