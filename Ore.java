@@ -23,8 +23,10 @@ public class Ore extends Resources
         transImage = new GreenfootImage(100,64);
         setImage(transImage);
         //setImage(image);
-                
         
+        hpBar = new StatBar(resourcesLeft, resourcesLeft, this, 30, 5, 60, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
+                
+
     }
 
     

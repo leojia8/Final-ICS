@@ -14,6 +14,8 @@ public abstract class Resources extends Actor
     protected GreenfootImage transImage;
     protected boolean foundLocation;
     protected int timer;
+    
+    protected StatBar hpBar;
     public Resources()
     {
         foundLocation = false;
@@ -62,6 +64,10 @@ public abstract class Resources extends Actor
 
     }
 
+    public void addedToWorld(World w){
+        w.addObject(hpBar, getX(), getY() + 20);
+    }
+    
     public void takeResources()
     {
 
