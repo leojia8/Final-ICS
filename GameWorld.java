@@ -32,7 +32,9 @@ public class GameWorld  extends World
                     {0,0,0,0,1,0,0,0,1,0,0,0,0,0,0},
                     {0,0,0,0,1,1,1,1,1,0,0,0,0,0,0},
                     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
-            
+    private static int numStone;
+    private static int numWood;
+    private static int numMetal;
     /**
      * Constructor for objects of class GameWorld
      */
@@ -44,6 +46,9 @@ public class GameWorld  extends World
         addObject(new EggCat(), 400, 600);
         addObject(new TallCat(), 400, 700);
         levelConstructor();
+        numStone = 5;
+        numWood = 5;
+        numMetal = 5;
     }
 
     
@@ -100,5 +105,42 @@ public class GameWorld  extends World
         distance = Math.sqrt(Math.pow(xLength, 2) + Math.pow(yLength, 2));
         return (float)distance;
 
+    }
+    
+    public static void addMetal()
+    {
+        numMetal++;
+    }
+    public static void addWood()
+    {
+        numWood++;
+    }
+    public static void addStone()
+    {
+        numStone++;
+    }
+    public static void takeMetal()
+    {
+        numMetal--;
+    }
+    public static int getMetal()
+    {
+        return numMetal;
+    }
+    public static void takeWood()
+    {
+        numWood--;
+    }
+    public static int getWood()
+    {
+        return numWood;
+    }
+    public static void takeStone()
+    {
+        numStone--;
+    }
+    public static int getStone()
+    {
+        return numStone;
     }
 }

@@ -9,9 +9,7 @@ import java.util.*;
  */
 public class Player extends Actor  
 {
-    private int numStone;
-    private int numMetal;
-    private int numWood;
+   
     private GreenfootImage idleImage1;
     private GreenfootImage idleImage2;
     private int collectingCounter;
@@ -31,9 +29,7 @@ public class Player extends Actor
     {
 
         //Player starts with some beginning resources 
-        numStone = 5;
-        numMetal = 5;
-        numWood = 5;
+      
         collectingCounter = 20;
         orientation = 4;
         addedRadius = false;
@@ -143,19 +139,19 @@ public class Player extends Actor
                         {
                             woodType = true;
                             r.takeResources();
-                            numWood++;
+                            GameWorld.addWood();
                         }
                         else if(r.getType() == 1 && stoneType == false)
                         {
                             stoneType = true;
                             r.takeResources();
-                            numStone++;
+                            GameWorld.addStone();
                         }
                         else if(r.getType() == 2 && metalType == false)
                         {
                             metalType = true;
                             r.takeResources();
-                            numMetal++;
+                            GameWorld.addMetal();
                         }
                     }
 
@@ -174,18 +170,5 @@ public class Player extends Actor
     }
      */
 
-    public void addStone()
-    {
-        numStone++;
-    }
-
-    public void addMetal()
-    {
-        numMetal++;
-    }
-
-    public void addWood()
-    {
-        numWood++;
-    }
+    
 }
