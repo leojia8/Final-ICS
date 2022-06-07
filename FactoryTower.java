@@ -18,7 +18,7 @@ public class FactoryTower extends Tower
         
         counter = 0;
         
-        
+        type = 2;
     }
     
     public void act()
@@ -37,6 +37,7 @@ public class FactoryTower extends Tower
     }
     
     
+   
     
 
 }
