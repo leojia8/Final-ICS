@@ -128,7 +128,7 @@ public class Player extends Actor
             if (resources.size() > 0)
             {
                 Resources r = resources.get(0);
-                System.out.println("Working");
+                //System.out.println("Working");
                 // Loop through the objects in the ArrayList to find the closest target
                 for (Resources o : resources)
                 {
