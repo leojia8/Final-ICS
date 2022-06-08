@@ -19,21 +19,27 @@ public class WhiteOut extends Actor
         image = new GreenfootImage("white.png");
         image.scale(2000,2000);
         
-        counter = 0;
+        counter = 225;
         
         
         image.setTransparency(counter);
+        setImage(image);
     }
     
     
     public void act()
     {
         image.setTransparency(counter);
-        counter+= 5;
-        if(counter >= 200)
+        setImage(image);
+        counter-= 8;
+        if(counter <= 0)
         {
             getWorld().removeObject(this);
         }
+        
+        
+        
+        
     }
     
     
