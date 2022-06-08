@@ -43,8 +43,8 @@ public class GameWorld  extends World
     {
         super(1200, 800, 1, false);
         //addObject(new Player(), 400, 400);
-        addObject(new NormalCat(), 0, 600);
-        addObject(new EggCat(), 400, 600);
+        //addObject(new NormalCat(), 0, 600);
+        addObject(new EggCat(), 0, 600);
         addObject(new TallCat(), 400, 700);
         addObject(new BossCat(), 400, 300);
         levelConstructor();

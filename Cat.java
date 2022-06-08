@@ -11,7 +11,9 @@ public abstract class Cat extends SuperSmoothMover
     protected int health;
     protected int speed;
     protected int damage;
-
+    protected int rotation = 90;
+    protected int counter = 20;
+    protected boolean noPath;
     protected StatBar hpBar;
     public Cat ()
     {
@@ -38,6 +40,108 @@ public abstract class Cat extends SuperSmoothMover
 
                 }
             }
+    }
+    protected void move(){
+        if(rotation == 90)
+        {
+            setLocation(getX() + 2, getY());
+            if(counter <= 0)
+            {
+                Square s = (Square)getOneObjectAtOffset(80, 0, Square.class);
+                if (s == null)
+                {
+                    noPath = true;
+                    
+                }
+                counter = 40;
+            }
+        }
+        else if(rotation == 0)
+        {
+            setLocation(getX(), getY() - 2);
+            if(counter <= 0)
+            {
+                Square s = (Square)getOneObjectAtOffset(0, -80, Square.class);
+                if(s == null)
+                {
+                    noPath = true;
+                    
+                }
+                counter = 40;
+            }
+        }
+        else if(rotation == 180)
+        {
+            setLocation(getX(), getY() + 2);
+            if(counter <= 0)
+            {
+                Square s = (Square)getOneObjectAtOffset(0, 80, Square.class);
+                if(s == null)
+                {
+                    noPath = true;
+                    
+                }
+                counter = 40;
+            }
+        }
+        else if(rotation == 270)
+        {
+            setLocation(getX() - 2, getY());
+            if(counter <= 0)
+            {
+                Square s = (Square)getOneObjectAtOffset(-80, 0, Square.class);
+
+                if(s == null)
+                {
+                    noPath = true;
+                    
+                }
+                counter = 40;
+            }
+        }
+        counter--;
+
+        if(noPath)
+        {
+            
+            Square s = (Square)getOneObjectAtOffset(-80, 0, Square.class);
+            Square s2 = (Square)getOneObjectAtOffset(0, 80, Square.class);
+            Square s3 = (Square)getOneObjectAtOffset(0, -80, Square.class);
+            Square s4 = (Square)getOneObjectAtOffset(80, 0, Square.class);
+
+            if(s != null && rotation != 90 && noPath == true)
+            {
+                
+                rotation = 270;
+                noPath = false;
+            }
+            
+            
+            if(s3 != null && rotation != 180 && noPath == true)
+            {
+                rotation = 0;
+                noPath = false;
+            }
+            if(s2 != null && rotation != 0 && noPath == true)
+            {
+                rotation = 180;
+                noPath = false;
+                
+            }
+            
+            if(s4 != null && rotation != 270 && noPath == true)
+            {
+                rotation = 90;
+                noPath = false;
+            }
+            
+            
+            if(noPath)
+            {
+                this.setLocation(2000, 2000);
+            }
+            
+        }
     }
 
     public void addedToWorld(World w){

@@ -12,9 +12,7 @@ public class NormalCat extends Cat
     private static GifImage master = new GifImage("flippednormalgif.gif");
     private GifImage gifImage;
     private static final int HP = 70;
-    private int rotation;
-    private int counter;
-    private boolean noPath;
+    
     public NormalCat()
     {
         noPath = false;
