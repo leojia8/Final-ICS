@@ -18,6 +18,7 @@ public class EggCat extends Cat
         hpBar = new StatBar(HP, HP, this, 60, 5, 60, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
         
         
+        
         gifImage = new GifImage(master);
         gifImage.resizeImages(113, 125);
     }
@@ -30,5 +31,6 @@ public class EggCat extends Cat
     {
         // Add your action code here.
          setImage( gifImage.getCurrentImage() );
+         move();
     }
 }
