@@ -38,7 +38,7 @@ public class BossCat extends Cat
 
     public void act()
     {
-        
+        HP--;
         setImage( gifImage.getCurrentImage() );
         if(HP % 100 == 0)
         {
@@ -82,6 +82,13 @@ public class BossCat extends Cat
 
                 }
             }
+        }
+        if(HP % 150 == 0)
+        {
+            WhiteOut w = new WhiteOut();
+            getWorld().addObject(w, 600, 600);
+            
+            getWorld().addObject(new NormalCat(), 160, 120);
         }
         if(justSpawned)
         {
