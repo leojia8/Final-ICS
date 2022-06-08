@@ -36,4 +36,11 @@ public class Tower extends Actor
             
         }
     }
+    
+    protected void stun()
+    {
+        
+    }
+    
+    
 }

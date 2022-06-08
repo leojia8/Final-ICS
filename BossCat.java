@@ -46,7 +46,7 @@ public class BossCat extends Cat
             getWorld().addObject(b, getX(), getY());
             HP--;
             int numTowers;
-            List neighbors = getNeighbours(2000, true, Tower.class);
+            List neighbors = getNeighbours(600, true, Tower.class);
             World I = getWorld();
 
             if (!neighbors.isEmpty()) {
@@ -54,7 +54,7 @@ public class BossCat extends Cat
 
                 if(numTowers > 0)
                 {
-                    towers = (ArrayList)getObjectsInRange(300, Tower.class);
+                    towers = (ArrayList)getObjectsInRange(600, Tower.class);
                 }
                 if (towers.size() > 0)
                 {
@@ -64,7 +64,7 @@ public class BossCat extends Cat
                     // to check if any other targets are closer
                     if(targetTower != null)
                     {
-                        //targetTower.stun();
+                        targetTower.stun();
                     }
 
                     // Loop through the objects in the ArrayList to find the closest target
@@ -76,7 +76,7 @@ public class BossCat extends Cat
                         if(o != null)
                         {
                             targetTower = o;
-                            //o.stun();
+                            o.stun();
                         }
                     }
 
