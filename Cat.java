@@ -15,6 +15,7 @@ public abstract class Cat extends SuperSmoothMover
     protected int counter = 20;
     protected boolean noPath;
     protected StatBar hpBar;
+    protected int HP;
     public Cat ()
     {
 
@@ -27,20 +28,22 @@ public abstract class Cat extends SuperSmoothMover
 
     public void act()
     {
-         if(getWorld() != null)
+        hpBar.update(HP);
+        if(getWorld() != null)
+        {
+            if (getY() <= -10 || getY() >= 810 )
             {
-                if (getY() <= -10 || getY() >= 810 )
-                {
-                    getWorld().removeObject(this);
+                getWorld().removeObject(this);
 
-                } 
-                else if (getX() >= 1210 || getX() <= -10)
-                {
-                    getWorld().removeObject(this);
+            } 
+            else if (getX() >= 1210 || getX() <= -10)
+            {
+                getWorld().removeObject(this);
 
-                }
             }
+        }
     }
+
     protected void move(){
         if(rotation == 90)
         {
@@ -51,7 +54,7 @@ public abstract class Cat extends SuperSmoothMover
                 if (s == null)
                 {
                     noPath = true;
-                    
+
                 }
                 counter = 40;
             }
@@ -65,7 +68,7 @@ public abstract class Cat extends SuperSmoothMover
                 if(s == null)
                 {
                     noPath = true;
-                    
+
                 }
                 counter = 40;
             }
@@ -79,7 +82,7 @@ public abstract class Cat extends SuperSmoothMover
                 if(s == null)
                 {
                     noPath = true;
-                    
+
                 }
                 counter = 40;
             }
@@ -94,7 +97,7 @@ public abstract class Cat extends SuperSmoothMover
                 if(s == null)
                 {
                     noPath = true;
-                    
+
                 }
                 counter = 40;
             }
@@ -103,7 +106,7 @@ public abstract class Cat extends SuperSmoothMover
 
         if(noPath)
         {
-            
+
             Square s = (Square)getOneObjectAtOffset(-80, 0, Square.class);
             Square s2 = (Square)getOneObjectAtOffset(0, 80, Square.class);
             Square s3 = (Square)getOneObjectAtOffset(0, -80, Square.class);
@@ -111,12 +114,11 @@ public abstract class Cat extends SuperSmoothMover
 
             if(s != null && rotation != 90 && noPath == true)
             {
-                
+
                 rotation = 270;
                 noPath = false;
             }
-            
-            
+
             if(s3 != null && rotation != 180 && noPath == true)
             {
                 rotation = 0;
@@ -126,21 +128,20 @@ public abstract class Cat extends SuperSmoothMover
             {
                 rotation = 180;
                 noPath = false;
-                
+
             }
-            
+
             if(s4 != null && rotation != 270 && noPath == true)
             {
                 rotation = 90;
                 noPath = false;
             }
-            
-            
+
             if(noPath)
             {
                 this.setLocation(2000, 2000);
             }
-            
+
         }
     }
 

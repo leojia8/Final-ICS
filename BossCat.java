@@ -34,11 +34,13 @@ public class BossCat extends Cat
         speed = 1;
         gifImage = new GifImage("bosscat.gif");
         gifImage.resizeImages(110, 130);
+        
     }
 
     public void act()
     {
         HP--;
+        
         setImage( gifImage.getCurrentImage() );
         if(HP % 100 == 0)
         {
