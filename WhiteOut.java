@@ -36,6 +36,10 @@ public class WhiteOut extends Actor
         {
             getWorld().removeObject(this);
         }
+        
+        
+        
+        
     }
     
     
