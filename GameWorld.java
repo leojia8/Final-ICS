@@ -46,6 +46,7 @@ public class GameWorld  extends World
         addObject(new NormalCat(), 400, 500);
         addObject(new EggCat(), 400, 600);
         addObject(new TallCat(), 400, 700);
+        addObject(new BossCat(), 400, 300);
         levelConstructor();
         numStone = 5;
         numWood = 5;

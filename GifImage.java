@@ -121,6 +121,10 @@ public class GifImage
         return images[currentIndex];
     }
 
+    public void restartGif()
+    {
+        currentIndex = 0;
+    }
     /**
      * Load the images
      */

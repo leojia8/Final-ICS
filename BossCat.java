@@ -19,7 +19,8 @@ public class BossCat extends Cat
     private boolean justSpawned;
     private ArrayList<Tower> towers;
     private Tower targetTower;
-    
+    private GifImage gifImage;
+
     /**
      * Constructor for objects of class BossCat
      */
@@ -27,17 +28,19 @@ public class BossCat extends Cat
     {
         hpBar = new StatBar(HP, HP, this, 100, 9, 100, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
         reverse = true;
-        image = new GreenfootImage("normalcat.png");
-        image.scale(64,64);
-        setImage(image);
+        
         counter = 15;
         justSpawned = true;
         speed = 1;
+        gifImage = new GifImage("bosscat.gif");
+        gifImage.resizeImages(110, 130);
     }
 
     public void act()
     {
-        if(HP % 10 == 0)
+        
+        setImage( gifImage.getCurrentImage() );
+        if(HP % 100 == 0)
         {
             BossAttack b = new BossAttack();
             getWorld().addObject(b, getX(), getY());
@@ -83,8 +86,7 @@ public class BossCat extends Cat
         if(justSpawned)
         {
             BossRing b = new BossRing();
-            
-                
+
             getWorld().addObject(b, getX(), getY());
             justSpawned = false;
         }
@@ -113,7 +115,12 @@ public class BossCat extends Cat
             }
             counter = 15;
         }
-
+        if(HP <= 0)
+        {
+            Explosion e = new Explosion();
+            getWorld().addObject(e, getX(), getY());
+            getWorld().removeObject(this);
+        }
     }
 
 }

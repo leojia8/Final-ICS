@@ -36,7 +36,7 @@ public class BossRing extends Actor
         }
         else if(justSpawned == false)
         {
-            if(targetCat != null)
+            if(targetCat != null && targetCat.getWorld() != null)
             {
                 setLocation(targetCat.getX(), targetCat.getY());
                 setImage( gifImage.getCurrentImage() );
