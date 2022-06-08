@@ -52,6 +52,7 @@ public class GameWorld  extends World
         numWood = 5;
         numMetal = 5;
         numCatFood = 0;
+        setPaintOrder(Cat.class, StatBar.class, BossRing.class, BossAttack.class, Explosion.class, Square.class);
     }
 
     
