@@ -22,8 +22,9 @@ public class Square extends Actor
     {
         
         // set this to true to see the Spawners - might help with understanding of how this works:
-        visible = true;
-        image = new GreenfootImage (width, height);
+        visible = false;
+        image = new GreenfootImage("pathsquare.jpg");
+        //image = new GreenfootImage (width, height);
         if(visible){
             image.setColor(TRANSPARENT_RED);
             image.fillRect(0, 0, width-1, height - 1);
