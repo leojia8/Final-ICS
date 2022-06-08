@@ -14,7 +14,7 @@ public class BossCat extends Cat
     private GreenfootImage image;
     private int speed;
     private boolean reverse; 
-    private int HP = 1200;
+    
     private int counter;
     private boolean justSpawned;
     private ArrayList<Tower> towers;
@@ -26,6 +26,7 @@ public class BossCat extends Cat
      */
     public BossCat()
     {
+        HP = 10000;
         hpBar = new StatBar(HP, HP, this, 100, 9, 100, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
         reverse = true;
         
@@ -39,6 +40,7 @@ public class BossCat extends Cat
 
     public void act()
     {
+        super.act();
         HP--;
         
         setImage( gifImage.getCurrentImage() );

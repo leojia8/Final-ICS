@@ -11,11 +11,12 @@ public class NormalCat extends Cat
     // instance variables - replace the example below with your own
     private static GifImage master = new GifImage("flippednormalgif.gif");
     private GifImage gifImage;
-    private static final int HP = 70;
+   
     
     public NormalCat()
     {
         noPath = false;
+        HP = 100;
         hpBar = new StatBar(HP, HP, this, 30, 5, 60, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
         counter = 20;
         rotation = 90;
@@ -25,7 +26,7 @@ public class NormalCat extends Cat
 
     public void act()
     {
-
+        super.act();
         setImage( gifImage.getCurrentImage() );
 
         if(rotation == 90)
