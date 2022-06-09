@@ -12,13 +12,13 @@ public class Water extends Projectile
     /**
      * Constructor for objects of class Water
      */
-    public Water()
+    public Water(int damage)
     {
         super();
         shootSound = new GreenfootSound("shooting.mp3");
         shootSound.setVolume(50);
         shootSound.play();
-        damage = 1;
+        this.damage = damage;
     }
 
     

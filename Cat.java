@@ -143,14 +143,18 @@ public abstract class Cat extends SuperSmoothMover
             }
 
         }
+        
+        
+        
+       
     }
 
     public void addedToWorld(World w){
         w.addObject(hpBar, getX(), getY() + 20);
     }
 
-    public void hit()
+    public void damage(int damage)
     {
-        health--;
+        health = health - damage;
     }
 }

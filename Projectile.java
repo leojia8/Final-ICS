@@ -81,7 +81,7 @@ public abstract class Projectile extends Actor
             Cat c = (Cat)getOneIntersectingObject(Cat.class);
             if(c != null)
             {
-                c.hit();
+                c.damage(damage);
                 getWorld().removeObject(this);
             }
 
