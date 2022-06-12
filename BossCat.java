@@ -87,12 +87,21 @@ public class BossCat extends Cat
                 }
             }
         }
-        if(HP % 150 == 0)
+        if(HP % 200 == 0)
         {
             WhiteOut w = new WhiteOut();
             getWorld().addObject(w, 600, 600);
             
             getWorld().addObject(new NormalCat(), 160, 120);
+            
+            
+            getWorld().addObject(new NormalCat(), 240, 440);
+            
+            
+            
+            getWorld().addObject(new NormalCat(), 400, 760);
+            
+            
         }
         if(justSpawned)
         {
