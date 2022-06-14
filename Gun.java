@@ -26,12 +26,16 @@ public class Gun extends Tower
     public void act()
     {
         //if (checked() != true){
-            
+        enemyDetector();
         //}
     }
     public void enemyDetector(){
         List<Cat> enemies = getObjectsInRange(radius, Cat.class);
-        
+        for (Cat fat: enemies){
+            Bullet bullet = new Bullet();
+            getWorld().addObject(bullet, getX(), getY());
+            bullet.turnTowards(fat.getX(),fat.getY());
+        }
     }
     /**
      * public void addedToWorld(World w){
