@@ -27,8 +27,8 @@ public abstract class TowerButton extends Actor
         {
             if(type == 0)
             {
-                //WaterTower w = new WaterTower();
-                //getWorld().addObject(w, getX(), getY());
+                Gun w = new Gun();
+                getWorld().addObject(w, getX(), getY());
             }
             else if(type == 1)
             {

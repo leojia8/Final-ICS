@@ -16,10 +16,16 @@ public class WaterTowerButton extends TowerButton
     {
         super();
         type = 0;
-        setLocation(300, 700);
         
+        image = new GreenfootImage("towerbutton.png");
+        image.scale(100,100);
+        setImage(image);
         
     }
+    
+    
+    
+    
     
     
     

@@ -64,6 +64,7 @@ public class GameWorld  extends World
         //showText("EHEHE" + numStone + "S" + numWood + "" + numMetal,600 ,50 );
         spawnResources();
         addInTowers();
+        addTowerButtons();
     }
     
     
@@ -120,6 +121,13 @@ public class GameWorld  extends World
         }
     }
     
+    
+    
+    private void addTowerButtons()
+    {
+        addObject(new WaterTowerButton(), 1100, 720);
+        //addObject(new FactoryTowerButton(), 1000, 720);
+    }
     public static void addMetal()
     {
         numMetal++;
