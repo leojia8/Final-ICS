@@ -27,7 +27,7 @@ public class Gun extends Tower
 
     public void act()
     {
-         setImage( gifImage.getCurrentImage() );
+         
         if(stun)
         {
             stunTimer--;

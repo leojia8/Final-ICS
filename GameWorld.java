@@ -63,7 +63,7 @@ public class GameWorld  extends World
     {
         //showText("EHEHE" + numStone + "S" + numWood + "" + numMetal,600 ,50 );
         spawnResources();
-        addInTowers();
+        //addInTowers();
         addTowerButtons();
     }
     
