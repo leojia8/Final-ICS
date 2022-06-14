@@ -28,7 +28,8 @@ public abstract class Cat extends SuperSmoothMover
 
     public void act()
     {
-        hpBar.update(HP);
+        //hpBar.update(HP);
+        gettingHit();
         if(getWorld() != null)
         {
             if (getY() <= -10 || getY() >= 810 )
@@ -152,7 +153,13 @@ public abstract class Cat extends SuperSmoothMover
     public void addedToWorld(World w){
         w.addObject(hpBar, getX(), getY() + 20);
     }
-
+    public void gettingHit(){
+        Actor bullet = getOneIntersectingObject(Bullet.class);
+        if (bullet != null){
+            getWorld().removeObject(bullet);
+            HP -=5;
+        }
+    }
     public void damage(int damage)
     {
         health = health - damage;

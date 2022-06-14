@@ -10,11 +10,11 @@ public class TallCat extends Cat
 {
     private static GifImage master = new GifImage("tallCatAdjusted.gif");
     private GifImage gifImage;
-    private static final int HP = 100;
+    
     
     public TallCat()
     {
-        
+        HP = 200;
         hpBar = new StatBar(HP, HP, this, 45, 5, 60, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
         
         
@@ -29,6 +29,9 @@ public class TallCat extends Cat
     public void act()
     {
         // Add your action code here.
+        super.act();
+        hpBar.update(HP);
         setImage( gifImage.getCurrentImage() );
+        move();
     }
 }

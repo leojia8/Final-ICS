@@ -10,11 +10,11 @@ public class EggCat extends Cat
 {
     private static GifImage master = new GifImage("eggAdjustedV2.gif");
     private GifImage gifImage;
-    private static final int HP = 150;
+    
     
     public EggCat()
     {
-        
+        HP = 100;
         hpBar = new StatBar(HP, HP, this, 60, 5, 60, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
         
         
@@ -30,6 +30,9 @@ public class EggCat extends Cat
     public void act()
     {
         // Add your action code here.
+        //super.act();
+        super.act();
+        hpBar.update(HP);
          setImage( gifImage.getCurrentImage() );
          move();
          
