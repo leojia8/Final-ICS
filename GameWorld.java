@@ -36,6 +36,7 @@ public class GameWorld  extends World
     private static int numWood;
     private static int numMetal;
     private static int numCatFood;
+    private Counter counter = new Counter();
     /**
      * Constructor for objects of class GameWorld
      */
@@ -45,22 +46,24 @@ public class GameWorld  extends World
         //addObject(new Player(), 400, 400);
         //addObject(new NormalCat(), 0, 600);
         addObject(new EggCat(), 0, 600);
-        addObject(new TallCat(), 400, 700);
-        addObject(new BossCat(), 400, 300);
+        //addObject(new TallCat(), 400, 700);
+        //addObject(new BossCat(), 400, 300);
         levelConstructor();
         numStone = 5;
         numWood = 5;
         numMetal = 5;
         numCatFood = 0;
-        setPaintOrder(Cat.class, StatBar.class, BossRing.class, BossAttack.class, Explosion.class, Square.class);
+        addObject(counter, 600, 200);
+        setPaintOrder(Counter.class,Cat.class, StatBar.class, BossRing.class, BossAttack.class, Explosion.class, Square.class);
     }
 
     
     
     public void act()
     {
-        showText("EHEHE" + numStone + "S" + numWood + "" + numMetal,600 ,50 );
+        //showText("EHEHE" + numStone + "S" + numWood + "" + numMetal,600 ,50 );
         spawnResources();
+        addInTowers();
     }
     
     
@@ -109,6 +112,12 @@ public class GameWorld  extends World
         distance = Math.sqrt(Math.pow(xLength, 2) + Math.pow(yLength, 2));
         return (float)distance;
 
+    }
+    public void addInTowers(){
+        if (Greenfoot.mouseClicked(null) && Greenfoot.getMouseInfo().getActor() == null && numWood>=5){
+            addObject(new Gun(), Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
+            numWood -= 5;
+        }
     }
     
     public static void addMetal()
