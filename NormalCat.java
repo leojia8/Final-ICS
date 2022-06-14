@@ -26,7 +26,7 @@ public class NormalCat extends Cat
 
     public void act()
     {
-        super.act();
+        
         setImage( gifImage.getCurrentImage() );
         hpBar.update(HP);
         if(rotation == 90)
@@ -130,6 +130,6 @@ public class NormalCat extends Cat
             
         }
 
-        
+        super.act();
     }
 }

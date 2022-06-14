@@ -41,6 +41,16 @@ public class GameWorld  extends World
     private Counter counter = new Counter();
     private int spawnTimer;
     private int round;
+    private Queue<Cat> r1 = new LinkedList<Cat>();
+    private Queue<Cat> r2 = new LinkedList<Cat>();
+    private Queue<Cat> r3 = new LinkedList<Cat>();
+    private Queue<Cat> r4 = new LinkedList<Cat>();
+    private Queue<Cat> r5 = new LinkedList<Cat>();
+    private Queue<Cat> r6 = new LinkedList<Cat>();
+    private Queue<Cat> r7 = new LinkedList<Cat>();
+    private Queue<Cat> r8 = new LinkedList<Cat>();
+    private Queue<Cat> r9 = new LinkedList<Cat>();
+    private Queue<Cat> r10 = new LinkedList<Cat>();
     /**
      * Constructor for objects of class GameWorld
      */
@@ -54,7 +64,7 @@ public class GameWorld  extends World
         //addObject(new BossCat(), 400, 300);
         levelConstructor();
         numStone = 5;
-        spawnTimer = 60;
+        spawnTimer = 600;
         numWood = 5;
         round = 1;
 
@@ -64,20 +74,18 @@ public class GameWorld  extends World
         numCatFood = 0;
         addObject(counter, 600, 200);
         setPaintOrder(Counter.class,Cat.class, StatBar.class, Projectile.class, BossRing.class, BossAttack.class, Explosion.class, Square.class);
-        Queue<Cat> r1 = new LinkedList<Cat>();
+
         r1.add(new NormalCat());
         r1.add(new NormalCat());
         r1.add(new NormalCat());
         r1.add(new NormalCat());
         r1.add(new NormalCat());
 
-        Queue<Cat> r2 = new LinkedList<Cat>();
         r2.add(new TallCat());
-        r1.add(new NormalCat());
-        r1.add(new NormalCat());
+        r2.add(new NormalCat());
+        r2.add(new NormalCat());
         r2.add(new TallCat());
 
-        Queue<Cat> r3 = new LinkedList<Cat>();
         r3.add(new EggCat());
         r3.add(new NormalCat());
         r3.add(new NormalCat());
@@ -92,7 +100,6 @@ public class GameWorld  extends World
         r3.add(new TallCat());
         r3.add(new TallCat());
 
-        Queue<Cat> r4 = new LinkedList<Cat>();
         r4.add(new EggCat());
         r4.add(new EggCat());
         r4.add(new EggCat());
@@ -102,8 +109,6 @@ public class GameWorld  extends World
         r4.add(new TallCat());
         r4.add(new TallCat());
 
-        Queue<Cat> r5 = new LinkedList<Cat>();
-
         r5.add(new NormalCat());
         r5.add(new NormalCat());
         r5.add(new NormalCat());
@@ -118,9 +123,6 @@ public class GameWorld  extends World
         r5.add(new NormalCat());
         r5.add(new NormalCat());
 
-        
-        Queue<Cat> r6 = new LinkedList<Cat>();
-
         r6.add(new TallCat());
         r6.add(new TallCat());
         r6.add(new TallCat());
@@ -130,7 +132,6 @@ public class GameWorld  extends World
         r6.add(new TallCat());
         r6.add(new TallCat());
 
-        Queue<Cat> r7 = new LinkedList<Cat>();
         r7.add(new NormalCat());
         r7.add(new EggCat());
         r7.add(new EggCat());
@@ -147,8 +148,6 @@ public class GameWorld  extends World
         r7.add(new NormalCat());
         r7.add(new NormalCat());
 
-        
-        Queue<Cat> r8 = new LinkedList<Cat>();
         r8.add(new NormalCat());
         r8.add(new NormalCat());
         r8.add(new NormalCat());
@@ -169,7 +168,6 @@ public class GameWorld  extends World
         r8.add(new TallCat());
         r8.add(new TallCat());
 
-        Queue<Cat> r9 = new LinkedList<Cat>();
         r9.add(new EggCat());
         r9.add(new TallCat());
         r9.add(new EggCat());
@@ -200,8 +198,6 @@ public class GameWorld  extends World
         r9.add(new TallCat());
         r9.add(new EggCat());
 
-        
-        Queue<Cat> r10 = new LinkedList<Cat>();
         r10.add(new BossCat());
         r10.add(new EggCat());
         r10.add(new EggCat());
@@ -221,22 +217,166 @@ public class GameWorld  extends World
         r10.add(new NormalCat());
         r10.add(new NormalCat());
         r10.add(new NormalCat());
-
+        addTowerButtons();
     }
-    
+
     public void act()
     {
         //showText("EHEHE" + numStone + "S" + numWood + "" + numMetal,600 ,50 );
         spawnResources();
         addInTowers();
-        addTowerButtons();
-        spawnCats();
         
+        spawnCats();
+
     }
 
     private void spawnCats()
     {
-        
+        spawnTimer--;
+        if(spawnTimer <= 0)
+        {
+            if(round == 1)
+            {
+                spawnTimer = 120;
+                Cat c = r1.peek();
+                if(c == null)
+                {
+                    round++;
+                }
+                else
+                {
+                    addObject(c, 0, 600);
+                    r1.remove();
+                }
+            }
+            else if(round == 2)
+            {
+                spawnTimer = 110;
+                Cat c = r2.peek();
+                if(c == null)
+                {
+                    round++;
+                }
+                else
+                {
+                    addObject(c, 0, 600);
+                    r2.remove();
+                }
+            }
+            else if(round == 3)
+            {
+                spawnTimer = 90;
+                Cat c = r3.peek();
+                if(c == null)
+                {
+                    round++;
+                }
+                else
+                {
+                    addObject(c, 0, 600);
+                    r3.remove();
+                }
+            }
+            else if(round == 4)
+            {
+                spawnTimer = 90;
+                Cat c = r4.peek();
+                if(c == null)
+                {
+                    round++;
+                }
+                else
+                {
+                    addObject(c, 0, 600);
+                    r4.remove();
+                }
+            }
+            else if(round == 5)
+            {
+                spawnTimer = 60;
+                Cat c = r5.peek();
+                if(c == null)
+                {
+                    round++;
+                }
+                else
+                {
+                    addObject(c, 0, 600);
+                    r5.remove();
+                }
+            }
+            else if(round == 6)
+            {
+                spawnTimer = 50;
+                Cat c = r6.peek();
+                if(c == null)
+                {
+                    round++;
+                }
+                else
+                {
+                    addObject(c, 0, 600);
+                    r6.remove();
+                }
+            }
+            else if(round == 7)
+            {
+                spawnTimer = 50;
+                Cat c = r7.peek();
+                if(c == null)
+                {
+                    round++;
+                }
+                else
+                {
+                    addObject(c, 0, 600);
+                    r7.remove();
+                }
+            }
+            else if(round == 8)
+            {
+                spawnTimer = 10;
+                Cat c = r8.peek();
+                if(c == null)
+                {
+                    round++;
+                }
+                else
+                {
+                    addObject(c, 0, 600);
+                    r8.remove();
+                }
+            }
+            else if(round == 9)
+            {
+                spawnTimer = 30;
+                Cat c = r9.peek();
+                if(c == null)
+                {
+                    round++;
+                }
+                else
+                {
+                    addObject(c, 0, 600);
+                    r9.remove();
+                }
+            }
+            else if(round == 10)
+            {
+                spawnTimer = 120;
+                Cat c = r10.peek();
+                if(c == null)
+                {
+                    //GameWorld.setWorld(new WinWorld());
+                }
+                else
+                {
+                    addObject(c, 0, 600);
+                    r10.remove();
+                }
+            }
+
+        }
     }
 
     //method that spawns resources 

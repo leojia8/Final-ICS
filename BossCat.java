@@ -41,8 +41,8 @@ public class BossCat extends Cat
     public void act()
     {
         super.act();
-        HP--;
         
+        hpBar.update(HP);
         setImage( gifImage.getCurrentImage() );
         if(HP % 100 == 0)
         {
