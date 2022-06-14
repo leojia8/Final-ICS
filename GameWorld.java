@@ -56,8 +56,12 @@ public class GameWorld  extends World
         //addObject(new BossCat(), 400, 300);
         levelConstructor();
         numStone = 5;
+<<<<<<< HEAD
         numWood = 5;
         round = 1;
+=======
+        numWood = 500;
+>>>>>>> 0254f676553223fdea90d1e3b986e80c939a040d
         numMetal = 5;
         numCatFood = 0;
         addObject(counter, 600, 200);
@@ -196,7 +200,7 @@ public class GameWorld  extends World
     {
         //showText("EHEHE" + numStone + "S" + numWood + "" + numMetal,600 ,50 );
         spawnResources();
-        //addInTowers();
+        addInTowers();
         addTowerButtons();
     }
     
