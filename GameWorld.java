@@ -377,7 +377,7 @@ public class GameWorld  extends World
                 Cat c = r10.peek();
                 if(c == null)
                 {
-                    //GameWorld.setWorld(new WinWorld());
+                    
                 }
                 else
                 {

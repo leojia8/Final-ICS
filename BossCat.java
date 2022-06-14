@@ -139,7 +139,9 @@ public class BossCat extends Cat
         {
             Explosion e = new Explosion();
             getWorld().addObject(e, getX(), getY());
+            
             getWorld().removeObject(this);
+            
         }
     }
 

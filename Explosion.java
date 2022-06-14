@@ -29,6 +29,7 @@ public class Explosion extends Actor
         counter--;
         if(counter <= 0)
         {
+            Greenfoot.setWorld(new WinWorld());
             getWorld().removeObject(this);
         }
     }
