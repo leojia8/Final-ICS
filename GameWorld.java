@@ -54,7 +54,7 @@ public class GameWorld  extends World
         numMetal = 5;
         numCatFood = 0;
         addObject(counter, 600, 200);
-        setPaintOrder(Counter.class,Cat.class, StatBar.class, BossRing.class, BossAttack.class, Explosion.class, Square.class);
+        setPaintOrder(Counter.class,Cat.class, StatBar.class, Projectile.class, BossRing.class, BossAttack.class, Explosion.class, Square.class);
     }
 
     
