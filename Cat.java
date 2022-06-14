@@ -28,7 +28,7 @@ public abstract class Cat extends SuperSmoothMover
 
     public void act()
     {
-        hpBar.update(HP);
+        //hpBar.update(HP);
         gettingHit();
         if(getWorld() != null)
         {
@@ -157,6 +157,7 @@ public abstract class Cat extends SuperSmoothMover
         Actor bullet = getOneIntersectingObject(Bullet.class);
         if (bullet != null){
             getWorld().removeObject(bullet);
+            HP -=5;
         }
     }
     public void damage(int damage)
