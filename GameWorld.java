@@ -105,6 +105,25 @@ public class GameWorld  extends World
         
         Queue<Cat> r6 = new LinkedList<Cat>();
         Queue<Cat> r7 = new LinkedList<Cat>();
+        
+        r7.add(new NormalCat());
+        r7.add(new EggCat());
+        r7.add(new EggCat());
+        r7.add(new EggCat());
+        r7.add(new EggCat());
+        r7.add(new NormalCat());
+        r7.add(new NormalCat());
+        r7.add(new NormalCat());
+        r7.add(new NormalCat());
+        r7.add(new NormalCat());
+        r7.add(new NormalCat());
+        r7.add(new NormalCat());
+        r7.add(new NormalCat());
+        r7.add(new NormalCat());
+        r7.add(new NormalCat());
+        
+        
+        
         Queue<Cat> r8 = new LinkedList<Cat>();
         r8.add(new NormalCat());
         r8.add(new NormalCat());
