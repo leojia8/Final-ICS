@@ -15,13 +15,14 @@ public class Gun extends Tower
     //private static GifImage master = new GifImage("WaterTower.gif");
     //private GifImage gifImage;
     private GreenfootImage image = new GreenfootImage("water.png"); ;
-    private int radius = 50;
+    private int radius = 1000;
     public Gun(){
         
         //gifImage = new GifImage(master);
         //gifImage.resizeImages(141, 264);
         setImage(image);       
         image.scale(100,100);
+        image.rotate(270);
     }
     public void act()
     {
@@ -35,7 +36,9 @@ public class Gun extends Tower
             Bullet bullet = new Bullet();
             getWorld().addObject(bullet, getX(), getY());
             bullet.turnTowards(fat.getX(),fat.getY());
+            turnTowards(fat.getX(), fat.getY());
         }
+        
     }
     /**
      * public void addedToWorld(World w){

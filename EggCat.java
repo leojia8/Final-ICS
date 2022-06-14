@@ -32,5 +32,7 @@ public class EggCat extends Cat
         // Add your action code here.
          setImage( gifImage.getCurrentImage() );
          move();
+         
+         
     }
 }

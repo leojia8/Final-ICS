@@ -28,7 +28,7 @@ public class NormalCat extends Cat
     {
         super.act();
         setImage( gifImage.getCurrentImage() );
-
+        
         if(rotation == 90)
         {
             setLocation(getX() + 2, getY());
