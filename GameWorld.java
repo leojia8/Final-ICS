@@ -225,13 +225,14 @@ public class GameWorld  extends World
         //showText("EHEHE" + numStone + "S" + numWood + "" + numMetal,600 ,50 );
         spawnResources();
         addInTowers();
-        
+
         spawnCats();
 
     }
 
     private void spawnCats()
     {
+        showText("Round " + round, 1100, 25);
         spawnTimer--;
         if(spawnTimer <= 0)
         {
@@ -242,6 +243,7 @@ public class GameWorld  extends World
                 if(c == null)
                 {
                     round++;
+                    spawnTimer = 400;
                 }
                 else
                 {
@@ -256,6 +258,7 @@ public class GameWorld  extends World
                 if(c == null)
                 {
                     round++;
+                    spawnTimer = 400;
                 }
                 else
                 {
@@ -270,6 +273,7 @@ public class GameWorld  extends World
                 if(c == null)
                 {
                     round++;
+                    spawnTimer = 400;
                 }
                 else
                 {
@@ -284,6 +288,7 @@ public class GameWorld  extends World
                 if(c == null)
                 {
                     round++;
+                    spawnTimer = 600;
                 }
                 else
                 {
@@ -298,6 +303,7 @@ public class GameWorld  extends World
                 if(c == null)
                 {
                     round++;
+                    spawnTimer = 400;
                 }
                 else
                 {
@@ -312,6 +318,7 @@ public class GameWorld  extends World
                 if(c == null)
                 {
                     round++;
+                    spawnTimer = 400;
                 }
                 else
                 {
@@ -326,6 +333,7 @@ public class GameWorld  extends World
                 if(c == null)
                 {
                     round++;
+                    spawnTimer = 400;
                 }
                 else
                 {
@@ -340,6 +348,7 @@ public class GameWorld  extends World
                 if(c == null)
                 {
                     round++;
+                    spawnTimer = 600;
                 }
                 else
                 {
@@ -354,6 +363,7 @@ public class GameWorld  extends World
                 if(c == null)
                 {
                     round++;
+                    spawnTimer = 600;
                 }
                 else
                 {
