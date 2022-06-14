@@ -39,7 +39,7 @@ public class GameWorld  extends World
     private static int numMetal;
     private static int numCatFood;
     private Counter counter = new Counter();
-
+    private int spawnTimer;
     private int round;
     /**
      * Constructor for objects of class GameWorld
@@ -54,7 +54,7 @@ public class GameWorld  extends World
         //addObject(new BossCat(), 400, 300);
         levelConstructor();
         numStone = 5;
-
+        spawnTimer = 60;
         numWood = 5;
         round = 1;
 
@@ -79,24 +79,24 @@ public class GameWorld  extends World
 
         Queue<Cat> r3 = new LinkedList<Cat>();
         r3.add(new EggCat());
-        r1.add(new NormalCat());
-        r1.add(new NormalCat());
-        r1.add(new NormalCat());
-        r1.add(new NormalCat());
-        r1.add(new NormalCat());
-        r1.add(new NormalCat());
-        r1.add(new NormalCat());
-        r1.add(new NormalCat());
-        r1.add(new NormalCat());
-        r1.add(new NormalCat());
-        r2.add(new TallCat());
-        r2.add(new TallCat());
+        r3.add(new NormalCat());
+        r3.add(new NormalCat());
+        r3.add(new NormalCat());
+        r3.add(new NormalCat());
+        r3.add(new NormalCat());
+        r3.add(new NormalCat());
+        r3.add(new NormalCat());
+        r3.add(new NormalCat());
+        r3.add(new NormalCat());
+        r3.add(new NormalCat());
+        r3.add(new TallCat());
+        r3.add(new TallCat());
 
         Queue<Cat> r4 = new LinkedList<Cat>();
-        r3.add(new EggCat());
-        r3.add(new EggCat());
-        r3.add(new EggCat());
-        r3.add(new EggCat());
+        r4.add(new EggCat());
+        r4.add(new EggCat());
+        r4.add(new EggCat());
+        r4.add(new EggCat());
         r4.add(new TallCat());
         r4.add(new TallCat());
         r4.add(new TallCat());
@@ -121,14 +121,14 @@ public class GameWorld  extends World
         
         Queue<Cat> r6 = new LinkedList<Cat>();
 
-        r4.add(new TallCat());
-        r4.add(new TallCat());
-        r4.add(new TallCat());
-        r4.add(new TallCat());
-        r4.add(new TallCat());
-        r4.add(new TallCat());
-        r4.add(new TallCat());
-        r4.add(new TallCat());
+        r6.add(new TallCat());
+        r6.add(new TallCat());
+        r6.add(new TallCat());
+        r6.add(new TallCat());
+        r6.add(new TallCat());
+        r6.add(new TallCat());
+        r6.add(new TallCat());
+        r6.add(new TallCat());
 
         Queue<Cat> r7 = new LinkedList<Cat>();
         r7.add(new NormalCat());
@@ -230,11 +230,13 @@ public class GameWorld  extends World
         spawnResources();
         addInTowers();
         addTowerButtons();
+        spawnCats();
+        
     }
 
-    public void spawnCats()
+    private void spawnCats()
     {
-
+        
     }
 
     //method that spawns resources 
