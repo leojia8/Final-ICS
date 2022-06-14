@@ -12,14 +12,14 @@ public class Gun extends Tower
      * Act - do whatever the Gun wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    //private static GifImage master = new GifImage("WaterTower.gif");
-    //private GifImage gifImage;
+    private static GifImage master = new GifImage("WaterTower.gif");
+    private GifImage gifImage;
     private GreenfootImage image = new GreenfootImage("water.png"); ;
     private int radius = 1000;
     public Gun(){
 
-        //gifImage = new GifImage(master);
-        //gifImage.resizeImages(141, 264);
+        gifImage = new GifImage(master);
+        gifImage.resizeImages(100, 100);
         setImage(image);       
         image.scale(100,100);
         image.rotate(270);
@@ -27,6 +27,7 @@ public class Gun extends Tower
 
     public void act()
     {
+         setImage( gifImage.getCurrentImage() );
         if(stun)
         {
             stunTimer--;
