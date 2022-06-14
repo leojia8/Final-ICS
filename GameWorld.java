@@ -1,5 +1,8 @@
 
 import greenfoot.*;
+import java.util.Queue;
+import java.util.LinkedList;
+
 /**
  * Here we will need to implement many things including resource spawning, cat spawning, and how the lane is going to orient. 
  * 
@@ -37,6 +40,9 @@ public class GameWorld  extends World
     private static int numMetal;
     private static int numCatFood;
     private Counter counter = new Counter();
+    
+    
+    private int round;
     /**
      * Constructor for objects of class GameWorld
      */
@@ -51,10 +57,137 @@ public class GameWorld  extends World
         levelConstructor();
         numStone = 5;
         numWood = 5;
+        round = 1;
         numMetal = 5;
         numCatFood = 0;
         addObject(counter, 600, 200);
         setPaintOrder(Counter.class,Cat.class, StatBar.class, Projectile.class, BossRing.class, BossAttack.class, Explosion.class, Square.class);
+        Queue<Cat> r1 = new LinkedList<Cat>();
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        
+        Queue<Cat> r2 = new LinkedList<Cat>();
+        r2.add(new TallCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r2.add(new TallCat());
+        
+        Queue<Cat> r3 = new LinkedList<Cat>();
+        r3.add(new EggCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r1.add(new NormalCat());
+        r2.add(new TallCat());
+        r2.add(new TallCat());
+        
+        Queue<Cat> r4 = new LinkedList<Cat>();
+        r3.add(new EggCat());
+        r3.add(new EggCat());
+        r3.add(new EggCat());
+        r3.add(new EggCat());
+        r2.add(new TallCat());
+        r2.add(new TallCat());
+        
+        Queue<Cat> r5 = new LinkedList<Cat>();
+        
+        
+        
+        
+        Queue<Cat> r6 = new LinkedList<Cat>();
+        Queue<Cat> r7 = new LinkedList<Cat>();
+        Queue<Cat> r8 = new LinkedList<Cat>();
+        r8.add(new NormalCat());
+        r8.add(new NormalCat());
+        r8.add(new NormalCat());
+        r8.add(new NormalCat());
+        r8.add(new NormalCat());
+        r8.add(new NormalCat());
+        r8.add(new EggCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        
+        
+        
+        Queue<Cat> r9 = new LinkedList<Cat>();
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        
+        
+        
+        
+        
+        
+        
+        Queue<Cat> r10 = new LinkedList<Cat>();
+        r10.add(new BossCat());
+        r10.add(new EggCat());
+        r10.add(new EggCat());
+        r10.add(new EggCat());
+        r10.add(new EggCat());
+        r10.add(new TallCat());
+        r10.add(new TallCat());
+        r10.add(new TallCat());
+        r10.add(new TallCat());
+        r10.add(new NormalCat());
+        r10.add(new NormalCat());
+        r10.add(new NormalCat());
+        r10.add(new NormalCat());
+        r10.add(new NormalCat());
+        r10.add(new NormalCat());
+        r10.add(new NormalCat());
+        r10.add(new NormalCat());
+        r10.add(new NormalCat());
+        r10.add(new NormalCat());
+        
+        
+        
     }
 
     
@@ -67,7 +200,10 @@ public class GameWorld  extends World
         addTowerButtons();
     }
     
-    
+    public void spawnCats()
+    {
+        
+    }
     
     //method that spawns resources 
     
