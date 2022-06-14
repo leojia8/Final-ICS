@@ -15,33 +15,31 @@ public class GameWorld  extends World
     private int x;
     private int spawnNumber;
     int path2[][] = {{1,1,1,0,0,1,1,1,1,1,0,0},
-                    {0,0,1,0,1,1,0,0,0,1,0,0},
-                    {0,0,1,0,1,0,0,1,1,1,0,0},
-                    {0,0,1,0,1,1,0,1,0,0,0,0},
-                    {0,1,0,0,0,1,0,1,0,1,1,1},
-                    {0,1,1,1,1,1,0,1,0,1,0,1},
-                    {0,0,0,0,0,0,0,1,0,1,0,1},
-                    {0,0,0,0,0,0,0,1,1,1,0,1}};
-                    
-                    
+            {0,0,1,0,1,1,0,0,0,1,0,0},
+            {0,0,1,0,1,0,0,1,1,1,0,0},
+            {0,0,1,0,1,1,0,1,0,0,0,0},
+            {0,1,0,0,0,1,0,1,0,1,1,1},
+            {0,1,1,1,1,1,0,1,0,1,0,1},
+            {0,0,0,0,0,0,0,1,0,1,0,1},
+            {0,0,0,0,0,0,0,1,1,1,0,1}};
+
     int path[][] = {{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                    {0,1,1,1,1,1,1,1,1,1,1,1,0,0,0},
-                    {0,1,0,0,0,0,0,0,0,0,0,1,0,0,0},
-                    {0,1,1,1,1,1,1,1,1,0,0,1,1,1,0},
-                    {0,0,0,0,0,0,0,0,1,0,0,0,0,1,0},
-                    {0,0,1,1,1,0,0,0,1,0,0,1,1,1,0},
-                    {0,0,1,0,1,0,0,0,1,0,0,1,0,0,0},
-                    {1,1,1,0,1,0,0,0,1,0,0,1,1,1,1},
-                    {0,0,0,0,1,0,0,0,1,0,0,0,0,0,0},
-                    {0,0,0,0,1,1,1,1,1,0,0,0,0,0,0},
-                    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
+            {0,1,1,1,1,1,1,1,1,1,1,1,0,0,0},
+            {0,1,0,0,0,0,0,0,0,0,0,1,0,0,0},
+            {0,1,1,1,1,1,1,1,1,0,0,1,1,1,0},
+            {0,0,0,0,0,0,0,0,1,0,0,0,0,1,0},
+            {0,0,1,1,1,0,0,0,1,0,0,1,1,1,0},
+            {0,0,1,0,1,0,0,0,1,0,0,1,0,0,0},
+            {1,1,1,0,1,0,0,0,1,0,0,1,1,1,1},
+            {0,0,0,0,1,0,0,0,1,0,0,0,0,0,0},
+            {0,0,0,0,1,1,1,1,1,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
     private static int numStone;
     private static int numWood;
     private static int numMetal;
     private static int numCatFood;
     private Counter counter = new Counter();
-    
-    
+
     private int round;
     /**
      * Constructor for objects of class GameWorld
@@ -56,12 +54,12 @@ public class GameWorld  extends World
         //addObject(new BossCat(), 400, 300);
         levelConstructor();
         numStone = 5;
-<<<<<<< HEAD
+        
         numWood = 5;
         round = 1;
-=======
+       
         numWood = 500;
->>>>>>> 0254f676553223fdea90d1e3b986e80c939a040d
+       
         numMetal = 5;
         numCatFood = 0;
         addObject(counter, 600, 200);
@@ -72,13 +70,13 @@ public class GameWorld  extends World
         r1.add(new NormalCat());
         r1.add(new NormalCat());
         r1.add(new NormalCat());
-        
+
         Queue<Cat> r2 = new LinkedList<Cat>();
         r2.add(new TallCat());
         r1.add(new NormalCat());
         r1.add(new NormalCat());
         r2.add(new TallCat());
-        
+
         Queue<Cat> r3 = new LinkedList<Cat>();
         r3.add(new EggCat());
         r1.add(new NormalCat());
@@ -93,7 +91,7 @@ public class GameWorld  extends World
         r1.add(new NormalCat());
         r2.add(new TallCat());
         r2.add(new TallCat());
-        
+
         Queue<Cat> r4 = new LinkedList<Cat>();
         r3.add(new EggCat());
         r3.add(new EggCat());
@@ -101,11 +99,9 @@ public class GameWorld  extends World
         r3.add(new EggCat());
         r2.add(new TallCat());
         r2.add(new TallCat());
-        
+
         Queue<Cat> r5 = new LinkedList<Cat>();
-        
-        
-        
+
         
         Queue<Cat> r6 = new LinkedList<Cat>();
         Queue<Cat> r7 = new LinkedList<Cat>();
@@ -129,8 +125,7 @@ public class GameWorld  extends World
         r8.add(new TallCat());
         r8.add(new TallCat());
         r8.add(new TallCat());
-        
-        
+
         
         Queue<Cat> r9 = new LinkedList<Cat>();
         r9.add(new EggCat());
@@ -162,10 +157,7 @@ public class GameWorld  extends World
         r9.add(new EggCat());
         r9.add(new TallCat());
         r9.add(new EggCat());
-        
-        
-        
-        
+
         
         
         
@@ -189,12 +181,10 @@ public class GameWorld  extends World
         r10.add(new NormalCat());
         r10.add(new NormalCat());
         r10.add(new NormalCat());
-        
-        
+
         
     }
 
-    
     
     public void act()
     {
@@ -203,21 +193,21 @@ public class GameWorld  extends World
         addInTowers();
         addTowerButtons();
     }
-    
+
     public void spawnCats()
     {
-        
+
     }
-    
+
     //method that spawns resources 
-    
+
     private void spawnResources()
     {
         spawnNumber = Greenfoot.getRandomNumber(1000);
         if(spawnNumber == 500)
         {
             int type = Greenfoot.getRandomNumber(3);
-            
+
             if(type == 0)
             {
                 this.addObject(new Rock(), Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(500) + 100);
@@ -232,7 +222,7 @@ public class GameWorld  extends World
             }
         }
     }
-    
+
     public void levelConstructor(){
         int spacing = 80;
         for (int i = 0; i<10; i++){
@@ -240,7 +230,7 @@ public class GameWorld  extends World
                 if (path[i][j] == 1){
                     addObject(new Square(), 40 + spacing * j, 40 + spacing * i);
                 }
-                
+
             }
         }
     }
@@ -254,64 +244,76 @@ public class GameWorld  extends World
         return (float)distance;
 
     }
+
     public void addInTowers(){
         if (Greenfoot.mouseClicked(null) && Greenfoot.getMouseInfo().getActor() == null && numWood>=5){
             addObject(new Gun(), Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
             numWood -= 5;
         }
     }
-    
-    
+
     
     private void addTowerButtons()
     {
         addObject(new WaterTowerButton(), 1100, 720);
         //addObject(new FactoryTowerButton(), 1000, 720);
     }
+
     public static void addMetal()
     {
         numMetal++;
     }
+
     public static void addCatFood()
     {
         numCatFood++;
     }
+
     public static int getCatFood()
     {
         return numCatFood;
     }
+
     public static void takeCatFood()
     {
         numCatFood--;
     }
+
     public static void addWood()
     {
         numWood++;
     }
+
     public static void addStone()
     {
         numStone++;
     }
+
     public static void takeMetal()
     {
         numMetal--;
     }
+
     public static int getMetal()
     {
         return numMetal;
     }
+
     public static void takeWood()
     {
         numWood--;
     }
+
     public static int getWood()
     {
         return numWood;
     }
+
     public static void takeStone()
     {
         numStone--;
     }
+
     public static int getStone()
     {
         return numStone;
