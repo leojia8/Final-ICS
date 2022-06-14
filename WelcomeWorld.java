@@ -14,9 +14,9 @@ public class WelcomeWorld extends World
     public WelcomeWorld()
     {
         super(1200,800,1);
-        //image = new GreenfootImage("StartImage");
-        //image.scale(1200,800);
-        //setBackground(image);
+        image = new GreenfootImage("Title Screen.jpg");
+        image.scale(1200,800);
+        setBackground(image);
         addObject(begin, 1280/2, 720);
         
         
