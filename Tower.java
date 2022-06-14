@@ -6,9 +6,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Tower extends Actor
+public abstract class Tower extends Actor
 {
-    
+    protected int stunTimer = 120;
+    protected boolean stun;
     protected int type;
     /**
      * Act - do whatever the Tower wants to do. This method is called whenever
@@ -39,7 +40,8 @@ public class Tower extends Actor
     
     protected void stun()
     {
-        
+        stun = true;
+        stunTimer = 60;
     }
     
     

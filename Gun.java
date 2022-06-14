@@ -17,19 +17,33 @@ public class Gun extends Tower
     private GreenfootImage image = new GreenfootImage("water.png"); ;
     private int radius = 1000;
     public Gun(){
-        
+
         //gifImage = new GifImage(master);
         //gifImage.resizeImages(141, 264);
         setImage(image);       
         image.scale(100,100);
         image.rotate(270);
     }
+
     public void act()
     {
-        //if (checked() != true){
-        enemyDetector();
-        //}
+        if(stun)
+        {
+            stunTimer--;
+            if(stunTimer <= 0)
+            {
+                stun = false;
+            }
+        }
+        else
+        {
+
+            //if (checked() != true){
+            enemyDetector();
+            //}
+        }
     }
+
     public void enemyDetector(){
         List<Cat> enemies = getObjectsInRange(radius, Cat.class);
         for (Cat fat: enemies){
@@ -38,28 +52,28 @@ public class Gun extends Tower
             bullet.turnTowards(fat.getX(),fat.getY());
             turnTowards(fat.getX(), fat.getY());
         }
-        
+
     }
     /**
      * public void addedToWorld(World w){
-        if (checked() != true){
-            getWorld().removeObject(this);
-        }
-        else{
-            setImage(image);       
-            image.scale(100,100);
-        }
-        
+    if (checked() != true){
+    getWorld().removeObject(this);
     }
-     private boolean checked(){
-        Square square = (Square)getOneIntersectingObject(Square.class);
-        Player player = (Player)getOneIntersectingObject(Player.class);
-        Resources r = (Resources)getOneIntersectingObject(Resources.class);
-        if (square != null || player != null || r != null){
-            return false;
-        }
-        return true;
+    else{
+    setImage(image);       
+    image.scale(100,100);
+    }
+
+    }
+    private boolean checked(){
+    Square square = (Square)getOneIntersectingObject(Square.class);
+    Player player = (Player)getOneIntersectingObject(Player.class);
+    Resources r = (Resources)getOneIntersectingObject(Resources.class);
+    if (square != null || player != null || r != null){
+    return false;
+    }
+    return true;
     }
      */
-    
+
 }
