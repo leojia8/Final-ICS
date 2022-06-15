@@ -220,7 +220,7 @@ public class GameWorld  extends World
         addTowerButtons();
         
         
-        addObject(new Grey(), 1000, 720);
+        //addObject(new Grey(), 1000, 720);
     }
 
     public void act()
