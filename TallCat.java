@@ -13,7 +13,7 @@ public class TallCat extends Cat
 
     public TallCat()
     {
-        HP = 200;
+        HP = 20;
         hpBar = new StatBar(HP, HP, this, 45, 5, 60, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
 
         gifImage = new GifImage(master);
@@ -29,7 +29,7 @@ public class TallCat extends Cat
         // Add your action code here.
         hpBar.update(HP);
         setImage( gifImage.getCurrentImage() );
-        move();
+        moveAlongPath(4);
         super.act();
 
     }

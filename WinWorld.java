@@ -9,6 +9,7 @@ import greenfoot.*;
 public class WinWorld extends World
 {
     private GreenfootImage image;
+    
     /**
      * Constructor for objects of class WinWorld
      */

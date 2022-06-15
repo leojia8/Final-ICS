@@ -16,7 +16,7 @@ public class NormalCat extends Cat
     public NormalCat()
     {
         noPath = false;
-        HP = 100;
+        HP = 25;
         hpBar = new StatBar(HP, HP, this, 30, 5, 60, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
         counter = 20;
         rotation = 90;

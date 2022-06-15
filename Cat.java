@@ -45,10 +45,10 @@ public abstract class Cat extends SuperSmoothMover
         }
     }
 
-    protected void move(){
+    protected void moveAlongPath(int speed){
         if(rotation == 90)
         {
-            setLocation(getX() + 2, getY());
+            setLocation(getX() + speed, getY());
             if(counter <= 0)
             {
                 Square s = (Square)getOneObjectAtOffset(80, 0, Square.class);
@@ -62,7 +62,7 @@ public abstract class Cat extends SuperSmoothMover
         }
         else if(rotation == 0)
         {
-            setLocation(getX(), getY() - 2);
+            setLocation(getX(), getY() - speed);
             if(counter <= 0)
             {
                 Square s = (Square)getOneObjectAtOffset(0, -80, Square.class);
@@ -76,7 +76,7 @@ public abstract class Cat extends SuperSmoothMover
         }
         else if(rotation == 180)
         {
-            setLocation(getX(), getY() + 2);
+            setLocation(getX(), getY() + speed);
             if(counter <= 0)
             {
                 Square s = (Square)getOneObjectAtOffset(0, 80, Square.class);
@@ -90,7 +90,7 @@ public abstract class Cat extends SuperSmoothMover
         }
         else if(rotation == 270)
         {
-            setLocation(getX() - 2, getY());
+            setLocation(getX() - speed, getY());
             if(counter <= 0)
             {
                 Square s = (Square)getOneObjectAtOffset(-80, 0, Square.class);
