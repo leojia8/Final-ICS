@@ -23,9 +23,15 @@ public class WaterTowerButton extends TowerButton
         
     }
     public void act(){
-        
+        onClick();
     }
-    
+    public void onClick()
+    {
+        if(Greenfoot.mouseClicked(this))
+        {
+            getWorld().addObject(new Gun(), 600, 600);
+        }
+    }
     
     
     
