@@ -23,6 +23,7 @@ public abstract class TowerButton extends Actor
     
     public void act()
     {
+        /**
         if(Greenfoot.mouseClicked(this))
         {
             if(type == 0)
@@ -38,7 +39,8 @@ public abstract class TowerButton extends Actor
             {
                 
             }
+            **/
             
         }
     }
-}
+

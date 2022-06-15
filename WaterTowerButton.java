@@ -22,6 +22,9 @@ public class WaterTowerButton extends TowerButton
         setImage(image);
         
     }
+    public void act(){
+        
+    }
     
     
     
