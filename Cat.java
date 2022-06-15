@@ -42,6 +42,10 @@ public abstract class Cat extends SuperSmoothMover
                 getWorld().removeObject(this);
 
             }
+            if (HP <= 0)
+            {
+                getWorld().removeObject(this);
+            }
         }
     }
 

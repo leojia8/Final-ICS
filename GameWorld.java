@@ -73,7 +73,7 @@ public class GameWorld  extends World
         numMetal = 5;
         numCatFood = 0;
         addObject(counter, 600, 200);
-        setPaintOrder(Counter.class,Cat.class, StatBar.class, Projectile.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Square.class, Grey.class  );
+        setPaintOrder(Counter.class,Cat.class, StatBar.class, Projectile.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, Square.class, Grey.class  );
 
         r1.add(new NormalCat());
         r1.add(new NormalCat());

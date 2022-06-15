@@ -40,7 +40,6 @@ public class BossCat extends Cat
 
     public void act()
     {
-        super.act();
         
         hpBar.update(HP);
         setImage( gifImage.getCurrentImage() );
@@ -140,9 +139,10 @@ public class BossCat extends Cat
             Explosion e = new Explosion();
             getWorld().addObject(e, getX(), getY());
             
-            getWorld().removeObject(this);
             
         }
+        
+        super.act();
     }
 
 }
