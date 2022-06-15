@@ -44,7 +44,6 @@ public class BossRing extends Actor
             else
             {
                 getWorld().removeObject(this);
-                System.out.println("hi");
             }
 
         }

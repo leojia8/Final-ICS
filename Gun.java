@@ -14,8 +14,8 @@ public class Gun extends Tower
      */
     //private static GifImage master = new GifImage("WaterTower.gif");
     //private GifImage gifImage;
-    private GreenfootImage image = new GreenfootImage("water.png"); ;
-    private int radius = 1000;
+    private GreenfootImage image = new GreenfootImage("gun.png"); ;
+    private int radius = 500;
     private int fireRate = 0;
     public Gun(){
 
