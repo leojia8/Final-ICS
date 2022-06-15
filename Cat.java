@@ -40,7 +40,8 @@ public abstract class Cat extends SuperSmoothMover
             else if (getX() >= 1210 || getX() <= -10)
             {
                 getWorld().removeObject(this);
-
+               
+                
             }
             if (HP <= 0)
             {
@@ -145,6 +146,7 @@ public abstract class Cat extends SuperSmoothMover
             if(noPath)
             {
                 this.setLocation(2000, 2000);
+                GameWorld.removeHealth();
             }
 
         }

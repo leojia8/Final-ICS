@@ -139,10 +139,12 @@ public class BossCat extends Cat
             Explosion e = new Explosion();
             getWorld().addObject(e, getX(), getY());
             
-            
+            Greenfoot.setWorld(new WinWorld());
         }
         
         super.act();
+        
+    
     }
 
 }

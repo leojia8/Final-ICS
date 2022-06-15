@@ -13,6 +13,7 @@ public class GameWorld  extends World
 {
     // instance variables - replace the example below with your own
     private int x;
+    private static int health = 10;
     private int spawnNumber;
     int path2[][] = {{1,1,1,0,0,1,1,1,1,1,0,0},
             {0,0,1,0,1,1,0,0,0,1,0,0},
@@ -72,7 +73,7 @@ public class GameWorld  extends World
 
         numMetal = 5;
         numCatFood = 0;
-        addObject(counter, 600, 200);
+        addObject(counter, 600, 40);
         setPaintOrder(Counter.class,Cat.class, StatBar.class, Projectile.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, Square.class, Grey.class  );
 
         r1.add(new NormalCat());
@@ -221,6 +222,7 @@ public class GameWorld  extends World
         
         
         addObject(new Grey(), 1000, 720);
+        addObject(new HealthActor(), 180, 100);
     }
 
     public void act()
@@ -233,6 +235,14 @@ public class GameWorld  extends World
 
     }
 
+    public static int getHP()
+    {
+        return health;
+    }
+    public static void removeHealth()
+    {
+        health--;
+    }
     private void spawnCats()
     {
         showText("Round " + round, 1100, 25);
