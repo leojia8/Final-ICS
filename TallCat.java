@@ -130,6 +130,7 @@ public class TallCat extends Cat
             if(noPath)
             {
                 this.setLocation(2000, 2000);
+                GameWorld.removeHealth();
             }
 
         }

@@ -13,7 +13,7 @@ public class GameWorld  extends World
 {
     // instance variables - replace the example below with your own
     private int x;
-    private static int health = 10;
+    private static int health;
     private int spawnNumber;
     int path2[][] = {{1,1,1,0,0,1,1,1,1,1,0,0},
             {0,0,1,0,1,1,0,0,0,1,0,0},
@@ -68,6 +68,7 @@ public class GameWorld  extends World
         spawnTimer = 600;
         numWood = 5;
         round = 1;
+        health = 10;
 
         numWood = 500;
 
@@ -242,6 +243,10 @@ public class GameWorld  extends World
     public static void removeHealth()
     {
         health--;
+        if(health <= 0)
+        {
+            //Greenfoot.setWorld(new LoseWorld());
+        }
     }
     private void spawnCats()
     {
