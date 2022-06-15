@@ -9,7 +9,7 @@ import greenfoot.*;
 public class WinWorld extends World
 {
     private GreenfootImage image;
-    
+    private TextButton begin = new TextButton("Restart", 100, Color.BLACK, Color.WHITE);
     /**
      * Constructor for objects of class WinWorld
      */
@@ -20,11 +20,19 @@ public class WinWorld extends World
         image.scale(1200,800);
         setBackground(image);
         addObject(new Victory(), 600, 100);
+        addObject(begin, 1280/2, 720);
     }
     
     
 
-    
+    public void act()
+    {
+        //starts the simulation when the start button is clicked
+        if (Greenfoot.mouseClicked(begin)){
+            WelcomeWorld welcomeworld = new WelcomeWorld();
+            Greenfoot.setWorld(welcomeworld);
+        } 
+    }
     
   
 }
