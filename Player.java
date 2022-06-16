@@ -21,7 +21,8 @@ public class Player extends Actor
     private boolean addedRadius;
     private int health;
     private boolean moving;
-
+    private GifImage idleImage;
+    private GreenfootImage activeImage;
     /**
      * Constructor for objects of class Dog
      */
@@ -29,7 +30,10 @@ public class Player extends Actor
     {
         
         //Player starts with some beginning resources 
-        
+        activeImage = new GreenfootImage("Player.png");
+        activeImage.scale(50, 62);
+        idleImage = new GifImage("idle.gif");
+        idleImage.resizeImages(50, 62);
         collectingCounter = 20;
         orientation = 4;
         addedRadius = false;
@@ -42,6 +46,7 @@ public class Player extends Actor
     {
         //followMouse();
         // in act method (or method called by it) Taken from DanPost the legend
+        
         if(Greenfoot.isKeyDown("C"))
         {
             collecting = true;
@@ -65,7 +70,14 @@ public class Player extends Actor
         }
         // 1 = up, 2 = right, 3 = down, 4 = left
         collectingCounter--;
-
+        if(collecting == false)
+        {
+            setImage( idleImage.getCurrentImage() );
+        }
+        else
+        {
+            setImage(activeImage);
+        }
         if(Greenfoot.isKeyDown("down") && getY() < 780 )
         {
             TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
