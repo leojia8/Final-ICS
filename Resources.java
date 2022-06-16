@@ -31,6 +31,8 @@ public abstract class Resources extends Actor
             Square square = (Square)getOneIntersectingObject(Square.class);
             Player player = (Player)getOneIntersectingObject(Player.class);
             Resources r = (Resources)getOneIntersectingObject(Resources.class);
+            Grey g = (Grey)getOneIntersectingObject(Grey.class);
+            TowerButton b = (TowerButton)getOneIntersectingObject(TowerButton.class);
             if(square != null)
             {
                 setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
@@ -41,6 +43,14 @@ public abstract class Resources extends Actor
                 setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
             }
             else if(r != null)
+            {
+                setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
+            }
+            else if(b != null)
+            {
+                setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
+            }
+            else if(g != null)
             {
                 setLocation(Greenfoot.getRandomNumber(1100), Greenfoot.getRandomNumber(700));
             }

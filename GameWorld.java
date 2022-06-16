@@ -52,6 +52,7 @@ public class GameWorld  extends World
     private Queue<Cat> r8 = new LinkedList<Cat>();
     private Queue<Cat> r9 = new LinkedList<Cat>();
     private Queue<Cat> r10 = new LinkedList<Cat>();
+    private int resourceChance;
     /**
      * Constructor for objects of class GameWorld
      */
@@ -65,11 +66,11 @@ public class GameWorld  extends World
         //addObject(new BossCat(), 400, 300);
         levelConstructor();
         numStone = 5;
-        spawnTimer = 600;
+        spawnTimer = 1500;
         numWood = 5;
         round = 1;
         health = 10;
-
+        resourceChance = 100;
         numWood = 500;
 
         numMetal = 5;
@@ -256,6 +257,7 @@ public class GameWorld  extends World
         {
             if(round == 1)
             {
+                resourceChance = 220;
                 spawnTimer = 120;
                 Cat c = r1.peek();
                 if(c == null)
@@ -273,6 +275,7 @@ public class GameWorld  extends World
             {
                 spawnTimer = 110;
                 Cat c = r2.peek();
+                resourceChance = 300;
                 if(c == null)
                 {
                     round++;
@@ -288,6 +291,7 @@ public class GameWorld  extends World
             {
                 spawnTimer = 90;
                 Cat c = r3.peek();
+                resourceChance = 250;
                 if(c == null)
                 {
                     round++;
@@ -303,6 +307,7 @@ public class GameWorld  extends World
             {
                 spawnTimer = 90;
                 Cat c = r4.peek();
+                resourceChance = 300;
                 if(c == null)
                 {
                     round++;
@@ -318,6 +323,7 @@ public class GameWorld  extends World
             {
                 spawnTimer = 60;
                 Cat c = r5.peek();
+                resourceChance = 200;
                 if(c == null)
                 {
                     round++;
@@ -333,6 +339,7 @@ public class GameWorld  extends World
             {
                 spawnTimer = 50;
                 Cat c = r6.peek();
+                resourceChance = 400;
                 if(c == null)
                 {
                     round++;
@@ -348,6 +355,7 @@ public class GameWorld  extends World
             {
                 spawnTimer = 50;
                 Cat c = r7.peek();
+                resourceChance = 450;
                 if(c == null)
                 {
                     round++;
@@ -363,6 +371,7 @@ public class GameWorld  extends World
             {
                 spawnTimer = 10;
                 Cat c = r8.peek();
+                resourceChance = 600;
                 if(c == null)
                 {
                     round++;
@@ -393,6 +402,7 @@ public class GameWorld  extends World
             {
                 spawnTimer = 120;
                 Cat c = r10.peek();
+                resourceChance = 600;
                 if(c == null)
                 {
                     
@@ -411,8 +421,8 @@ public class GameWorld  extends World
 
     private void spawnResources()
     {
-        spawnNumber = Greenfoot.getRandomNumber(1000);
-        if(spawnNumber == 500)
+        spawnNumber = Greenfoot.getRandomNumber(resourceChance);
+        if(spawnNumber == 1)
         {
             int type = Greenfoot.getRandomNumber(3);
 
