@@ -22,6 +22,7 @@ public class NormalCat extends Cat
         rotation = 90;
         gifImage = new GifImage(master);
         gifImage.resizeImages(100, 87);
+        type = 4;
     }
 
     public void act()

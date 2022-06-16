@@ -19,6 +19,7 @@ public class EggCat extends Cat
         
         gifImage = new GifImage(master);
         gifImage.resizeImages(113, 125);
+        type = 3;
     }
 
     /**

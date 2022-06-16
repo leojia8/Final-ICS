@@ -14,8 +14,9 @@ public class BossCat extends Cat
     private GreenfootImage image;
     private int speed;
     private boolean reverse; 
-    
+
     private int counter;
+    private int counter2;
     private boolean justSpawned;
     private ArrayList<Tower> towers;
     private Tower targetTower;
@@ -29,18 +30,18 @@ public class BossCat extends Cat
         HP = 10000;
         hpBar = new StatBar(HP, HP, this, 100, 9, 100, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
         reverse = true;
+        type = 1;
         
-        counter = 15;
         justSpawned = true;
         speed = 1;
         gifImage = new GifImage("bosscat.gif");
         gifImage.resizeImages(110, 130);
-        
+        counter2 = 40;
     }
 
     public void act()
     {
-        moveAlongPath(1);
+        moveAlongPathCat(1);
         hpBar.update(HP);
         setImage( gifImage.getCurrentImage() );
         if(HP % 100 == 0)
@@ -90,17 +91,13 @@ public class BossCat extends Cat
         {
             WhiteOut w = new WhiteOut();
             getWorld().addObject(w, 600, 600);
-            
+
             getWorld().addObject(new NormalCat(), 160, 120);
-            
-            
+
             getWorld().addObject(new NormalCat(), 240, 440);
-            
-            
-            
+
             getWorld().addObject(new NormalCat(), 400, 760);
-            
-            
+
         }
         if(justSpawned)
         {
@@ -109,42 +106,118 @@ public class BossCat extends Cat
             getWorld().addObject(b, getX(), getY());
             justSpawned = false;
         }
-        counter--;
-        if(counter <= 0)
-        {
-
-            if(reverse)
-            {
-
-                speed--;
-                setLocation(getX(), getY() + speed/2);
-                if(speed == -5)
-                {
-                    reverse = false;
-                }
-            }
-            else if(reverse == false)
-            {
-                speed++;
-                setLocation(getX(), getY() + speed/2);
-                if(speed == 5)
-                {
-                    reverse = true;
-                }
-            }
-            counter = 15;
-        }
+        
         if(HP <= 0)
         {
             Explosion e = new Explosion();
             getWorld().addObject(e, getX(), getY());
-            
+
             Greenfoot.setWorld(new WinWorld());
         }
         
         super.act();
-        
-    
+
     }
 
+    private void moveAlongPathCat(int speed){
+        if(rotation == 90)
+        {
+            setLocation(getX() + speed, getY());
+            if(counter2 <= 0)
+            {
+                Square s = (Square)getOneObjectAtOffset(80, 0, Square.class);
+                if (s == null)
+                {
+                    noPath = true;
+
+                }
+                counter2 = 80;
+            }
+        }
+        else if(rotation == 0)
+        {
+            setLocation(getX(), getY() - speed);
+            if(counter2 <= 0)
+            {
+                Square s = (Square)getOneObjectAtOffset(0, -80, Square.class);
+                if(s == null)
+                {
+                    noPath = true;
+
+                }
+                counter2 = 80;
+            }
+        }
+        else if(rotation == 180)
+        {
+            setLocation(getX(), getY() + speed);
+            if(counter2 <= 0)
+            {
+                Square s = (Square)getOneObjectAtOffset(0, 80, Square.class);
+                if(s == null)
+                {
+                    noPath = true;
+
+                }
+                counter2 = 80;
+            }
+        }
+        else if(rotation == 270)
+        {
+            setLocation(getX() - speed, getY());
+            if(counter2 <= 0)
+            {
+                Square s = (Square)getOneObjectAtOffset(-80, 0, Square.class);
+
+                if(s == null)
+                {
+                    noPath = true;
+
+                }
+                counter2 = 80;
+            }
+        }
+        counter2--;
+
+        if(noPath)
+        {
+
+            Square s = (Square)getOneObjectAtOffset(-80, 0, Square.class);
+            Square s2 = (Square)getOneObjectAtOffset(0, 80, Square.class);
+            Square s3 = (Square)getOneObjectAtOffset(0, -80, Square.class);
+            Square s4 = (Square)getOneObjectAtOffset(80, 0, Square.class);
+
+            if(s != null && rotation != 90 && noPath == true)
+            {
+
+                rotation = 270;
+                noPath = false;
+            }
+
+            if(s3 != null && rotation != 180 && noPath == true)
+            {
+                rotation = 0;
+                noPath = false;
+            }
+            if(s2 != null && rotation != 0 && noPath == true)
+            {
+                rotation = 180;
+                noPath = false;
+
+            }
+
+            if(s4 != null && rotation != 270 && noPath == true)
+            {
+                rotation = 90;
+                noPath = false;
+            }
+
+            if(noPath)
+            {
+                this.setLocation(2000, 2000);
+                GameWorld.removeHealth();
+            }
+
+        }
+    }
 }

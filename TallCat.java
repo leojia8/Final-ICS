@@ -10,7 +10,7 @@ public class TallCat extends Cat
 {
     private static GifImage master = new GifImage("tallCatAdjusted.gif");
     private GifImage gifImage;
-
+    
     public TallCat()
     {
         HP = 20;
@@ -18,6 +18,8 @@ public class TallCat extends Cat
 
         gifImage = new GifImage(master);
         gifImage.resizeImages(141, 264);
+        type = 2;
+        counter = 10;
     }
 
     /**

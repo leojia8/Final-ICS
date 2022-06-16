@@ -82,14 +82,14 @@ public class GameWorld  extends World
         addObject(new Player(), 400, 400);
         //addObject(new NormalCat(), 0, 600);
         addObject(new EggCat(), 0, 600);
-        
+
         //addObject(new TallCat(), 400, 700);
         //addObject(new BossCat(), 400, 300);
         levelConstructor();
         numStone = 5;
         spawnTimer = 1500;
         numWood = 5;
-        round = 1;
+        round = 10;
         health = 10;
         resourceChance = 100;
         numWood = 5;
@@ -240,8 +240,7 @@ public class GameWorld  extends World
         r10.add(new NormalCat());
         r10.add(new NormalCat());
         addTowerButtons();
-        
-        
+
         addObject(new Grey(), 1000, 720);
         addObject(new HealthActor(), 180, 100);
     }
@@ -260,6 +259,7 @@ public class GameWorld  extends World
     {
         return health;
     }
+
     public static void removeHealth()
     {
         health--;
@@ -268,6 +268,7 @@ public class GameWorld  extends World
             //Greenfoot.setWorld(new LoseWorld());
         }
     }
+
     private void spawnCats()
     {
         showText("Round " + round, 1100, 25);
@@ -424,15 +425,22 @@ public class GameWorld  extends World
                 resourceChance = 600;
                 if(c == null)
                 {
-                    
+
                 }
                 else
                 {
-                    if(c == BossCat.class)
+                    if(c.getType() == 1)
                     {
-                        
+                        addObject(c, 0, 600);
                     }
-                    addObject(c, 0, 600);
+                    else if(c.getType() == 2)
+                    {
+                        addObject(c, 0, 600);
+                    }
+                    else
+                    {
+                        addObject(c, 0, 600);
+                    }
                     r10.remove();
                 }
             }

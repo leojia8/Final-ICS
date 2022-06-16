@@ -16,6 +16,7 @@ public abstract class Cat extends SuperSmoothMover
     protected boolean noPath;
     protected StatBar hpBar;
     protected int HP;
+    protected int type;
     public Cat ()
     {
         
@@ -169,5 +170,10 @@ public abstract class Cat extends SuperSmoothMover
     public void damage(int damage)
     {
         health = health - damage;
+    }
+    
+    public int getType()
+    {
+        return type;
     }
 }
