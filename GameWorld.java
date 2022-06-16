@@ -92,7 +92,7 @@ public class GameWorld  extends World
         round = 1;
         health = 10;
         resourceChance = 100;
-        numWood = 100;
+        numWood = 5;
         numMetal = 5;
         numCatFood = 0;
         addObject(counter, 600, 40);
