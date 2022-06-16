@@ -40,72 +40,7 @@ public abstract class Projectile extends Actor
 
     public void act()
     {
-        //To make sure the bullet does not kill the object shooting it. 
-        immuneTimer--;
-
-        //If the bullet has not found a target.
-        if(target)
-        {
-            target = false;
-
-            //targets class
-            targetClosest();
-            if(targetCat != null && targetCat.getWorld() != null)
-            {
-                turnTowardsTarget();
-
-                //Important: Set image only after the target has been confirmed. 
-                setImage(image);
-                
-            }
-            else
-            {
-                target = true;
-                
-            }
-
-        }
-        //makes the bullet move
-        move (3);
-
-        //If any of these objects are touching the bullet the bullet will kill them. 
-
-        if(target == true)
-        {   
-
-            getWorld().removeObject(this);
-        }
-
-        else if(getWorld() != null)
-        {
-            Cat c = (Cat)getOneIntersectingObject(Cat.class);
-            if(c != null)
-            {
-                c.damage(damage);
-                getWorld().removeObject(this);
-            }
-
-            if(getWorld() != null)
-            {
-                if (getY() <= -10 || getY() >= 810 )
-                {
-                    getWorld().removeObject(this);
-
-                } 
-                else if (getX() >= 1210 || getX() <= -10)
-                {
-                    getWorld().removeObject(this);
-
-                }
-            }
-        }
-
-        else
-        {
-
-            //remove if outside world. 
-
-        }
+        
 
     }
 

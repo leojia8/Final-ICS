@@ -148,6 +148,7 @@ public abstract class Cat extends SuperSmoothMover
             {
                 this.setLocation(2000, 2000);
                 GameWorld.removeHealth();
+                getWorld().addObject(new Red(), 400, 400);
             }
 
         }

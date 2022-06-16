@@ -133,6 +133,7 @@ public class TallCat extends Cat
             {
                 this.setLocation(2000, 2000);
                 GameWorld.removeHealth();
+                getWorld().addObject(new Red(), 400, 400);
             }
 
         }

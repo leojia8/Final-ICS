@@ -71,6 +71,7 @@ public class Player extends Actor
             if(c != null)
             {
                 GameWorld.removeHealth();
+                getWorld().addObject(new Red(), 400, 400);
                 immuneCounter = 120;
             }
         }

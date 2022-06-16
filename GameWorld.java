@@ -79,7 +79,7 @@ public class GameWorld  extends World
     public GameWorld()
     {
         super(1200, 800, 1, false);
-        addObject(new Player(), 400, 400);
+        addObject(new Player(), 500, 400);
         //addObject(new NormalCat(), 0, 600);
         addObject(new EggCat(), 0, 600);
 
@@ -96,7 +96,7 @@ public class GameWorld  extends World
         numMetal = 5;
         numCatFood = 0;
         addObject(counter, 600, 40);
-        setPaintOrder(Counter.class, BossCat.class, Cat.class, StatBar.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, Square.class, Grey.class  );
+        setPaintOrder(Counter.class, BossCat.class, Cat.class, StatBar.class, Red.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, WhiteOut.class, Square.class, Grey.class  );
         r1.add(new NormalCat());
         r1.add(new NormalCat());
         r1.add(new NormalCat());
@@ -263,6 +263,7 @@ public class GameWorld  extends World
     public static void removeHealth()
     {
         health--;
+        
         if(health <= 0)
         {
             //Greenfoot.setWorld(new LoseWorld());
