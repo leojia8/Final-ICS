@@ -12,7 +12,7 @@ public abstract class Cat extends SuperSmoothMover
     protected int speed;
     protected int damage;
     protected int rotation = 90;
-    protected int counter = 20;
+    protected int counter = 40;
     protected boolean noPath;
     protected StatBar hpBar;
     protected int HP;
@@ -63,7 +63,7 @@ public abstract class Cat extends SuperSmoothMover
                     noPath = true;
 
                 }
-                counter = 40;
+                counter = 80;
             }
         }
         else if(rotation == 0)
@@ -77,7 +77,7 @@ public abstract class Cat extends SuperSmoothMover
                     noPath = true;
 
                 }
-                counter = 40;
+                counter = 80;
             }
         }
         else if(rotation == 180)
@@ -91,7 +91,7 @@ public abstract class Cat extends SuperSmoothMover
                     noPath = true;
 
                 }
-                counter = 40;
+                counter = 80;
             }
         }
         else if(rotation == 270)
@@ -106,7 +106,7 @@ public abstract class Cat extends SuperSmoothMover
                     noPath = true;
 
                 }
-                counter = 40;
+                counter = 80;
             }
         }
         counter--;
