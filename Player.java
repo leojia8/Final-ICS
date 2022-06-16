@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class Player extends Actor  
 {
-    
+
     private GreenfootImage idleImage1;
     private GreenfootImage idleImage2;
     private int collectingCounter;
@@ -23,12 +23,13 @@ public class Player extends Actor
     private boolean moving;
     private GifImage idleImage;
     private GreenfootImage activeImage;
+    private int immuneCounter;
     /**
      * Constructor for objects of class Dog
      */
     public Player()
     {
-        
+
         //Player starts with some beginning resources 
         activeImage = new GreenfootImage("Player.png");
         activeImage.scale(50, 62);
@@ -39,6 +40,7 @@ public class Player extends Actor
         addedRadius = false;
         health = 100;
         moving = false;
+        immuneCounter = 120;
         //let the player start looking down 
     }
 
@@ -46,7 +48,7 @@ public class Player extends Actor
     {
         //followMouse();
         // in act method (or method called by it) Taken from DanPost the legend
-        
+
         if(Greenfoot.isKeyDown("C"))
         {
             collecting = true;
@@ -55,18 +57,22 @@ public class Player extends Actor
         {
             collecting = false;
         }
-        
+
         if(addedRadius == false)
         {
             radius = new Radius();
             getWorld().addObject(radius, getX(), getY());
             addedRadius = true;
         }
-
-        Cat c = (Cat)getOneIntersectingObject(Cat.class);
-        if(c != null)
+        immuneCounter--;
+        if(immuneCounter <= 0)
         {
-            health = health - 5;
+            Cat c = (Cat)getOneIntersectingObject(Cat.class);
+            if(c != null)
+            {
+                GameWorld.removeHealth();
+                immuneCounter = 120;
+            }
         }
         // 1 = up, 2 = right, 3 = down, 4 = left
         collectingCounter--;
@@ -174,7 +180,5 @@ public class Player extends Actor
 
     }
 
-   
 
-    
 }
