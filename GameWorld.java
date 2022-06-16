@@ -6,8 +6,28 @@ import java.util.LinkedList;
 /**
  * Here we will need to implement many things including resource spawning, cat spawning, and how the lane is going to orient. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Current bugs !!
+ * the boss for some reason starts moving in the opposite direction
+ * the player needs to be smaller (idk how to rescale a gif)  
+ * 
+ * 
+ * New features !!
+ * add story 
+ * add a tutorial reel
+ * more towers (factory tower, slow tower)
+ * tower select (when the tower is selected it changes hue? and thats how you know what you are placing)
+ * more rounds
+ * add better graphics
+ * upgrade feature (UI pop up menu)
+ * 
+ * Balance changes !!
+ * the resourses should have lower health (forces the players to move more)
+ * resources should spawn more
+ * boss is kinda too OP (but this is without upgrades and w/o other features)
+ * 
+ * 
+ * Thomas Yang, Ivan Cai, Angus Feng, Leo Jia 
+ * THURSDAY JUNE 16, 2022
  */
 public class GameWorld  extends World
 {
@@ -59,9 +79,10 @@ public class GameWorld  extends World
     public GameWorld()
     {
         super(1200, 800, 1, false);
-        //addObject(new Player(), 400, 400);
+        addObject(new Player(), 400, 400);
         //addObject(new NormalCat(), 0, 600);
         addObject(new EggCat(), 0, 600);
+        
         //addObject(new TallCat(), 400, 700);
         //addObject(new BossCat(), 400, 300);
         levelConstructor();
@@ -70,13 +91,18 @@ public class GameWorld  extends World
         numWood = 5;
         round = 1;
         health = 10;
+<<<<<<< Updated upstream
         resourceChance = 100;
         numWood = 500;
+=======
+
+        numWood = 100;
+>>>>>>> Stashed changes
 
         numMetal = 5;
         numCatFood = 0;
         addObject(counter, 600, 40);
-        setPaintOrder(Counter.class,Cat.class, StatBar.class, Projectile.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, Square.class, Grey.class  );
+        setPaintOrder(Counter.class,Cat.class, StatBar.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, Square.class, Grey.class  );
 
         r1.add(new NormalCat());
         r1.add(new NormalCat());

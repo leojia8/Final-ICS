@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=GameWorld
-comment0.text=\r\n\ Here\ we\ will\ need\ to\ implement\ many\ things\ including\ resource\ spawning,\ cat\ spawning,\ and\ how\ the\ lane\ is\ going\ to\ orient.\ \r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Here\ we\ will\ need\ to\ implement\ many\ things\ including\ resource\ spawning,\ cat\ spawning,\ and\ how\ the\ lane\ is\ going\ to\ orient.\ \n\ \n\ Current\ bugs\ \!\!\n\ the\ boss\ for\ some\ reason\ starts\ moving\ in\ the\ opposite\ direction\n\ the\ player\ needs\ to\ be\ smaller\ (idk\ how\ to\ rescale\ a\ gif)\ \ \n\ \n\ \n\ New\ features\ \!\!\n\ add\ story\ \n\ add\ a\ tutorial\ reel\n\ more\ towers\ (factory\ tower,\ slow\ tower)\n\ tower\ select\ (when\ the\ tower\ is\ selected\ it\ changes\ hue?\ and\ thats\ how\ you\ know\ what\ you\ are\ placing)\n\ more\ rounds\n\ add\ better\ graphics\n\ upgrade\ feature\ (UI\ pop\ up\ menu)\n\ \n\ Balance\ changes\ \!\!\n\ the\ resourses\ should\ have\ lower\ health\ (forces\ the\ players\ to\ move\ more)\n\ resources\ should\ spawn\ more\n\ boss\ is\ kinda\ too\ OP\ (but\ this\ is\ without\ upgrades\ and\ w/o\ other\ features)\n\ \n\ \n\ Thomas\ Yang,\ Ivan\ Cai,\ Angus\ Feng,\ Leo\ Jia\ \n\ THURSDAY\ JUNE\ 16\n
 comment1.params=
 comment1.target=GameWorld()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ GameWorld\r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ GameWorld\n
 comment10.params=
 comment10.target=void\ addTowerButtons()
 comment11.params=

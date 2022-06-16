@@ -50,7 +50,7 @@ public class Gun extends Tower
         fireRate++;
         List<Cat> enemies = getObjectsInRange(radius, Cat.class);
         for (Cat fat: enemies){
-            if (fireRate >9){
+            if (fireRate >13){
                 fireRate = 0;
                 Bullet bullet = new Bullet();
                 getWorld().addObject(bullet, getX(), getY());
