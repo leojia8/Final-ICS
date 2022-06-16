@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class Player extends Actor  
 {
-   
+    
     private GreenfootImage idleImage1;
     private GreenfootImage idleImage2;
     private int collectingCounter;
@@ -27,9 +27,9 @@ public class Player extends Actor
      */
     public Player()
     {
-
+        
         //Player starts with some beginning resources 
-      
+        
         collectingCounter = 20;
         orientation = 4;
         addedRadius = false;
@@ -75,7 +75,7 @@ public class Player extends Actor
             }
             else 
             {
-                setLocation(getX(), getY() + 2);
+                setLocation(getX(), getY() + 5);
                 orientation = 3;
             }
 
@@ -89,7 +89,7 @@ public class Player extends Actor
             }
             else 
             {
-                setLocation(getX(), getY() - 2);
+                setLocation(getX(), getY() - 5);
                 orientation = 1;
             }
         }
@@ -102,7 +102,7 @@ public class Player extends Actor
             }
             else 
             {
-                setLocation(getX() - 2, getY());
+                setLocation(getX() - 5, getY());
                 orientation = 4;
             }
         }
@@ -115,7 +115,7 @@ public class Player extends Actor
             }
             else 
             {
-                setLocation(getX() + 2, getY());
+                setLocation(getX() + 5, getY());
                 orientation = 2;
             }
         }
