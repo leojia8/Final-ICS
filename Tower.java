@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class Tower extends Actor
 {
-    protected int stunTimer = 120;
+    protected int stunTimer = 180;
     protected boolean stun;
     protected int type;
     /**

@@ -409,6 +409,10 @@ public class GameWorld  extends World
                 }
                 else
                 {
+                    if(c == BossCat.class)
+                    {
+                        
+                    }
                     addObject(c, 0, 600);
                     r10.remove();
                 }
