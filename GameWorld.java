@@ -91,19 +91,12 @@ public class GameWorld  extends World
         numWood = 5;
         round = 1;
         health = 10;
-<<<<<<< Updated upstream
         resourceChance = 100;
-        numWood = 500;
-=======
-
         numWood = 100;
->>>>>>> Stashed changes
-
         numMetal = 5;
         numCatFood = 0;
         addObject(counter, 600, 40);
         setPaintOrder(Counter.class,Cat.class, StatBar.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, Square.class, Grey.class  );
-
         r1.add(new NormalCat());
         r1.add(new NormalCat());
         r1.add(new NormalCat());
