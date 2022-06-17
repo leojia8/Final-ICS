@@ -15,6 +15,7 @@ public class WaterTowerButton extends TowerButton
     private GreenfootImage[] images = new GreenfootImage[2];
     private boolean toggleWaterGun;
     private boolean toggle;
+    private boolean clickTwice;
     public WaterTowerButton()
     {
         super();
