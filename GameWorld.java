@@ -73,8 +73,8 @@ public class GameWorld  extends World
     private Queue<Cat> r9 = new LinkedList<Cat>();
     private Queue<Cat> r10 = new LinkedList<Cat>();
     private int resourceChance;
-    WaterTowerButton w = new WaterTowerButton();
-    
+    private WaterTowerButton w = new WaterTowerButton();
+    private boolean upgrading;
     /**
      * Constructor for objects of class GameWorld
      */
@@ -84,7 +84,7 @@ public class GameWorld  extends World
         addObject(new Player(), 500, 400);
         //addObject(new NormalCat(), 0, 600);
         addObject(new EggCat(), 0, 600);
-
+        upgrading = false;
         //addObject(new TallCat(), 400, 700);
         //addObject(new BossCat(), 400, 300);
         levelConstructor();
@@ -570,7 +570,10 @@ public class GameWorld  extends World
     {
         numStone--;
     }
-
+    public boolean getUpgrade()
+    {
+        return upgrading;
+    }
     public static int getStone()
     {
         return numStone;

@@ -21,6 +21,15 @@ public abstract class Tower extends Actor
     public void act()
     {
         // Add your action code here.
+        
+        if(Greenfoot.mouseClicked(this))
+        {
+            UpgradeButton b = new UpgradeButton(this, "+10 Damage", 10, Color.WHITE, Color.BLACK); 
+            
+
+            getWorld().addObject(b, 400, 400);
+            
+        }
     }
     protected void upgrade()
     {

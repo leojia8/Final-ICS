@@ -45,7 +45,12 @@ public class UpgradeButton extends Actor
         setImage (image);
         this.target = (Tower)owner;
     }
-
+    
+    
+    
+    
+    
+    
     public void act()
     {
         //if it is a special button that holds a value 
