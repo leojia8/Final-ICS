@@ -85,7 +85,7 @@ public class Player extends Actor
         {
             setImage(activeImage);
         }
-        if(Greenfoot.isKeyDown("down") && getY() < 780 )
+        if(Greenfoot.isKeyDown("S") && getY() < 780 )
         {
             TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
             if(a != null)
@@ -99,7 +99,7 @@ public class Player extends Actor
             }
 
         }
-        else if(Greenfoot.isKeyDown("up") && getY() > 20)
+        else if(Greenfoot.isKeyDown("W") && getY() > 20)
         {
             TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
             if(a != null)
@@ -112,7 +112,7 @@ public class Player extends Actor
                 orientation = 1;
             }
         }
-        else if(Greenfoot.isKeyDown("left") && getX() > 20)
+        else if(Greenfoot.isKeyDown("A") && getX() > 20)
         {
             TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
             if(a != null)
@@ -125,7 +125,7 @@ public class Player extends Actor
                 orientation = 4;
             }
         }
-        else if(Greenfoot.isKeyDown("right") && getX() < 1180)
+        else if(Greenfoot.isKeyDown("D") && getX() < 1180)
         {
             TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
             if(a != null)

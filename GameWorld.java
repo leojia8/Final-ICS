@@ -73,6 +73,8 @@ public class GameWorld  extends World
     private Queue<Cat> r9 = new LinkedList<Cat>();
     private Queue<Cat> r10 = new LinkedList<Cat>();
     private int resourceChance;
+    WaterTowerButton w = new WaterTowerButton();
+    
     /**
      * Constructor for objects of class GameWorld
      */
@@ -89,7 +91,7 @@ public class GameWorld  extends World
         numStone = 5;
         spawnTimer = 1500;
         numWood = 5;
-        round = 10;
+        round = 1;
         health = 10;
         resourceChance = 100;
         numWood = 5;
@@ -252,7 +254,8 @@ public class GameWorld  extends World
         addInTowers();
 
         spawnCats();
-
+        w.getToggle();
+        
     }
 
     public static int getHP()
@@ -496,15 +499,20 @@ public class GameWorld  extends World
     }
 
     public void addInTowers(){
-        if (Greenfoot.mouseClicked(null) && Greenfoot.getMouseInfo().getActor() == null && numWood>=5){
+        if (Greenfoot.mouseClicked(null) && Greenfoot.getMouseInfo().getActor() == null && numWood>=5 && numMetal >=2 && numStone >=1){
             addObject(new Gun(), Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
             numWood -= 5;
+            numMetal -=2;
+            numStone -=1;
         }
     }
 
     private void addTowerButtons()
     {
-        addObject(new WaterTowerButton(), 1100, 720);
+        
+        addObject(w, 1100, 720);
+        
+        
         //addObject(new FactoryTowerButton(), 1000, 720);
     }
 

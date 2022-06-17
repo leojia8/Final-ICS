@@ -13,6 +13,8 @@ public class WaterTowerButton extends TowerButton
      * Constructor for objects of class WaterTower
      */
     private GreenfootImage[] images = new GreenfootImage[2];
+    private boolean toggleWaterGun;
+    private boolean toggle;
     public WaterTowerButton()
     {
         super();
@@ -35,7 +37,8 @@ public class WaterTowerButton extends TowerButton
     {
         if(Greenfoot.mouseClicked(this))
         {
-            getWorld().addObject(new Gun(), 600, 600);
+            setImage(images[1]);
+            toggle = true;
         }
     }
     public void onHover()
@@ -44,11 +47,14 @@ public class WaterTowerButton extends TowerButton
         {
             setImage(images[1]); //Dark
         }
-        else if(Greenfoot.mouseMoved(null))
+        else if(Greenfoot.mouseMoved(null) && toggle!= true)
         {
             setImage(images[0]); //Light
         }
 
+    }
+    public boolean getToggle(){
+        return toggleWaterGun;
     }
     
     
