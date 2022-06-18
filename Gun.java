@@ -1,5 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
+import java.util.ArrayList;
+
 /**
  * Write a description of class Gun here.
  * 
@@ -17,8 +19,9 @@ public class Gun extends Tower
     private GreenfootImage image = new GreenfootImage("gun.png"); ;
     private int radius = 500;
     private int fireRate = 0;
-    
-
+    private int num;
+    private Gun targetGun;
+    private ArrayList<Gun> guns;
     public Gun(){
         //gifImage = new GifImage(master);
         //gifImage.resizeImages(100, 100);
@@ -31,7 +34,7 @@ public class Gun extends Tower
 
     public void act()
     {
-        
+
         if(stun)
         {
             stunTimer--;
@@ -42,24 +45,77 @@ public class Gun extends Tower
         }
         else
         {
-            if(Greenfoot.mouseClicked(this) && GameWorld.isUpgrading() == false && upgraded == false)
+            if(Greenfoot.mouseClicked(this) && GameWorld.isUpgrading() == false )
             {
-                
-                if(GameWorld.getCatFood() > 0)
+                if(GameWorld.getCatFood() >= 30)
                 {
-                    UpgradeButton b = new UpgradeButton(this, "Upgrade: x3 Damage / Cost: 1 Cat Food", 50, Color.BLACK, Color.WHITE); 
+                    ParagonButton p = new ParagonButton(this, "Upgrade to Paragon / Cost: 30 Cat Food", 50, Color.BLACK, Color.WHITE);
+                    getWorld().addObject(p, 600, 600);
                     CancelButton c = new CancelButton(this, "Cancel", 50, Color.BLACK, Color.WHITE);
-                    GameWorld.upgrading();
-                    getWorld().addObject(b, 400, 400);
                     getWorld().addObject(c, 1000, 400);
-                    
+                    GameWorld.upgrading();
+                }
+                if(upgraded == false)
+                {
+                    if(GameWorld.getCatFood() > 0)
+                    {
+                        UpgradeButton b = new UpgradeButton(this, "Upgrade: x3 Damage / Cost: 1 Cat Food", 50, Color.BLACK, Color.WHITE); 
+
+                        GameWorld.upgrading();
+                        getWorld().addObject(b, 400, 400);
+                        getWorld().removeObjects(getNeighbours(3000, true, CancelButton.class));
+                        CancelButton c = new CancelButton(this, "Cancel", 50, Color.BLACK, Color.WHITE);
+                        getWorld().addObject(c, 1000, 400);
+                        
+                    }
                 }
             }
+
 
             //if (checked() != true){
             enemyDetector();
             //}
         }
+    }
+
+    public void upgradeParagon()
+    {
+
+        getWorld().addObject(new WhiteOut(), getX(), getY());
+
+        List neighbors = getNeighbours(2000, true, Gun.class);
+        World I = getWorld();
+        if (!neighbors.isEmpty()) {
+            num =  I.getObjects(Gun.class).size();
+
+        }
+        int dam;
+        int speed;
+        
+        if(num > 30)
+        {
+            dam = 7;
+            speed = 10;
+        }
+        else if(num > 20)
+        {
+            dam = 4;
+            speed = 8;
+        }
+        else if(num > 10)
+        {
+            dam = 3;
+            speed = 6;
+        }
+        else 
+        {
+            dam = 1;
+            speed = 4;
+        }
+        getWorld().removeObjects(getNeighbours(3000, true, Gun.class));
+        getWorld().addObject(new Paragon(speed, dam), getX(), getY());
+        getWorld().removeObject(this);
+
     }
 
     public void enemyDetector(){
@@ -68,7 +124,7 @@ public class Gun extends Tower
         for (Cat fat: enemies){
             if (fireRate >13){
                 fireRate = 0;
-                Bullet bullet = new Bullet(damage);
+                Bullet bullet = new Bullet(damage, 4);
                 getWorld().addObject(bullet, getX(), getY());
                 bullet.turnTowards(fat.getX(),fat.getY());
                 turnTowards(fat.getX(), fat.getY());
@@ -99,5 +155,4 @@ public class Gun extends Tower
     }
      */
 
-    
 }

@@ -174,7 +174,19 @@ public abstract class Cat extends SuperSmoothMover
     {
         health = health - damage;
     }
-    
+    public void hit()
+    {
+        if(type != 1)
+        {
+            getWorld().addObject(new Explosion(), getX(), getY() - 20);
+            getWorld().removeObject(this);
+        }
+        else 
+        {
+            health = health - 55;
+            getWorld().addObject(new Explosion(), getX(), getY() - 21);
+        }
+    }
     public int getType()
     {
         return type;

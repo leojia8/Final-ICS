@@ -1,36 +1,35 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Explosion here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This class creates an explosion effect
  */
-public class Explosion extends Actor
+public class Explosion extends Actor 
 {
-    private GifImage master = new GifImage("explosion.gif");
-    private GifImage gifImage;
+    private GreenfootSound explosionSound;
+    private GreenfootImage image;
     private int counter;
-    /**
-     * Constructor for objects of class Explosion
-     */
+    private int explosionSoundsIndex;
     public Explosion()
     {
-        counter = 280;
-        gifImage = new GifImage(master);
-        gifImage.resizeImages(300,300);
-        gifImage.restartGif();
+        image = new GreenfootImage("explosion.png");
+        //Plays an explosion sound when created. 
+        //explosionSound = new GreenfootSound ("explosion.wav");
+        //explosionSound.setVolume(100);
+        counter = 60;
+        image.scale(140,140);
+        setImage(image);
+        //explosionSound.play();
     }
 
-    
     public void act()
     {
-        setImage( gifImage.getCurrentImage() );
+        
+        //removes after 1 second
         counter--;
         if(counter <= 0)
         {
-            Greenfoot.setWorld(new WinWorld());
             getWorld().removeObject(this);
         }
     }
+
 }

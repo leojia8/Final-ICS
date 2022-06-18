@@ -13,9 +13,9 @@
         /**
          * Constructor for objects of class Code
          */
-        public Code()
-        {
-        }
+        //public Code()
+        //{
+        //}
     
         /**
          * An example of a method - replace this comment with your own

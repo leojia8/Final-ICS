@@ -6,9 +6,9 @@ import java.util.List;
  * @version April 2022
  * @Credits: Alex Li and Jordan Cohen
  */
-public class CancelButton extends Actor
+public class ParagonButton extends Actor
 {
-    private Tower target;
+    private Gun target;
     private String text;
     private GreenfootImage image;
 
@@ -32,7 +32,7 @@ public class CancelButton extends Actor
      * @param Color touchColour  the colour of the words on the button when pressed/touched, it also becomes the background color when the button
      * is not pressed
      */
-    public CancelButton(Tower owner, String theText, int textSize, Color buttonColor, Color touchColor)
+    public ParagonButton(Gun owner, String theText, int textSize, Color buttonColor, Color touchColor)
     {
         text = theText;
         this.textSize=textSize;
@@ -43,7 +43,7 @@ public class CancelButton extends Actor
         //Draws the button
         drawButton();
         setImage (image);
-        this.target = (Tower)owner;
+        this.target = (Gun)owner;
     }
     
     
@@ -59,8 +59,10 @@ public class CancelButton extends Actor
 
             
             GameWorld.stopUpgrading();
+            target.upgradeParagon();
             getWorld().removeObjects(getNeighbours(3000, true, UpgradeButton.class));
-            getWorld().removeObjects(getNeighbours(3000, true, ParagonButton.class));
+            getWorld().removeObjects(getNeighbours(3000, true, CancelButton.class));
+            
             getWorld().removeObject(this);
         }
 

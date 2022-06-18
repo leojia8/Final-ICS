@@ -9,9 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bullet extends Projectile
 {
     private int damage;
-    public Bullet(int damage)
+    private int speed;
+    public Bullet(int damage, int speed)
     {
         this.damage = damage;
+        this.speed = speed;
     }
     /**
      * Act - do whatever the Bullet wants to do. This method is called whenever
@@ -19,7 +21,7 @@ public class Bullet extends Projectile
      */
     public void act()
     {
-       move(4);
+       move(speed);
     }
     
     public int getDamage()

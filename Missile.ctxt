@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Missile
+comment0.text=\r\n\ This\ class\ creates\ missle\ objects\ that\ target\ and\ follow\ instances\ of\ the\ Jeep\ class.\ \r\n
+comment1.params=
+comment1.target=Missile()
+comment2.params=
+comment2.target=void\ targetClosestCat()
+comment2.text=\r\n\ Private\ method,\ called\ by\ act(),\ that\ constantly\ checks\ for\ closer\ targets.\ Borrowed\ from\r\n\ Mr.\ Cohen's\ bug\ simulation\ project.\ \r\n
+comment3.params=
+comment3.target=void\ moveTowardOrDestroyJeep()
+comment3.text=\r\n\ Private\ method,\ called\ by\ act(),\ that\ moves\ toward\ the\ target,\r\n\ or\ explodes\ it\ if\ within\ range.\ Borrowed\ from\ Mr.Cohen's\ bug\ simulation\ project.\r\n
+comment4.params=
+comment4.target=void\ act()
+numComments=5

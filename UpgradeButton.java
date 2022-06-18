@@ -60,6 +60,7 @@ public class UpgradeButton extends Actor
             target.upgrade();
             GameWorld.stopUpgrading();
             getWorld().removeObjects(getNeighbours(3000, true, CancelButton.class));
+            getWorld().removeObjects(getNeighbours(3000, true, ParagonButton.class));
             getWorld().removeObject(this);
         }
 

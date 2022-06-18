@@ -91,17 +91,19 @@ public class GameWorld  extends World
         //addObject(new TallCat(), 400, 700);
         //addObject(new BossCat(), 400, 300);
         levelConstructor();
-        numStone = 5;
+        
         spawnTimer = 1500;
-        numWood = 5;
+        numStone = 5000;
+        numWood = 5000;
+        numMetal = 1000;
+        numCatFood = 1000;
         round = 1;
         health = 10;
         resourceChance = 100;
-        numWood = 5;
-        numMetal = 5;
-        numCatFood = 0;
+        
+        
         addObject(counter, 600, 40);
-        setPaintOrder(UpgradeButton.class, CancelButton.class, Counter.class, BossCat.class, Cat.class, StatBar.class, Red.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, WhiteOut.class, Square.class, Grey.class  );
+        setPaintOrder(ParagonButton.class, UpgradeButton.class, CancelButton.class, Missile.class, Counter.class, BossCat.class, Cat.class, StatBar.class, Red.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, WhiteOut.class, Square.class, Grey.class  );
         r1.add(new NormalCat());
         r1.add(new NormalCat());
         r1.add(new NormalCat());
@@ -248,7 +250,7 @@ public class GameWorld  extends World
 
         addObject(new Grey(), 1000, 720);
         addObject(new HealthActor(), 180, 100);
-        numCatFood = 10;
+        
         upgrading = false;
     }
 

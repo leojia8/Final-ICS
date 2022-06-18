@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Paragon
+comment0.text=\r\n\ The\ ultimate\ tower\ of\ destruction,\ the\ one\ who\ will\ exterminate\ the\ cats,\ there\ can\ be\ \r\n\ only\ one.\ Stats\ based\ on\ number\ of\ towers\ on\ screen.\ Inspired\ by\ btd6\ paragons.\ \r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ \r\n
+comment1.params=speed\ damage
+comment1.target=Paragon(int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ spawnMissles()
+comment4.params=
+comment4.target=void\ enemyDetector()
+numComments=5
