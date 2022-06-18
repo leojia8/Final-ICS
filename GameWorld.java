@@ -31,7 +31,7 @@ import java.util.LinkedList;
  */
 public class GameWorld  extends World
 {
-    // instance variables - replace the example below with your own
+    // 
     private int x;
     private static int health;
     private int spawnNumber;
@@ -62,6 +62,8 @@ public class GameWorld  extends World
     private Counter counter = new Counter();
     private int spawnTimer;
     private int round;
+    
+    //Creating the enemy rounds in a linked list queue
     private Queue<Cat> r1 = new LinkedList<Cat>();
     private Queue<Cat> r2 = new LinkedList<Cat>();
     private Queue<Cat> r3 = new LinkedList<Cat>();
@@ -77,12 +79,13 @@ public class GameWorld  extends World
     private boolean upgrading;
     /**
      * Constructor for objects of class GameWorld
+     * this adds the player into the game
+     * This sets up the game with startug materials setting the round and health 
      */
     public GameWorld()
     {
         super(1200, 800, 1, false);
         addObject(new Player(), 500, 400);
-        //addObject(new NormalCat(), 0, 600);
         addObject(new EggCat(), 0, 600);
         upgrading = false;
         //addObject(new TallCat(), 400, 700);
