@@ -17,18 +17,21 @@ public class Gun extends Tower
     private GreenfootImage image = new GreenfootImage("gun.png"); ;
     private int radius = 500;
     private int fireRate = 0;
-    public Gun(){
+    
 
+    public Gun(){
         //gifImage = new GifImage(master);
         //gifImage.resizeImages(100, 100);
         setImage(image);       
         image.scale(100,100);
         image.rotate(270);
+        type = 0;
+        upgraded = false;
     }
 
     public void act()
     {
-         
+        
         if(stun)
         {
             stunTimer--;
@@ -39,6 +42,19 @@ public class Gun extends Tower
         }
         else
         {
+            if(Greenfoot.mouseClicked(this) && GameWorld.isUpgrading() == false && upgraded == false)
+            {
+                
+                if(GameWorld.getCatFood() > 0)
+                {
+                    UpgradeButton b = new UpgradeButton(this, "Upgrade: x3 Damage / Cost: 1 Cat Food", 50, Color.BLACK, Color.WHITE); 
+                    CancelButton c = new CancelButton(this, "Cancel", 50, Color.BLACK, Color.WHITE);
+                    GameWorld.upgrading();
+                    getWorld().addObject(b, 400, 400);
+                    getWorld().addObject(c, 1000, 400);
+                    
+                }
+            }
 
             //if (checked() != true){
             enemyDetector();
@@ -52,12 +68,12 @@ public class Gun extends Tower
         for (Cat fat: enemies){
             if (fireRate >13){
                 fireRate = 0;
-                Bullet bullet = new Bullet();
+                Bullet bullet = new Bullet(damage);
                 getWorld().addObject(bullet, getX(), getY());
                 bullet.turnTowards(fat.getX(),fat.getY());
                 turnTowards(fat.getX(), fat.getY());
             }
-            
+
         }
 
     }
@@ -83,4 +99,5 @@ public class Gun extends Tower
     }
      */
 
+    
 }

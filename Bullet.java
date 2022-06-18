@@ -8,6 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends Projectile
 {
+    private int damage;
+    public Bullet(int damage)
+    {
+        this.damage = damage;
+    }
     /**
      * Act - do whatever the Bullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,5 +20,10 @@ public class Bullet extends Projectile
     public void act()
     {
        move(4);
+    }
+    
+    public int getDamage()
+    {
+        return damage;
     }
 }

@@ -11,47 +11,54 @@ public abstract class Tower extends Actor
     protected int stunTimer = 180;
     protected boolean stun;
     protected int type;
+    protected int damage;
+    protected boolean upgraded;
     /**
      * Act - do whatever the Tower wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Tower(){
         getImage().scale(60,60);
+        damage = 1;
+        
     }
+
     public void act()
     {
         // Add your action code here.
-        
-        if(Greenfoot.mouseClicked(this))
-        {
-            UpgradeButton b = new UpgradeButton(this, "+10 Damage", 10, Color.WHITE, Color.BLACK); 
-            
 
-            getWorld().addObject(b, 400, 400);
-            
-        }
     }
     protected void upgrade()
     {
-        if(type == 0)
+        if(GameWorld.getCatFood() > 0)
         {
-            
+            upgraded = true;
+            GameWorld.takeCatFood();
+            if(type == 0)
+            {
+                addDamage();
+            }
+            else if(type == 1)
+            {
+                
+            }
+            else if(type == 2)
+            {
+
+            }
         }
-        else if(type == 1)
-        {
-            
-        }
-        else if(type == 2)
-        {
-            
-        }
+
     }
-    
+
+    protected void addDamage()
+    {
+        damage = damage  * 3;
+    }
+
     protected void stun()
     {
         stun = true;
         stunTimer = 60;
     }
-    
-    
+
 }

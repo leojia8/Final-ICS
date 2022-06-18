@@ -76,7 +76,7 @@ public class GameWorld  extends World
     private Queue<Cat> r10 = new LinkedList<Cat>();
     private int resourceChance;
     private WaterTowerButton w = new WaterTowerButton();
-    private boolean upgrading;
+    private static boolean upgrading;
     /**
      * Constructor for objects of class GameWorld
      * this adds the player into the game
@@ -101,7 +101,7 @@ public class GameWorld  extends World
         numMetal = 5;
         numCatFood = 0;
         addObject(counter, 600, 40);
-        setPaintOrder(Counter.class, BossCat.class, Cat.class, StatBar.class, Red.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, WhiteOut.class, Square.class, Grey.class  );
+        setPaintOrder(UpgradeButton.class, CancelButton.class, Counter.class, BossCat.class, Cat.class, StatBar.class, Red.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, WhiteOut.class, Square.class, Grey.class  );
         r1.add(new NormalCat());
         r1.add(new NormalCat());
         r1.add(new NormalCat());
@@ -248,6 +248,8 @@ public class GameWorld  extends World
 
         addObject(new Grey(), 1000, 720);
         addObject(new HealthActor(), 180, 100);
+        numCatFood = 10;
+        upgrading = false;
     }
 
     public void act()
@@ -260,7 +262,10 @@ public class GameWorld  extends World
         w.getToggle();
         
     }
-
+    public static int getCatFood()
+    {
+        return numCatFood;
+    }
     public static int getHP()
     {
         return health;
@@ -529,10 +534,7 @@ public class GameWorld  extends World
         numCatFood++;
     }
 
-    public static int getCatFood()
-    {
-        return numCatFood;
-    }
+    
 
     public static void takeCatFood()
     {
@@ -568,14 +570,21 @@ public class GameWorld  extends World
     {
         return numWood;
     }
-
+    public static void upgrading()
+    {
+        upgrading = true;
+    }
     public static void takeStone()
     {
         numStone--;
     }
-    public boolean getUpgrade()
+    public static boolean isUpgrading()
     {
         return upgrading;
+    }
+    public static void stopUpgrading()
+    {
+        upgrading = false;
     }
     public static int getStone()
     {

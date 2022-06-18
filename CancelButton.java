@@ -6,7 +6,7 @@ import java.util.List;
  * @version April 2022
  * @Credits: Alex Li and Jordan Cohen
  */
-public class UpgradeButton extends Actor
+public class CancelButton extends Actor
 {
     private Tower target;
     private String text;
@@ -32,7 +32,7 @@ public class UpgradeButton extends Actor
      * @param Color touchColour  the colour of the words on the button when pressed/touched, it also becomes the background color when the button
      * is not pressed
      */
-    public UpgradeButton(Tower owner, String theText, int textSize, Color buttonColor, Color touchColor)
+    public CancelButton(Tower owner, String theText, int textSize, Color buttonColor, Color touchColor)
     {
         text = theText;
         this.textSize=textSize;
@@ -57,9 +57,9 @@ public class UpgradeButton extends Actor
 
         if (Greenfoot.mouseClicked(this)){
 
-            target.upgrade();
+            
             GameWorld.stopUpgrading();
-            getWorld().removeObjects(getNeighbours(3000, true, CancelButton.class));
+            getWorld().removeObjects(getNeighbours(3000, true, UpgradeButton.class));
             getWorld().removeObject(this);
         }
 

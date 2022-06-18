@@ -162,10 +162,12 @@ public abstract class Cat extends SuperSmoothMover
         w.addObject(hpBar, getX(), getY() + 20);
     }
     public void gettingHit(){
-        Actor bullet = getOneIntersectingObject(Bullet.class);
+        Bullet bullet = (Bullet)getOneIntersectingObject(Bullet.class);
         if (bullet != null){
+            int dam = bullet.getDamage();
             getWorld().removeObject(bullet);
-            HP -=1;
+            HP -= dam;
+            
         }
     }
     public void damage(int damage)
