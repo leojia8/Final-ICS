@@ -49,7 +49,7 @@ public class Player extends Actor
         //followMouse();
         // in act method (or method called by it) Taken from DanPost the legend
 
-        if(Greenfoot.isKeyDown("C"))
+        if(Greenfoot.isKeyDown("SPACE"))
         {
             collecting = true;
         }
