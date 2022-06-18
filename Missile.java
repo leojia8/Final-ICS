@@ -90,7 +90,6 @@ public class Missile extends SuperSmoothMover
 
         turnTowards(targetCat.getX(), targetCat.getY());
         move(6);
-        
 
     }
 
@@ -104,13 +103,7 @@ public class Missile extends SuperSmoothMover
         }
         else
         {
-            Cat j = (Cat)getOneIntersectingObject (Cat.class);
-            if (j != null)
-            {
-                j.hit();
-                getWorld().removeObject(this); // Remove myself
 
-            }
             //If the missile needs to retarget
             if(retarget == true)
             {
@@ -127,16 +120,30 @@ public class Missile extends SuperSmoothMover
             if (targetCat != null && targetCat.getWorld() != null)
             {
                 moveTowardOrDestroyJeep();
+
             }
             // If I can't find anything to move towards, move in the current direction I am travelling
             else
             {
                 move (speed);
+                if(getWorld() != null)
+                {
+                    if (getY() <= -10 || getY() >= 900 ){
+                        getWorld().removeObject(this);
+                    } else if (getX() >= 1210|| getX() <= -10){
+                        getWorld().removeObject(this);
+                    }
+                }
 
-                if (getY() <= -10 || getY() >= 900 ){
-                    getWorld().removeObject(this);
-                } else if (getX() >= 1210|| getX() <= -10){
-                    getWorld().removeObject(this);
+            }
+            if(getWorld()!= null)
+            {
+                Cat j = (Cat)getOneIntersectingObject (Cat.class);
+                if (j != null)
+                {
+                    j.hit();
+                    getWorld().removeObject(this); // Remove myself
+
                 }
             }
         }

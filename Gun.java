@@ -22,6 +22,12 @@ public class Gun extends Tower
     private int num;
     private Gun targetGun;
     private ArrayList<Gun> guns;
+    private int paragonCounter;
+    private int dam;
+    private int speed;
+    private int x;
+    private int y;
+    private boolean addedToWorld;
     public Gun(){
         //gifImage = new GifImage(master);
         //gifImage.resizeImages(100, 100);
@@ -30,12 +36,37 @@ public class Gun extends Tower
         image.rotate(270);
         type = 0;
         upgraded = false;
+        paragonCounter = -1;
+        addedToWorld = false;
     }
 
     public void act()
     {
+        if(addedToWorld == false)
+        {
+            x = getX();
+            y = getY();
+            addedToWorld = true;
+        }
 
-        if(stun)
+        if(paragonCounter >= 0)
+        {
+
+            setLocation(getX() + (Greenfoot.getRandomNumber(6)-3), getY() + (Greenfoot.getRandomNumber(6) - 3));
+            if(paragonCounter % 3 == 0)
+            {
+                setLocation(x, y);
+            }
+            paragonCounter--;
+            if(paragonCounter <= 0)
+            {
+                getWorld().addObject(new Paragon(speed, dam), getX(), getY());
+                getWorld().addObject(new WhiteOut(), getX(), getY());
+                getWorld().removeObjects(getNeighbours(3000, true, Gun.class));
+                getWorld().removeObject(this);
+            }
+        }
+        else if(stun)
         {
             stunTimer--;
             if(stunTimer <= 0)
@@ -66,11 +97,10 @@ public class Gun extends Tower
                         getWorld().removeObjects(getNeighbours(3000, true, CancelButton.class));
                         CancelButton c = new CancelButton(this, "Cancel", 50, Color.BLACK, Color.WHITE);
                         getWorld().addObject(c, 1000, 400);
-                        
+
                     }
                 }
             }
-
 
             //if (checked() != true){
             enemyDetector();
@@ -81,7 +111,6 @@ public class Gun extends Tower
     public void upgradeParagon()
     {
 
-        getWorld().addObject(new WhiteOut(), getX(), getY());
 
         List neighbors = getNeighbours(2000, true, Gun.class);
         World I = getWorld();
@@ -89,9 +118,7 @@ public class Gun extends Tower
             num =  I.getObjects(Gun.class).size();
 
         }
-        int dam;
-        int speed;
-        
+
         if(num > 30)
         {
             dam = 7;
@@ -112,10 +139,8 @@ public class Gun extends Tower
             dam = 1;
             speed = 4;
         }
-        getWorld().removeObjects(getNeighbours(3000, true, Gun.class));
-        getWorld().addObject(new Paragon(speed, dam), getX(), getY());
-        getWorld().removeObject(this);
 
+        paragonCounter = 90;
     }
 
     public void enemyDetector(){
