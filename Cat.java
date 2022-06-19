@@ -19,7 +19,7 @@ public abstract class Cat extends SuperSmoothMover
     protected int type;
     public Cat ()
     {
-        
+
     }
 
     /**
@@ -41,8 +41,7 @@ public abstract class Cat extends SuperSmoothMover
             else if (getX() >= 1210 || getX() <= -10)
             {
                 getWorld().removeObject(this);
-               
-                
+
             }
             if (HP <= 0)
             {
@@ -152,28 +151,32 @@ public abstract class Cat extends SuperSmoothMover
             }
 
         }
-        
-        
-        
-       
-    }
 
+        
+    }
     public void addedToWorld(World w){
         w.addObject(hpBar, getX(), getY() + 20);
     }
+
     public void gettingHit(){
         Bullet bullet = (Bullet)getOneIntersectingObject(Bullet.class);
         if (bullet != null){
             int dam = bullet.getDamage();
             getWorld().removeObject(bullet);
-            HP -= dam;
-            
+
+            if(type == 1)
+            {
+
+                HP = HP - (dam * 3);
+            }
         }
     }
+
     public void damage(int damage)
     {
         health = health - damage;
     }
+
     public void hit()
     {
         if(type != 1)
@@ -187,6 +190,7 @@ public abstract class Cat extends SuperSmoothMover
             getWorld().addObject(new Explosion(), getX(), getY() - 21);
         }
     }
+
     public int getType()
     {
         return type;
