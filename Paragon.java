@@ -10,6 +10,7 @@ import java.util.List;
  */
 public class Paragon extends Tower
 {
+    private GifImage gifImage;
     private GreenfootImage image = new GreenfootImage("gun.png"); ;
     private int radius = 2000;
     private int fireRate = 0;
@@ -24,6 +25,9 @@ public class Paragon extends Tower
         missleCounter = 20;
         this.damage = damage;
         this.speed = speed;
+        gifImage = new GifImage("WaterTowerUpgraded.gif");
+        gifImage.resizeImages(150, 180);
+        
     }
     public void act()
     {
@@ -67,6 +71,7 @@ public class Paragon extends Tower
         List<Cat> enemies = getObjectsInRange(radius, Cat.class);
         for (Cat fat: enemies){
             if (fireRate >4){
+                setImage( gifImage.getCurrentImage() );
                 fireRate = 0;
                 Bullet bullet = new Bullet(damage, speed);
                 getWorld().addObject(bullet, getX(), getY());

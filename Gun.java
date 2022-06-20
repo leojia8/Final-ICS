@@ -14,8 +14,8 @@ public class Gun extends Tower
      * Act - do whatever the Gun wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    //private static GifImage master = new GifImage("WaterTower.gif");
-    //private GifImage gifImage;
+    private static GifImage master = new GifImage("WaterTowerUpgraded.gif");
+    private GifImage gifImage;
     private GreenfootImage image = new GreenfootImage("gun.png"); ;
     private int radius = 500;
     private int fireRate = 0;
@@ -28,9 +28,10 @@ public class Gun extends Tower
     private int x;
     private int y;
     private boolean addedToWorld;
+    
     public Gun(){
-        //gifImage = new GifImage(master);
-        //gifImage.resizeImages(100, 100);
+        gifImage = new GifImage(master);
+        gifImage.resizeImages(100, 120);
         setImage(image);       
         image.scale(100,100);
         image.rotate(270);
@@ -101,7 +102,7 @@ public class Gun extends Tower
                     }
                 }
             }
-
+            
             //if (checked() != true){
             enemyDetector();
             //}
@@ -147,6 +148,10 @@ public class Gun extends Tower
         fireRate++;
         List<Cat> enemies = getObjectsInRange(radius, Cat.class);
         for (Cat fat: enemies){
+            if(upgraded)
+            {
+                setImage( gifImage.getCurrentImage() );
+            }
             if (fireRate >13){
                 fireRate = 0;
                 Bullet bullet = new Bullet(damage, 4);

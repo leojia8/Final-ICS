@@ -163,11 +163,15 @@ public abstract class Cat extends SuperSmoothMover
         if (bullet != null){
             int dam = bullet.getDamage();
             getWorld().removeObject(bullet);
-
+            
             if(type == 1)
             {
 
                 HP = HP - (dam * 3);
+            }
+            else
+            {
+                HP = HP - (dam);
             }
         }
     }
@@ -186,7 +190,7 @@ public abstract class Cat extends SuperSmoothMover
         }
         else 
         {
-            health = health - 55;
+            health = health - 70;
             getWorld().addObject(new Explosion(), getX(), getY() - 21);
         }
     }
