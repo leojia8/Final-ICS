@@ -2,10 +2,10 @@ import greenfoot.*;
 import java.util.List;
 import java.util.ArrayList;
 /**
- * Write a description of class BossRing here.
+ * A faint yellow circle that fades in and out around the boss for visual effect
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class BossRing extends Actor
 {
@@ -17,7 +17,7 @@ public class BossRing extends Actor
     private BossCat targetCat;
     private int spawnCounter;
     /**
-     * Constructor for objects of class BossRing
+     * Sets the master GIF image, resizes it to fit around the boss and sets variables for the fading effect
      */
     public BossRing()
     {
@@ -27,6 +27,9 @@ public class BossRing extends Actor
         justSpawned = true;
     }
 
+    /**
+     * If there is a Boss Cat in the world, follows the Boss Cat while fading in and out - else removes itself from the world
+     */
     public void act(){
         spawnCounter--;
         if(justSpawned && spawnCounter <= 10)

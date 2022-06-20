@@ -2,10 +2,11 @@ import greenfoot.*;
 
 
 /**
- * Write a description of class BossAttack here.
+ * A red circle that grows bigger every act, and faster over time, until it reaches a certain size, at which point it is removed from the world. 
+ * Acts as a visual indicator of a stun attack, by BossCat. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class BossAttack extends Actor
 {
@@ -15,7 +16,7 @@ public class BossAttack extends Actor
     private GreenfootImage image;
 
     /**
-     * Constructor for objects of class BossAttack
+     * Sets it's image to the red stun circle, and initializes some variables
      */
     public BossAttack()
     {
@@ -27,6 +28,9 @@ public class BossAttack extends Actor
         setImage(image);
     }
 
+    /**
+     * Causes the BossAttack circle to grow bigger by increasing amounts over time, then remove itself after 120 acts
+     */
     public void act()
     {
         num+= 20;
