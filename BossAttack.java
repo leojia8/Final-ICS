@@ -36,7 +36,7 @@ public class BossAttack extends Actor
         num+= 20;
         if(num % 10 == 0)
         {
-            image.scale(120 + num, 120 + num);
+            image.scale(120 + num + 5, 120 + num + 5);
             setImage(image);
         }
         counter++;
