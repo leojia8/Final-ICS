@@ -1,17 +1,18 @@
+import greenfoot.*;
+
 /**
- * Write a description of class WinWorld here.
+ * A class representing a end screen for the game, to be shown if the player wins. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 
-import greenfoot.*;
 public class WinWorld extends World
 {
     private GreenfootImage image;
     private TextButton begin = new TextButton("Restart", 100, Color.BLACK, Color.WHITE);
     /**
-     * Constructor for objects of class WinWorld
+     * Creates a new world, sets and resizes the background and adds a button that allows the user to replay the game.
      */
     public WinWorld()
     {
@@ -24,7 +25,9 @@ public class WinWorld extends World
     }
     
     
-
+    /**
+     * Restarts the simulation by setting the world back to the welcome world if the "restart" button is clicked. 
+     */
     public void act()
     {
         //starts the simulation when the start button is clicked

@@ -1,7 +1,7 @@
 
 import greenfoot.*;
 /**
- * Write a description of class StoryWorld here.
+ * A story menu for the simulation. Tells users the story of the game, as well as how to play.
  * 
  * @author (your name) 
  * @version (a version number or a date)
