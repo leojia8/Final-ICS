@@ -1,11 +1,11 @@
+import greenfoot.*;
+
 /**
  * Write a description of class NormalCat here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-
-import greenfoot.*;
 public class NormalCat extends Cat 
 {
     // instance variables - replace the example below with your own

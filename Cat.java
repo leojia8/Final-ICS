@@ -1,10 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Cat here.
+ * The abstract superclass for cats. Contains all necessary methods for it's subclasses (aside from BossCat, which has some extra functionality). 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * <p> Has an empty constructor because each cat subclass sets its own health, speed, type, etc.
+ * 
+ * <p>All cats have:
+ *  <p>- Health (and a corresponding health bar)
+ *  <p>- Speed
+ *  <p>- Sprites
+ * 
+ * @author Thomas Yang, Angus Feng
+ * @version June 2022
  */
 public abstract class Cat extends SuperSmoothMover
 {
@@ -23,10 +30,8 @@ public abstract class Cat extends SuperSmoothMover
     }
 
     /**
-     * Act - do whatever the Cat wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Checks if the cat has been hit by a projectile from a tower and removes the cat if it is off the world or has no more HP.
      */
-
     public void act()
     {
         //hpBar.update(HP);
@@ -50,6 +55,15 @@ public abstract class Cat extends SuperSmoothMover
         }
     }
 
+    /**
+     * A method that allows the cat to move along the path by using a rotation variable to see which way the cat is going.
+     * 
+     * <p>After a set counter, the cat will start to check if there are any more path squares in the direction it is moving. If there aren't any, 
+     * it will check around itself for any available path squares to move onto. If it does not find any, that means that the cat is at 
+     * the end of the world so it will remove itself and damage the player.
+     * 
+     * @param speed     Speed of the cat moving along the path - allows different cats to move at different speeds.
+     */
     protected void moveAlongPath(int speed){
         if(rotation == 90)
         {
@@ -154,10 +168,21 @@ public abstract class Cat extends SuperSmoothMover
 
         
     }
+    
+    /**
+     * Adds an hp bar object to follow every cat added to the world
+     * 
+     * @param w     The world that the cat and statbar are added to.
+     */
     public void addedToWorld(World w){
         w.addObject(hpBar, getX(), getY() + 20);
     }
 
+    /**
+     * Method that checks if the cat has been hit by a projectile from the towers - If it has, remove the bullet and damage the cat
+     * 
+     * <p> If the cat is a BossCat, it will take triple the damage
+     */
     public void gettingHit(){
         Bullet bullet = (Bullet)getOneIntersectingObject(Bullet.class);
         if (bullet != null){
@@ -195,6 +220,9 @@ public abstract class Cat extends SuperSmoothMover
         }
     }
 
+    /**
+     * Method to find the type of the cat.
+     */
     public int getType()
     {
         return type;
