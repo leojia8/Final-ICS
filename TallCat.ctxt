@@ -1,11 +1,10 @@
 #BlueJ class context
 comment0.target=TallCat
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ TallCat\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Subclass\ of\ cat\ -\ faster,\ weaker\ enemy.\r\n\ \r\n\ @author\ Thomas\ Yang,\ Leo\ Jia,\ Angus\ Feng\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=TallCat()
+comment1.text=\r\n\ Sets\ Hp\ and\ type\ variables,\ initializes\ an\ HP\ bar,\ and\ sets\ the\ GIF\ image.\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ TallCat\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-comment3.params=speed
-comment3.target=void\ moveAlongPathCat(int)
-numComments=4
+comment2.text=\r\n\ Updates\ the\ Hp\ bar\ to\ track\ damage\ done\ and\ moves\ the\ egg\ cat\ along\ the\ path\ at\ a\ set\ speed.\r\n\ \r\n\ <p>\ Uses\ the\ superclass\ act\ method\ to\ check\ if\ the\ cat\ needs\ to\ be\ removed\ from\ the\ world.\r\n
+numComments=3

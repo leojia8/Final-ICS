@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Write a description of class BossCat here.
+ * Subclass of cat - the ultimate boss enemy, spawned during round 10.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * <p> Has a lot of extra functionality including the ability to stun towers, the ability to spawn more cats and multiple extra visual effects
+ * 
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class BossCat extends Cat
 {
@@ -23,7 +25,7 @@ public class BossCat extends Cat
     private GifImage gifImage;
 
     /**
-     * Constructor for objects of class BossCat
+     * Sets Hp, type, speed, initializes an hp bar and sets the GIF image. Also has some other variables for the extra functionalities
      */
     public BossCat()
     {
@@ -39,9 +41,17 @@ public class BossCat extends Cat
         counter2 = 40;
     }
 
+    /**
+     * Moves the boss cat along the path, sets the GIF image and updates the hp bar - all pretty standard.
+     * <p> Every time the boss cat's hp is divisible by 100, do a stun attack in the form of a big expanding red circle that stuns towers.
+     * <p> Every time the boss cat's hp is divisible by 150, make a "whiteout" effect and spawn a few normal cats.
+     * <p> When the boss first spawns, add a Boss Ring, which is a small circle that fades in and out for visual effect.
+     * <p> Once the boss dies, add an explosion and go to win world. Otherwise, if the boss does not die it uses the superclass act method to 
+     * remove itself from the world.
+     */
     public void act()
     {
-        moveAlongPathCat(1);
+        moveAlongPath(1);
         hpBar.update(HP);
         setImage( gifImage.getCurrentImage() );
         if(HP % 100 == 0)
@@ -119,106 +129,4 @@ public class BossCat extends Cat
 
     }
 
-    private void moveAlongPathCat(int speed){
-        if(rotation == 90)
-        {
-            setLocation(getX() + speed, getY());
-            if(counter2 <= 0)
-            {
-                Square s = (Square)getOneObjectAtOffset(80, 0, Square.class);
-                if (s == null)
-                {
-                    noPath = true;
-
-                }
-                counter2 = 80;
-            }
-        }
-        else if(rotation == 0)
-        {
-            setLocation(getX(), getY() - speed);
-            if(counter2 <= 0)
-            {
-                Square s = (Square)getOneObjectAtOffset(0, -80, Square.class);
-                if(s == null)
-                {
-                    noPath = true;
-
-                }
-                counter2 = 80;
-            }
-        }
-        else if(rotation == 180)
-        {
-            setLocation(getX(), getY() + speed);
-            if(counter2 <= 0)
-            {
-                Square s = (Square)getOneObjectAtOffset(0, 80, Square.class);
-                if(s == null)
-                {
-                    noPath = true;
-
-                }
-                counter2 = 80;
-            }
-        }
-        else if(rotation == 270)
-        {
-            setLocation(getX() - speed, getY());
-            if(counter2 <= 0)
-            {
-                Square s = (Square)getOneObjectAtOffset(-80, 0, Square.class);
-
-                if(s == null)
-                {
-                    noPath = true;
-
-                }
-                counter2 = 80;
-            }
-        }
-        counter2--;
-
-        if(noPath)
-        {
-
-            Square s = (Square)getOneObjectAtOffset(-80, 0, Square.class);
-            Square s2 = (Square)getOneObjectAtOffset(0, 80, Square.class);
-            Square s3 = (Square)getOneObjectAtOffset(0, -80, Square.class);
-            Square s4 = (Square)getOneObjectAtOffset(80, 0, Square.class);
-
-            if(s != null && rotation != 90 && noPath == true)
-            {
-
-                rotation = 270;
-                noPath = false;
-            }
-
-            if(s3 != null && rotation != 180 && noPath == true)
-            {
-                rotation = 0;
-                noPath = false;
-            }
-            if(s2 != null && rotation != 0 && noPath == true)
-            {
-                rotation = 180;
-                noPath = false;
-
-            }
-
-            if(s4 != null && rotation != 270 && noPath == true)
-            {
-                rotation = 90;
-                noPath = false;
-            }
-
-            if(noPath)
-            {
-                this.setLocation(2000, 2000);
-                GameWorld.removeHealth();
-                getWorld().addObject(new Red(), 400, 400);
-            }
-
-        }
-    }
 }

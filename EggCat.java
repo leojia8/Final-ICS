@@ -26,7 +26,7 @@ public class EggCat extends Cat
     }
 
     /**
-     * Updates the Hp bar to track damage done and moves the cat along the path at a set speed.
+     * Updates the Hp bar to track damage done and moves the egg cat along the path at a set speed.
      * 
      * <p> Uses the superclass act method to check if the cat needs to be removed from the world.
      */
