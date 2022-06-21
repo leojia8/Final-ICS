@@ -1,10 +1,10 @@
 
 import greenfoot.*;
 /**
- * Write a description of class FactoryTower here.
+ * Subclass of tower - creates "cat food", a secondary resource used to upgrade towers
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class FactoryTower extends Tower
 {

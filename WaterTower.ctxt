@@ -1,12 +1,16 @@
 #BlueJ class context
 comment0.target=WaterTower
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Gun\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Subclass\ of\ tower\ -\ attacks\ cats,\ can\ be\ upgraded\ into\ a\ much\ stronger\ version\ (paragon).\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=WaterTower()
+comment1.text=\r\n\ Setting,\ scaling,\ resizing\ and\ rotating\ the\ GIF\ image,\ as\ well\ as\ initializing\ some\ necessary\ variables\ for\ upgrades\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Checks\ for\ and\ attacks\ any\ cats\ in\ range.\ Functionality\ to\ upgrade\ damage,\ to\ upgrade\ into\ a\ paragon\ (which\ removes\ nearby\ towers),\ \r\n\ and\ to\ be\ stunned\ by\ Boss\ Cat.\r\n\ <p>\ If\ clicked\ on\ by\ the\ user\ and\ the\ user\ has\ enough\ cat\ food,\ opens\ buttons\ which\ when\ clicked\ will\ upgrade\ the\ tower.\r\n
 comment3.params=
 comment3.target=void\ upgradeParagon()
+comment3.text=\r\n\ A\ method\ to\ upgrade\ a\ water\ tower\ into\ a\ paragon,\ with\ damage\ and\ speed\ values\ set\ depending\ on\ the\ amount\ of\ other\ nearby\ water\ towers\ \r\n\ sacrificed\ \r\n
 comment4.params=
 comment4.target=void\ enemyDetector()
+comment4.text=\r\n\ \r\n
 numComments=5

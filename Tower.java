@@ -2,10 +2,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * The abstract superclass for towers, which the player places to defend themselves from the cat hordes. Has functionality to upgrade towers using 
- * "cat food", with added functionality to increase the damage of the water tower
+ * "cat food", as well as a method to track and set the duration of the stun effect created by the Boss Cat.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * <p> As our towers (factory tower, which makes cat food, and water tower/paragon, which attacks cats) are very different, they don't have a lot of
+ * shared functionality.
+ * 
+ * @author Thomas Yang, Angus Feng 
+ * @version June 2022
  */
 public abstract class Tower extends Actor
 {
@@ -15,8 +18,7 @@ public abstract class Tower extends Actor
     protected int damage;
     protected boolean upgraded;
     /**
-     * Act - do whatever the Tower wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Scales the image, and sets damage for the attacking towers.
      */
     public Tower(){
         getImage().scale(60,60);
@@ -29,6 +31,10 @@ public abstract class Tower extends Actor
         // Add your action code here.
 
     }
+    
+    /**
+     * Functionality to upgrade towers - If a water tower has been upgraded, increase the damage by a set amount.
+     */
     protected void upgrade()
     {
         if(GameWorld.getCatFood() > 0)
@@ -51,11 +57,17 @@ public abstract class Tower extends Actor
 
     }
 
+    /**
+     * Applies the damage multiplier to upgraded towers.
+     */
     protected void addDamage()
     {
         damage = damage  * 3;
     }
 
+    /**
+     * Stuns towers, which makes them stop working for a set period of time.
+     */
     protected void stun()
     {
         stun = true;

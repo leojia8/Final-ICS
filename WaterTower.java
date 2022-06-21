@@ -3,10 +3,10 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Write a description of class Gun here.
+ * Subclass of tower - attacks cats, can be upgraded into a much stronger version (paragon).
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang, Angus Feng
+ * @version June 2022
  */
 public class WaterTower extends Tower
 {
@@ -25,6 +25,9 @@ public class WaterTower extends Tower
     private int y;
     private boolean addedToWorld;
     
+    /**
+     * Setting, scaling, resizing and rotating the GIF image, as well as initializing some necessary variables for upgrades
+     */
     public WaterTower(){
         gifImage = new GifImage(master);
         gifImage.resizeImages(100, 120);
@@ -37,6 +40,11 @@ public class WaterTower extends Tower
         addedToWorld = false;
     }
 
+    /**
+     * Checks for and attacks any cats in range. Functionality to upgrade damage, to upgrade into a paragon (which removes nearby towers), 
+     * and to be stunned by Boss Cat.
+     * <p> If clicked on by the user and the user has enough cat food, opens buttons which when clicked will upgrade the tower.
+     */
     public void act()
     {
         if(addedToWorld == false)
@@ -105,6 +113,10 @@ public class WaterTower extends Tower
         }
     }
 
+    /**
+     * A method to upgrade a water tower into a paragon, with damage and speed values set depending on the amount of other nearby water towers 
+     * sacrificed 
+     */
     public void upgradeParagon()
     {
 
@@ -140,6 +152,9 @@ public class WaterTower extends Tower
         paragonCounter = 90;
     }
 
+    /**
+     * A method that allows the water towers to detect enemies through use of iterative loop.
+     */
     public void enemyDetector(){
         fireRate++;
         List<Cat> enemies = getObjectsInRange(radius, Cat.class);

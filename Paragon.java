@@ -6,7 +6,7 @@ import java.util.List;
  * only one. Stats based on number of towers on screen. Inspired by btd6 paragons. 
  * 
  * @author Thomas Yang
- * 
+ * @version June 2022
  */
 public class Paragon extends Tower
 {
@@ -17,6 +17,14 @@ public class Paragon extends Tower
     private int missleCounter;
     private int damage;
     private int speed;
+    
+    /**
+     * Constructor for paragon, which sets, scales and rotates the upgraded image, as well as setting speed and damage which get passed in based
+     * on the amount of nearby towers sacrificed
+     * 
+     * @param speed     Speed of projectiles fired by the paragon, decided by the amount of towers sacrificed
+     * @param damage    Damage value of projectiles fired by the paragon, decided by the amount of towers sacrificed
+     */
     public Paragon(int speed, int damage)
     {
         setImage(image);       
@@ -29,6 +37,11 @@ public class Paragon extends Tower
         gifImage.resizeImages(150, 180);
         
     }
+    
+    /**
+     * Can be stunned for a certain period of time, otherwise fire missiles and do the stardard enemy check found in Water Tower to find and attack
+     * cats in the area.
+     */
     public void act()
     {
 
@@ -55,6 +68,9 @@ public class Paragon extends Tower
 
     }
     
+    /**
+     * Method to spawn 5 missiles on the paragon, which target the nearest cat.
+     */
     private void spawnMissles()
     {
         getWorld().addObject(new Missile(), getX(), getY());
@@ -65,7 +81,10 @@ public class Paragon extends Tower
         
     }
     
-    
+    /**
+     * A method that allows the paragon to detect cats through use of iterative loop - different from the enemy detector in Water Tower, as it
+     * cannot be upgraded and bullet speed is more fluid (depending on the amount of towers sacrificed).
+     */
     public void enemyDetector(){
         fireRate++;
         List<Cat> enemies = getObjectsInRange(radius, Cat.class);
