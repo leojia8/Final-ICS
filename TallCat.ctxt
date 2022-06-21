@@ -7,4 +7,6 @@ comment1.text=\r\n\ Sets\ Hp\ and\ type\ variables,\ initializes\ an\ HP\ bar,\ 
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ Updates\ the\ Hp\ bar\ to\ track\ damage\ done\ and\ moves\ the\ tall\ cat\ along\ the\ path\ at\ a\ set\ speed.\r\n\ \r\n\ <p>\ Uses\ the\ superclass\ act\ method\ to\ check\ if\ the\ cat\ needs\ to\ be\ removed\ from\ the\ world.\r\n
-numComments=3
+comment3.params=speed
+comment3.target=void\ moveAlongPathCat(int)
+numComments=4

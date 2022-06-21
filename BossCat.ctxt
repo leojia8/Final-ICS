@@ -7,4 +7,6 @@ comment1.text=\r\n\ Sets\ Hp,\ type,\ speed,\ initializes\ an\ hp\ bar\ and\ set
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ Moves\ the\ boss\ cat\ along\ the\ path,\ sets\ the\ GIF\ image\ and\ updates\ the\ hp\ bar\ -\ all\ pretty\ standard.\r\n\ <p>\ Every\ time\ the\ boss\ cat's\ hp\ is\ divisible\ by\ 100,\ do\ a\ stun\ attack\ in\ the\ form\ of\ a\ big\ expanding\ red\ circle\ that\ stuns\ towers.\r\n\ <p>\ Every\ time\ the\ boss\ cat's\ hp\ is\ divisible\ by\ 150,\ make\ a\ "whiteout"\ effect\ and\ spawn\ a\ few\ normal\ cats.\r\n\ <p>\ When\ the\ boss\ first\ spawns,\ add\ a\ Boss\ Ring,\ which\ is\ a\ small\ circle\ that\ fades\ in\ and\ out\ for\ visual\ effect.\r\n\ <p>\ Once\ the\ boss\ dies,\ add\ an\ explosion\ and\ go\ to\ win\ world.\ Otherwise,\ if\ the\ boss\ does\ not\ die\ it\ uses\ the\ superclass\ act\ method\ to\ \r\n\ remove\ itself\ from\ the\ world.\r\n
-numComments=3
+comment3.params=speed
+comment3.target=void\ moveAlongPathCat(int)
+numComments=4

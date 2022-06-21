@@ -12,5 +12,5 @@ comment3.target=void\ spawnMissles()
 comment3.text=\r\n\ Method\ to\ spawn\ 5\ missiles\ on\ the\ paragon,\ which\ target\ the\ nearest\ cat.\r\n
 comment4.params=
 comment4.target=void\ enemyDetector()
-comment4.text=\r\n\ A\ method\ that\ allows\ the\ paragon\ to\ detect\ cats\ through\ use\ of\ iterative\ loop\ -\ different\ from\ the\ enemy\ detector\ in\ Water\ Tower,\ as\ it\r\n\ \r\n
+comment4.text=\r\n\ A\ method\ that\ allows\ the\ paragon\ to\ detect\ cats\ through\ use\ of\ iterative\ loop\ -\ different\ from\ the\ enemy\ detector\ in\ Water\ Tower,\ as\ it\r\n\ cannot\ be\ upgraded\ and\ bullet\ speed\ is\ more\ fluid\ (depending\ on\ the\ amount\ of\ towers\ sacrificed).\r\n
 numComments=5
