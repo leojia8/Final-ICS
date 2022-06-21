@@ -1,7 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Tower here.
+ * The abstract superclass for towers, which the player places to defend themselves from the cat hordes. Has functionality to upgrade towers using 
+ * "cat food", with added functionality to increase the damage of the water tower
  * 
  * @author (your name) 
  * @version (a version number or a date)

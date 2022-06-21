@@ -510,7 +510,7 @@ public class GameWorld  extends World
 
     public void addInTowers(){
         if (Greenfoot.mouseClicked(null) && Greenfoot.getMouseInfo().getActor() == null && numWood>=5 && numMetal >=2 && numStone >=1){
-            addObject(new Gun(), Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
+            addObject(new WaterTower(), Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
             numWood -= 5;
             numMetal -=2;
             numStone -=1;

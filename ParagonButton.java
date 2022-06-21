@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class ParagonButton extends Actor
 {
-    private Gun target;
+    private WaterTower target;
     private String text;
     private GreenfootImage image;
 
@@ -32,7 +32,7 @@ public class ParagonButton extends Actor
      * @param Color touchColour  the colour of the words on the button when pressed/touched, it also becomes the background color when the button
      * is not pressed
      */
-    public ParagonButton(Gun owner, String theText, int textSize, Color buttonColor, Color touchColor)
+    public ParagonButton(WaterTower owner, String theText, int textSize, Color buttonColor, Color touchColor)
     {
         text = theText;
         this.textSize=textSize;
@@ -43,7 +43,7 @@ public class ParagonButton extends Actor
         //Draws the button
         drawButton();
         setImage (image);
-        this.target = (Gun)owner;
+        this.target = (WaterTower)owner;
     }
     
     

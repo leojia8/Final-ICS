@@ -8,20 +8,16 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Gun extends Tower
+public class WaterTower extends Tower
 {
-    /**
-     * Act - do whatever the Gun wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     private static GifImage master = new GifImage("WaterTowerUpgraded.gif");
     private GifImage gifImage;
     private GreenfootImage image = new GreenfootImage("gun.png"); ;
     private int radius = 500;
     private int fireRate = 0;
     private int num;
-    private Gun targetGun;
-    private ArrayList<Gun> guns;
+    private WaterTower targetGun;
+    private ArrayList<WaterTower> guns;
     private int paragonCounter;
     private int dam;
     private int speed;
@@ -29,7 +25,7 @@ public class Gun extends Tower
     private int y;
     private boolean addedToWorld;
     
-    public Gun(){
+    public WaterTower(){
         gifImage = new GifImage(master);
         gifImage.resizeImages(100, 120);
         setImage(image);       
@@ -63,7 +59,7 @@ public class Gun extends Tower
             {
                 getWorld().addObject(new Paragon(speed, dam), getX(), getY());
                 getWorld().addObject(new WhiteOut(), getX(), getY());
-                getWorld().removeObjects(getNeighbours(3000, true, Gun.class));
+                getWorld().removeObjects(getNeighbours(3000, true, WaterTower.class));
                 getWorld().removeObject(this);
             }
         }
@@ -113,10 +109,10 @@ public class Gun extends Tower
     {
 
 
-        List neighbors = getNeighbours(2000, true, Gun.class);
+        List neighbors = getNeighbours(2000, true, WaterTower.class);
         World I = getWorld();
         if (!neighbors.isEmpty()) {
-            num =  I.getObjects(Gun.class).size();
+            num =  I.getObjects(WaterTower.class).size();
 
         }
 
