@@ -24,9 +24,10 @@ public abstract class Cat extends SuperSmoothMover
     protected StatBar hpBar;
     protected int HP;
     protected int type;
+    protected boolean addedHealth;
     public Cat ()
     {
-
+        addedHealth = false;
     }
 
     /**
@@ -51,6 +52,14 @@ public abstract class Cat extends SuperSmoothMover
             if (HP <= 0)
             {
                 getWorld().removeObject(this);
+            }
+        }
+        if(addedHealth == false)
+        {
+            if(GameWorld.getRound() >= 7)
+            {
+                HP = HP * 2;
+                addedHealth = true;
             }
         }
     }
@@ -161,6 +170,10 @@ public abstract class Cat extends SuperSmoothMover
             {
                 this.setLocation(2000, 2000);
                 GameWorld.removeHealth();
+                if(type == 1)
+                {
+                    Greenfoot.setWorld(new LoseWorld());
+                }
                 getWorld().addObject(new Red(), 400, 400);
             }
 

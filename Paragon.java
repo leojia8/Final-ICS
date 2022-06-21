@@ -27,15 +27,15 @@ public class Paragon extends Tower
      */
     public Paragon(int speed, int damage)
     {
-        setImage(image);       
-        image.scale(120,120);
-        image.rotate(270);
+        //setImage(image);       
+        //image.scale(120,120);
+        //image.rotate(270);
         missleCounter = 20;
         this.damage = damage;
         this.speed = speed;
         gifImage = new GifImage("WaterTowerUpgraded.gif");
         gifImage.resizeImages(150, 180);
-        
+        setImage( gifImage.getCurrentImage() );
     }
     
     /**

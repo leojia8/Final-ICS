@@ -2,6 +2,7 @@
 import greenfoot.*;
 import java.util.Queue;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Here we will need to implement many things including resource spawning, cat spawning, and how the lane is going to orient. 
@@ -61,8 +62,8 @@ public class GameWorld  extends World
     private static int numCatFood;
     private Counter counter = new Counter();
     private int spawnTimer;
-    private int round;
-    
+    private static int round;
+
     //Creating the enemy rounds in a linked list queue
     private Queue<Cat> r1 = new LinkedList<Cat>();
     private Queue<Cat> r2 = new LinkedList<Cat>();
@@ -82,26 +83,25 @@ public class GameWorld  extends World
      * this adds the player into the game
      * This sets up the game with startug materials setting the round and health 
      */
-    public GameWorld()
+    public GameWorld(int startingRound)
     {
         super(1200, 800, 1, false);
         addObject(new Player(), 500, 400);
-        addObject(new EggCat(), 0, 600);
+
         upgrading = false;
         //addObject(new TallCat(), 400, 700);
         //addObject(new BossCat(), 400, 300);
         levelConstructor();
-        
+
         spawnTimer = 1500;
         numStone = 5000;
         numWood = 5000;
         numMetal = 1000;
         numCatFood = 1000;
-        round = 1;
+        round = startingRound;
         health = 10;
         resourceChance = 100;
-        
-        
+
         addObject(counter, 600, 40);
         setPaintOrder(ParagonButton.class, UpgradeButton.class, CancelButton.class, Missile.class, Counter.class, BossCat.class, Cat.class, StatBar.class, Red.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, WhiteOut.class, Square.class, Grey.class  );
         r1.add(new NormalCat());
@@ -110,6 +110,14 @@ public class GameWorld  extends World
         r1.add(new NormalCat());
         r1.add(new NormalCat());
 
+        r2.add(new TallCat());
+        r2.add(new NormalCat());
+        r2.add(new NormalCat());
+        r2.add(new TallCat());
+        r2.add(new TallCat());
+        r2.add(new NormalCat());
+        r2.add(new NormalCat());
+        r2.add(new TallCat());
         r2.add(new TallCat());
         r2.add(new NormalCat());
         r2.add(new NormalCat());
@@ -128,6 +136,10 @@ public class GameWorld  extends World
         r3.add(new NormalCat());
         r3.add(new TallCat());
         r3.add(new TallCat());
+        r3.add(new EggCat());
+        r3.add(new EggCat());
+        r3.add(new EggCat());
+        r3.add(new EggCat());
 
         r4.add(new EggCat());
         r4.add(new EggCat());
@@ -137,6 +149,12 @@ public class GameWorld  extends World
         r4.add(new TallCat());
         r4.add(new TallCat());
         r4.add(new TallCat());
+        r4.add(new TallCat());
+        r4.add(new TallCat());
+        r4.add(new EggCat());
+        r4.add(new EggCat());
+        r4.add(new EggCat());
+        r4.add(new EggCat());
 
         r5.add(new NormalCat());
         r5.add(new NormalCat());
@@ -196,6 +214,30 @@ public class GameWorld  extends World
         r8.add(new TallCat());
         r8.add(new TallCat());
         r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
+        r8.add(new TallCat());
 
         r9.add(new EggCat());
         r9.add(new TallCat());
@@ -213,6 +255,49 @@ public class GameWorld  extends World
         r9.add(new TallCat());
         r9.add(new EggCat());
         r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
+        r9.add(new TallCat());
+        r9.add(new EggCat());
         r9.add(new EggCat());
         r9.add(new TallCat());
         r9.add(new EggCat());
@@ -246,11 +331,17 @@ public class GameWorld  extends World
         r10.add(new NormalCat());
         r10.add(new NormalCat());
         r10.add(new NormalCat());
+        r10.add(new EggCat());
+        r10.add(new EggCat());
+        r10.add(new TallCat());
+        r10.add(new TallCat());
+        r10.add(new TallCat());
+        r10.add(new TallCat());
         addTowerButtons();
 
         addObject(new Grey(), 1000, 720);
         addObject(new HealthActor(), 180, 100);
-        
+
         upgrading = false;
     }
 
@@ -262,12 +353,14 @@ public class GameWorld  extends World
 
         spawnCats();
         w.getToggle();
-        
+
     }
+
     public static int getCatFood()
     {
         return numCatFood;
     }
+
     public static int getHP()
     {
         return health;
@@ -276,7 +369,7 @@ public class GameWorld  extends World
     public static void removeHealth()
     {
         health--;
-        
+
         if(health <= 0)
         {
             //Greenfoot.setWorld(new LoseWorld());
@@ -296,7 +389,11 @@ public class GameWorld  extends World
                 Cat c = r1.peek();
                 if(c == null)
                 {
-                    round++;
+                    List objectslookingfor = getObjects(Cat.class);
+                    if (objectslookingfor.size() <= 0)
+                    {
+                        round++;
+                    }
                     spawnTimer = 400;
                 }
                 else
@@ -312,7 +409,11 @@ public class GameWorld  extends World
                 resourceChance = 300;
                 if(c == null)
                 {
-                    round++;
+                    List objectslookingfor = getObjects(Cat.class);
+                    if (objectslookingfor.size() <= 0)
+                    {
+                        round++;
+                    }
                     spawnTimer = 400;
                 }
                 else
@@ -328,7 +429,11 @@ public class GameWorld  extends World
                 resourceChance = 250;
                 if(c == null)
                 {
-                    round++;
+                    List objectslookingfor = getObjects(Cat.class);
+                    if (objectslookingfor.size() <= 0)
+                    {
+                        round++;
+                    }
                     spawnTimer = 400;
                 }
                 else
@@ -344,7 +449,12 @@ public class GameWorld  extends World
                 resourceChance = 300;
                 if(c == null)
                 {
-                    round++;
+                    //Code Borrowed from DanPost 
+                    List objectslookingfor = getObjects(Cat.class);
+                    if (objectslookingfor.size() <= 0)
+                    {
+                        round++;
+                    }
                     spawnTimer = 600;
                 }
                 else
@@ -360,7 +470,11 @@ public class GameWorld  extends World
                 resourceChance = 200;
                 if(c == null)
                 {
-                    round++;
+                    List objectslookingfor = getObjects(Cat.class);
+                    if (objectslookingfor.size() <= 0)
+                    {
+                        round++;
+                    }
                     spawnTimer = 400;
                 }
                 else
@@ -376,7 +490,11 @@ public class GameWorld  extends World
                 resourceChance = 400;
                 if(c == null)
                 {
-                    round++;
+                    List objectslookingfor = getObjects(Cat.class);
+                    if (objectslookingfor.size() <= 0)
+                    {
+                        round++;
+                    }
                     spawnTimer = 400;
                 }
                 else
@@ -392,7 +510,11 @@ public class GameWorld  extends World
                 resourceChance = 450;
                 if(c == null)
                 {
-                    round++;
+                    List objectslookingfor = getObjects(Cat.class);
+                    if (objectslookingfor.size() <= 0)
+                    {
+                        round++;
+                    }
                     spawnTimer = 400;
                 }
                 else
@@ -408,7 +530,11 @@ public class GameWorld  extends World
                 resourceChance = 600;
                 if(c == null)
                 {
-                    round++;
+                    List objectslookingfor = getObjects(Cat.class);
+                    if (objectslookingfor.size() <= 0)
+                    {
+                        round++;
+                    }
                     spawnTimer = 600;
                 }
                 else
@@ -419,11 +545,15 @@ public class GameWorld  extends World
             }
             else if(round == 9)
             {
-                spawnTimer = 30;
+                spawnTimer = 18;
                 Cat c = r9.peek();
                 if(c == null)
                 {
-                    round++;
+                    List objectslookingfor = getObjects(Cat.class);
+                    if (objectslookingfor.size() <= 0)
+                    {
+                        round++;
+                    }
                     spawnTimer = 600;
                 }
                 else
@@ -439,7 +569,11 @@ public class GameWorld  extends World
                 resourceChance = 600;
                 if(c == null)
                 {
-
+                    List objectslookingfor = getObjects(Cat.class);
+                    if (objectslookingfor.size() <= 0)
+                    {
+                        Greenfoot.setWorld(new WinWorld());
+                    }
                 }
                 else
                 {
@@ -519,10 +653,9 @@ public class GameWorld  extends World
 
     private void addTowerButtons()
     {
-        
+
         addObject(w, 1100, 720);
-        
-        
+
         //addObject(new FactoryTowerButton(), 1000, 720);
     }
 
@@ -535,8 +668,6 @@ public class GameWorld  extends World
     {
         numCatFood++;
     }
-
-    
 
     public static void takeCatFood()
     {
@@ -572,24 +703,34 @@ public class GameWorld  extends World
     {
         return numWood;
     }
+
     public static void upgrading()
     {
         upgrading = true;
     }
+
     public static void takeStone()
     {
         numStone--;
     }
+
     public static boolean isUpgrading()
     {
         return upgrading;
     }
+
     public static void stopUpgrading()
     {
         upgrading = false;
     }
+
     public static int getStone()
     {
         return numStone;
+    }
+
+    public static int getRound()
+    {
+        return round;
     }
 }

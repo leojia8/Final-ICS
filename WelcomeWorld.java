@@ -11,6 +11,7 @@ public class WelcomeWorld extends World
 {
     private GreenfootImage image;
     private TextButton begin = new TextButton("Begin!", 100, Color.BLACK, Color.WHITE);
+    private TextButton BossLevel = new TextButton("Go to Boss Level", 100, Color.BLACK, Color.WHITE);
     /**
      * Creates a new world, sets and resizes the background and adds a button that, when pressed, moves the user forward to the story world.
      */
@@ -18,9 +19,13 @@ public class WelcomeWorld extends World
     {
         super(1200,800,1);
         image = new GreenfootImage("Title Screen.jpg");
+        
         image.scale(1200,800);
         setBackground(image);
-        addObject(begin, 1280/2, 720);
+        addObject(begin, 600, 580);
+        addObject(BossLevel, 600, 740);
+        
+        
         
         
         
@@ -35,6 +40,10 @@ public class WelcomeWorld extends World
         if (Greenfoot.mouseClicked(begin)){
             StoryWorld storyworld = new StoryWorld();
             Greenfoot.setWorld(storyworld);
+        } 
+        else if (Greenfoot.mouseClicked(BossLevel)){
+            GameWorld gw = new GameWorld(10);
+            Greenfoot.setWorld(gw);
         } 
     }
     

@@ -36,11 +36,11 @@ public class BossAttack extends Actor
         num+= 20;
         if(num % 10 == 0)
         {
-            image.scale(120 + num + 5, 120 + num + 5);
+            image.scale(120 + num + 10, 120 + num + 10);
             setImage(image);
         }
         counter++;
-        if(counter >= 120)
+        if(counter >= 60)
         {
             getWorld().removeObject(this);
         }
