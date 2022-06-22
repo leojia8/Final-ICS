@@ -24,14 +24,14 @@ public class WaterTower extends Tower
     private int x;
     private int y;
     private boolean addedToWorld;
-    
+
     /**
      * Setting, scaling, resizing and rotating the GIF image, as well as initializing some necessary variables for upgrades
      */
     public WaterTower(){
         gifImage = new GifImage(master);
         gifImage.resizeImages(100, 120);
-        setImage(image);       
+            
         image.scale(100,100);
         image.rotate(270);
         type = 0;
@@ -49,68 +49,94 @@ public class WaterTower extends Tower
     {
         if(addedToWorld == false)
         {
-            x = getX();
-            y = getY();
-            addedToWorld = true;
-        }
 
-        if(paragonCounter >= 0)
-        {
-            GameWorld.upgrading();
-            setLocation(getX() + (Greenfoot.getRandomNumber(6)-3), getY() + (Greenfoot.getRandomNumber(6) - 3));
-            if(paragonCounter % 3 == 0)
+            Square s = (Square)getOneIntersectingObject(Square.class);
+
+            if(s != null)
             {
-                setLocation(x, y);
-            }
-            paragonCounter--;
-            if(paragonCounter <= 0)
-            {
-                getWorld().addObject(new Paragon(speed, dam), getX(), getY());
-                getWorld().addObject(new WhiteOut(), getX(), getY());
-                GameWorld.stopUpgrading();
-                getWorld().removeObjects(getNeighbours(3000, true, WaterTower.class));
                 getWorld().removeObject(this);
             }
-        }
-        else if(stun)
-        {
-            stunTimer--;
-            if(stunTimer <= 0)
+            else
             {
-                stun = false;
+                x = getX();
+                y = getY();
+                addedToWorld = true;
+                GameWorld.takeWood();
+                GameWorld.takeWood();
+                GameWorld.takeWood();
+                GameWorld.takeWood();
+                GameWorld.takeWood();
+                GameWorld.takeMetal();
+                GameWorld.takeMetal();
+                GameWorld.takeStone();
+                GameWorld.takeStone();
+                GameWorld.takeStone();
+                GameWorld.takeStone();
+                setImage(image);   
             }
+
         }
         else
         {
-            if(Greenfoot.mouseClicked(this) && GameWorld.isUpgrading() == false )
+            
+            if(paragonCounter >= 0)
             {
-                if(GameWorld.getCatFood() >= 30)
+                GameWorld.upgrading();
+                setLocation(getX() + (Greenfoot.getRandomNumber(6)-3), getY() + (Greenfoot.getRandomNumber(6) - 3));
+                if(paragonCounter % 3 == 0)
                 {
-                    ParagonButton p = new ParagonButton(this, "Upgrade to Paragon / Cost: 30 Cat Food", 50, Color.BLACK, Color.WHITE);
-                    getWorld().addObject(p, 600, 600);
-                    CancelButton c = new CancelButton(this, "Cancel", 50, Color.BLACK, Color.WHITE);
-                    getWorld().addObject(c, 1000, 400);
-                    GameWorld.upgrading();
+                    setLocation(x, y);
                 }
-                if(upgraded == false)
+                paragonCounter--;
+                if(paragonCounter <= 0)
                 {
-                    if(GameWorld.getCatFood() > 0)
-                    {
-                        UpgradeButton b = new UpgradeButton(this, "Upgrade: x3 Damage / Cost: 1 Cat Food", 50, Color.BLACK, Color.WHITE); 
-
-                        GameWorld.upgrading();
-                        getWorld().addObject(b, 400, 400);
-                        getWorld().removeObjects(getNeighbours(3000, true, CancelButton.class));
-                        CancelButton c = new CancelButton(this, "Cancel", 50, Color.BLACK, Color.WHITE);
-                        getWorld().addObject(c, 1000, 400);
-
-                    }
+                    getWorld().addObject(new Paragon(speed, dam), getX(), getY());
+                    getWorld().addObject(new WhiteOut(), getX(), getY());
+                    GameWorld.stopUpgrading();
+                    getWorld().removeObjects(getNeighbours(3000, true, WaterTower.class));
+                    getWorld().removeObject(this);
                 }
             }
-            
-            //if (checked() != true){
-            enemyDetector();
-            //}
+            else if(stun)
+            {
+                stunTimer--;
+                if(stunTimer <= 0)
+                {
+                    stun = false;
+                }
+            }
+            else
+            {
+                if(Greenfoot.mouseClicked(this) && GameWorld.isUpgrading() == false )
+                {
+                    if(GameWorld.getCatFood() >= 30)
+                    {
+                        ParagonButton p = new ParagonButton(this, "Upgrade to Paragon / Cost: 30 Cat Food", 50, Color.BLACK, Color.WHITE);
+                        getWorld().addObject(p, 600, 600);
+                        CancelButton c = new CancelButton(this, "Cancel", 50, Color.BLACK, Color.WHITE);
+                        getWorld().addObject(c, 1000, 400);
+                        GameWorld.upgrading();
+                    }
+                    if(upgraded == false)
+                    {
+                        if(GameWorld.getCatFood() > 0)
+                        {
+                            UpgradeButton b = new UpgradeButton(this, "Upgrade: x3 Damage / Cost: 1 Cat Food", 50, Color.BLACK, Color.WHITE); 
+
+                            GameWorld.upgrading();
+                            getWorld().addObject(b, 400, 400);
+                            getWorld().removeObjects(getNeighbours(3000, true, CancelButton.class));
+                            CancelButton c = new CancelButton(this, "Cancel", 50, Color.BLACK, Color.WHITE);
+                            getWorld().addObject(c, 1000, 400);
+
+                        }
+                    }
+                }
+
+                //if (checked() != true){
+                enemyDetector();
+                //}
+            }
         }
     }
 
@@ -120,7 +146,6 @@ public class WaterTower extends Tower
      */
     public void upgradeParagon()
     {
-
 
         List neighbors = getNeighbours(2000, true, WaterTower.class);
         World I = getWorld();
