@@ -27,7 +27,7 @@ public class BossAttack extends Actor
         image.scale(120,120);
         setImage(image);
         sound = new GreenfootSound("bossattack.wav");
-        sound.setVolume(60);
+        sound.setVolume(75);
         sound.play();
     }
 
