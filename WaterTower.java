@@ -56,7 +56,7 @@ public class WaterTower extends Tower
 
         if(paragonCounter >= 0)
         {
-
+            GameWorld.upgrading();
             setLocation(getX() + (Greenfoot.getRandomNumber(6)-3), getY() + (Greenfoot.getRandomNumber(6) - 3));
             if(paragonCounter % 3 == 0)
             {
@@ -67,6 +67,7 @@ public class WaterTower extends Tower
             {
                 getWorld().addObject(new Paragon(speed, dam), getX(), getY());
                 getWorld().addObject(new WhiteOut(), getX(), getY());
+                GameWorld.stopUpgrading();
                 getWorld().removeObjects(getNeighbours(3000, true, WaterTower.class));
                 getWorld().removeObject(this);
             }

@@ -56,7 +56,7 @@ public abstract class Cat extends SuperSmoothMover
         }
         if(addedHealth == false)
         {
-            if(GameWorld.getRound() >= 7)
+            if(GameWorld.getRound() >= 7 && type != 1)
             {
                 HP = HP * 2;
                 addedHealth = true;

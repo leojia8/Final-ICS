@@ -16,7 +16,8 @@ public class BossCat extends Cat
     private GreenfootImage image;
     private int speed;
     private boolean reverse; 
-
+    private boolean teleported;
+    private boolean teleported2;
     private int counter;
     private int counter2;
     private boolean justSpawned;
@@ -39,6 +40,8 @@ public class BossCat extends Cat
         gifImage = new GifImage("bosscat.gif");
         gifImage.resizeImages(110, 130);
         counter2 = 40;
+        teleported = false;
+        teleported2 = false;
     }
 
     /**
@@ -51,10 +54,25 @@ public class BossCat extends Cat
      */
     public void act()
     {
+        System.out.println(HP);
         moveAlongPathCat(1);
         hpBar.update(HP);
         setImage( gifImage.getCurrentImage() );
-        if(HP % 100 == 0)
+        if(HP <= 9000 && teleported == false)
+        {
+            counter2 = 40;
+            rotation = 90;
+            setLocation(160, 120);
+            teleported = true;
+        }
+        else if(HP <= 7000 && teleported2 == false)
+        {
+            counter2 = 40;
+            rotation = 90;
+            setLocation(400, 760);
+            teleported2 = true;
+        }
+        if(HP % 200 == 0)
         {
             BossAttack b = new BossAttack();
             getWorld().addObject(b, getX(), getY());
@@ -99,15 +117,14 @@ public class BossCat extends Cat
         }
         if(HP % 150 == 0)
         {
-            WhiteOut w = new WhiteOut();
-            getWorld().addObject(w, 600, 600);
+            
 
             getWorld().addObject(new NormalCat(), 160, 120);
 
             getWorld().addObject(new NormalCat(), 240, 440);
 
             getWorld().addObject(new NormalCat(), 400, 760);
-
+            HP--;
         }
         if(justSpawned)
         {
@@ -225,7 +242,7 @@ public class BossCat extends Cat
             if(noPath)
             {
                 this.setLocation(2000, 2000);
-                GameWorld.removeHealth();
+                Greenfoot.setWorld(new LoseWorld());
                 getWorld().addObject(new Red(), 400, 400);
             }
 

@@ -17,7 +17,7 @@ public class TallCat extends Cat
     public TallCat()
     {
         HP = 20;
-        hpBar = new StatBar(HP, HP, this, 45, 5, 60, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
+        hpBar = new StatBar(HP, HP, this, 45, 5, 135, Color.RED, new Color(255, 204, 203), false, Color.WHITE, 1);
 
         gifImage = new GifImage(master);
         gifImage.resizeImages(141, 264);
