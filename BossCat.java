@@ -54,7 +54,7 @@ public class BossCat extends Cat
      */
     public void act()
     {
-        System.out.println(HP);
+        
         moveAlongPathCat(1);
         hpBar.update(HP);
         setImage( gifImage.getCurrentImage() );
