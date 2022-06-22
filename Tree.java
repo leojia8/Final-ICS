@@ -16,7 +16,7 @@ public class Tree extends Resources
     {
         super();
         resourceType = 0;
-        resourcesLeft = 8;
+        resourcesLeft = 15;
         image = new GreenfootImage("tree.png");
         image.scale(64,64);
         transImage = new GreenfootImage(64,64);
