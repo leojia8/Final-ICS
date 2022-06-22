@@ -18,7 +18,7 @@ public class Rock extends Resources
     {
         super();
         resourceType = 1;
-        resourcesLeft = 20;
+        resourcesLeft = 8;
         image = new GreenfootImage("rock.png");
         image.scale(100,64);
         transImage = new GreenfootImage(100,64);

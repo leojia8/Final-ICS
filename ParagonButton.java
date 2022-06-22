@@ -60,6 +60,7 @@ public class ParagonButton extends Actor
             
             GameWorld.stopUpgrading();
             target.upgradeParagon();
+            GameWorld.takeCatFood30();
             getWorld().removeObjects(getNeighbours(3000, true, UpgradeButton.class));
             getWorld().removeObjects(getNeighbours(3000, true, CancelButton.class));
             

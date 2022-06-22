@@ -63,7 +63,9 @@ public class GameWorld  extends World
     private Counter counter = new Counter();
     private int spawnTimer;
     private static int round;
-
+    private GreenfootSound bossMusic;
+    private GreenfootSound normalMusic;
+    private boolean stoppedMusic;
     //Creating the enemy rounds in a linked list queue
     private Queue<Cat> r1 = new LinkedList<Cat>();
     private Queue<Cat> r2 = new LinkedList<Cat>();
@@ -94,15 +96,20 @@ public class GameWorld  extends World
         levelConstructor();
 
         spawnTimer = 1500;
-        numStone = 5000;
-        numWood = 5000;
-        numMetal = 1000;
-        numCatFood = 1000;
+        numStone = 5;
+        numWood = 5;
+        numMetal = 5;
+        numCatFood = 30;
         round = startingRound;
         health = 10;
         resourceChance = 100;
+        normalMusic = new GreenfootSound("gamemusic.mp3");
+        bossMusic = new GreenfootSound("bossmusic.mp3");
+        //normalMusic.setVolume(50);
+        bossMusic.setVolume(20);
 
         addObject(counter, 600, 40);
+        stoppedMusic = false;
         setPaintOrder(ParagonButton.class, UpgradeButton.class, CancelButton.class, Missile.class, Counter.class, BossCat.class, Cat.class, StatBar.class, Red.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, WhiteOut.class, Square.class, Grey.class  );
         r1.add(new NormalCat());
         r1.add(new NormalCat());
@@ -343,17 +350,41 @@ public class GameWorld  extends World
         addObject(new HealthActor(), 180, 100);
 
         upgrading = false;
-    }
 
+    }
     public void act()
     {
         //showText("EHEHE" + numStone + "S" + numWood + "" + numMetal,600 ,50 );
         spawnResources();
-        addInTowers();
+        //addInTowers();
 
         spawnCats();
         w.getToggle();
+        if(health <= 0)
+        {
+            bossMusic.stop();
+            normalMusic.stop();
+            Greenfoot.setWorld(new LoseWorld());
+        }
+    }
 
+    public void started()
+    {
+        if(stoppedMusic)
+        {
+            bossMusic.playLoop();
+        }
+        else
+        {
+            normalMusic.playLoop();
+        }
+
+    }
+
+    public void stopped()
+    {
+        normalMusic.pause();
+        bossMusic.pause();
     }
 
     public static int getCatFood()
@@ -370,10 +401,7 @@ public class GameWorld  extends World
     {
         health--;
 
-        if(health <= 0)
-        {
-            //Greenfoot.setWorld(new LoseWorld());
-        }
+        
     }
 
     private void spawnCats()
@@ -564,6 +592,12 @@ public class GameWorld  extends World
             }
             else if(round == 10)
             {
+                if(stoppedMusic == false)
+                {
+                    stoppedMusic = true;
+                    normalMusic.stop();
+                    bossMusic.playLoop();
+                }
                 spawnTimer = 120;
                 Cat c = r10.peek();
                 resourceChance = 600;
@@ -572,8 +606,11 @@ public class GameWorld  extends World
                     List objectslookingfor = getObjects(Cat.class);
                     if (objectslookingfor.size() <= 0)
                     {
+                        bossMusic.stop();
                         Greenfoot.setWorld(new WinWorld());
+                        
                     }
+
                 }
                 else
                 {
@@ -641,15 +678,11 @@ public class GameWorld  extends World
         return (float)distance;
 
     }
-
-    public void addInTowers(){
-        if (Greenfoot.mouseClicked(null) && Greenfoot.getMouseInfo().getActor() == null && numWood>=5 && numMetal >=2 && numStone >=1){
-            addObject(new WaterTower(), Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
-            numWood -= 5;
-            numMetal -=2;
-            numStone -=1;
-        }
+    public static void setLives0()
+    {
+        health = 0;
     }
+    
 
     private void addTowerButtons()
     {
@@ -668,7 +701,10 @@ public class GameWorld  extends World
     {
         numCatFood++;
     }
-
+    public static void takeCatFood30()
+    {
+        numCatFood = numCatFood - 30;
+    }
     public static void takeCatFood()
     {
         numCatFood--;

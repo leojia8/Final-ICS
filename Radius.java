@@ -21,9 +21,25 @@ public class Radius extends Actor
         setImage(image);
         image.setTransparency(50);
     }
-    
+
     public void act()
     {
+
+        if (Greenfoot.mouseClicked(this) && GameWorld.getWood()>=5 && GameWorld.getMetal() >=2 && GameWorld.getStone() >=4){
+            getWorld().addObject(new WaterTower(), Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
+            GameWorld.takeWood();
+            GameWorld.takeWood();
+            GameWorld.takeWood();
+            GameWorld.takeWood();
+            GameWorld.takeWood();
+            GameWorld.takeMetal();
+            GameWorld.takeMetal();
+            GameWorld.takeStone();
+            GameWorld.takeStone();
+            GameWorld.takeStone();
+            GameWorld.takeStone();
+        }
+
         if(!foundHost)
         {
             player = (Player)getOneIntersectingObject(Player.class);
@@ -33,9 +49,7 @@ public class Radius extends Actor
         {
             setLocation(player.getX(), player.getY());
         }
-        
+
     }
 
-
-    
 }

@@ -11,12 +11,16 @@ public class Bullet extends Projectile
     private int damage;
     private int speed;
     private GreenfootImage image;
+    private GreenfootSound shootSound;
     public Bullet(int damage, int speed)
     {
         this.damage = damage;
         this.speed = speed;
         image = new GreenfootImage("waterball_sprite.png");
         setImage(image);
+        shootSound = new GreenfootSound("shooting.mp3");
+        shootSound.setVolume(20);
+        shootSound.play();
     }
     /**
      * Act - do whatever the Bullet wants to do. This method is called whenever

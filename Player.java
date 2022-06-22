@@ -13,6 +13,7 @@ public class Player extends Actor
     private GreenfootImage idleImage1;
     private GreenfootImage idleImage2;
     private int collectingCounter;
+    private GreenfootSound stepSound;
     private boolean collecting;
     private ArrayList<Resources> resources;
     // 1 = up, 2 = right, 3 = down, 4 = left
@@ -24,6 +25,7 @@ public class Player extends Actor
     private GifImage idleImage;
     private GreenfootImage activeImage;
     private int immuneCounter;
+    private GreenfootSound collectingSound;
     /**
      * Constructor for objects of class Dog
      */
@@ -38,6 +40,11 @@ public class Player extends Actor
         collectingCounter = 20;
         orientation = 4;
         addedRadius = false;
+        collectingSound = new GreenfootSound("towerplacesound.wav");
+        collectingSound.setVolume(70);
+        stepSound = new GreenfootSound("stepsound.wav");
+        stepSound.setVolume(83);
+        
         health = 100;
         moving = false;
         immuneCounter = 120;
@@ -87,6 +94,7 @@ public class Player extends Actor
         }
         if(Greenfoot.isKeyDown("S") && getY() < 780 )
         {
+            stepSound.play();
             TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
             if(a != null)
             {
@@ -101,6 +109,7 @@ public class Player extends Actor
         }
         else if(Greenfoot.isKeyDown("W") && getY() > 20)
         {
+             stepSound.play();
             TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
             if(a != null)
             {
@@ -114,6 +123,7 @@ public class Player extends Actor
         }
         else if(Greenfoot.isKeyDown("A") && getX() > 20)
         {
+             stepSound.play();
             TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
             if(a != null)
             {
@@ -127,6 +137,7 @@ public class Player extends Actor
         }
         else if(Greenfoot.isKeyDown("D") && getX() < 1180)
         {
+             stepSound.play();
             TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
             if(a != null)
             {
@@ -140,6 +151,7 @@ public class Player extends Actor
         }
         else if(collecting && collectingCounter <= 0)
         {
+            collectingSound.play();
             boolean woodType = false;
             boolean stoneType = false;
             boolean metalType = false;
@@ -176,7 +188,7 @@ public class Player extends Actor
 
                 }
             }
-            collectingCounter = 20;
+            collectingCounter = 40;
         }
 
     }

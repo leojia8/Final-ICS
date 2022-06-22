@@ -17,7 +17,7 @@ public class Ore extends Resources
     {
         super();
         resourceType = 2;
-        resourcesLeft = 10;
+        resourcesLeft = 5;
         image = new GreenfootImage("ore.png");
         image.scale(100,64);
         transImage = new GreenfootImage(100,64);

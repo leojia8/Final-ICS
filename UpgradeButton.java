@@ -58,6 +58,7 @@ public class UpgradeButton extends Actor
         if (Greenfoot.mouseClicked(this)){
 
             target.upgrade();
+            GameWorld.takeCatFood();
             GameWorld.stopUpgrading();
             getWorld().removeObjects(getNeighbours(3000, true, CancelButton.class));
             getWorld().removeObjects(getNeighbours(3000, true, ParagonButton.class));

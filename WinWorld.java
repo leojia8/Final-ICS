@@ -11,6 +11,7 @@ public class WinWorld extends World
 {
     private GreenfootImage image;
     private TextButton begin = new TextButton("Restart", 100, Color.BLACK, Color.WHITE);
+    private GreenfootSound sound;
     /**
      * Creates a new world, sets and resizes the background and adds a button that allows the user to replay the game.
      */
@@ -22,6 +23,8 @@ public class WinWorld extends World
         setBackground(image);
         addObject(new Victory(), 600, 100);
         addObject(begin, 1280/2, 720);
+        sound = new GreenfootSound("winsound.wav");
+        sound.play();
     }
     
     

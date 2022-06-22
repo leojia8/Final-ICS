@@ -242,7 +242,7 @@ public class BossCat extends Cat
             if(noPath)
             {
                 this.setLocation(2000, 2000);
-                Greenfoot.setWorld(new LoseWorld());
+                GameWorld.setLives0();
                 getWorld().addObject(new Red(), 400, 400);
             }
 

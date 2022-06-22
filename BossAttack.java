@@ -14,7 +14,7 @@ public class BossAttack extends Actor
     private int num;
     private int counter;
     private GreenfootImage image;
-
+    private GreenfootSound sound;
     /**
      * Sets it's image to the red stun circle, and initializes some variables
      */
@@ -26,6 +26,9 @@ public class BossAttack extends Actor
         num = 0;
         image.scale(120,120);
         setImage(image);
+        sound = new GreenfootSound("bossattack.wav");
+        sound.setVolume(30);
+        sound.play();
     }
 
     /**

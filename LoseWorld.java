@@ -10,6 +10,7 @@ public class LoseWorld extends World
 {
     private GreenfootImage image;
     private TextButton begin = new TextButton("Restart", 100, Color.BLACK, Color.WHITE);
+    private GreenfootSound sound;
     /**
      * Creates a new world, then sets its background to the appropriate image.
      */
@@ -18,7 +19,8 @@ public class LoseWorld extends World
         super(1200, 800, 1);
 
         image = new GreenfootImage("black.jpg");
-
+        sound = new GreenfootSound("losesound.mp3");
+        sound.play();
         setBackground(image);
         
         addObject(new Defeat(), 600, 100);
