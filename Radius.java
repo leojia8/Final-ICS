@@ -29,14 +29,16 @@ public class Radius extends Actor
     public void act()
     {
 
-        if (Greenfoot.mouseClicked(this) && GameWorld.getWood()>=5 && GameWorld.getMetal() >=2 && GameWorld.getStone() >=4 && GameWorld.getWater() && GameWorld.getFactory() == false){
+        if (Greenfoot.mouseClicked(this) && GameWorld.getWood()>=5 && GameWorld.getMetal() >=2 && GameWorld.getStone() >=4 && GameWorld.getWater() == true && GameWorld.getFactory() == false){
             getWorld().addObject(new WaterTower(), Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
             
             
         }
+        else if (Greenfoot.mouseClicked(this) && GameWorld.getWood()>=5 && GameWorld.getMetal() >=2 && GameWorld.getStone() >=4 && GameWorld.getWater() == false && GameWorld.getFactory() == true){
+            getWorld().addObject(new FactoryTower(), Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
+            
         
-        
-        
+        }
         
         if(!foundHost)
         {
