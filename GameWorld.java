@@ -83,7 +83,7 @@ public class GameWorld  extends World
     /**
      * Constructor for objects of class GameWorld
      * this adds the player into the game
-     * This sets up the game with startug materials setting the round and health 
+     * This sets up the game with starter materials setting the round and health 
      */
     public GameWorld(int startingRound)
     {
@@ -351,6 +351,10 @@ public class GameWorld  extends World
         upgrading = false;
 
     }
+    
+    /**
+     * Spawns resources and cats, and checks if the player has lost.
+     */
     public void act()
     {
         
@@ -367,6 +371,9 @@ public class GameWorld  extends World
         }
     }
 
+    /**
+     * Plays boss music if there is a boss, otherwise plays the regular music.
+     */
     public void started()
     {
         if(stoppedMusic)
@@ -380,22 +387,34 @@ public class GameWorld  extends World
 
     }
 
+    /**
+     * Stops all music.
+     */
     public void stopped()
     {
         normalMusic.pause();
         bossMusic.pause();
     }
 
+    /**
+     * Returns the amount of cat food that the player has.
+     */
     public static int getCatFood()
     {
         return numCatFood;
     }
 
+    /**
+     * Returns the HP of the player.
+     */
     public static int getHP()
     {
         return health;
     }
 
+    /**
+     * Setter method to decrement the amount of health the player has.
+     */
     public static void removeHealth()
     {
         health--;
@@ -403,6 +422,9 @@ public class GameWorld  extends World
         
     }
 
+    /**
+     * Spawns cats based on the round number and the lists initialized in the constructor of the world.
+     */
     private void spawnCats()
     {
         showText("Round " + round, 1100, 25);
@@ -632,8 +654,10 @@ public class GameWorld  extends World
         }
     }
 
-    //method that spawns resources 
-
+    
+    /**
+     * Method that spawns resources
+     */
     private void spawnResources()
     {
         spawnNumber = Greenfoot.getRandomNumber(resourceChance);
@@ -656,6 +680,9 @@ public class GameWorld  extends World
         }
     }
 
+    /**
+     * Creates the path using a 2d array which holds all of the path square locations.
+     */
     public void levelConstructor(){
         int spacing = 80;
         for (int i = 0; i<10; i++){
@@ -667,7 +694,9 @@ public class GameWorld  extends World
             }
         }
     }
-    //Borrowed from Mr. Cohen. Method makes the world get the distance between two objects 
+    /**
+     * Borrowed from Mr. Cohen. Method makes the world get the distance between two objects.
+     */
     public static float getDistance (Actor a, Actor b)
     {
         double distance;
@@ -677,6 +706,10 @@ public class GameWorld  extends World
         return (float)distance;
 
     }
+    
+    /**
+     * Sets the amount of health the player has to 0.
+     */
     public static void setLives0()
     {
         health = 0;
@@ -691,83 +724,137 @@ public class GameWorld  extends World
         //addObject(new FactoryTowerButton(), 1000, 720);
     }
 
+    /**
+     * Method to increase the amount of metal the player has.
+     */
     public static void addMetal()
     {
         numMetal++;
     }
 
+    /**
+     * Method to increase the amount of cat food the player has.
+     */
     public static void addCatFood()
     {
         numCatFood++;
     }
+    
+    /**
+     * Method to reduce the amount of cat food the player has by 30. Used when upgrading water towers to paragons.
+     */
     public static void takeCatFood30()
     {
         numCatFood = numCatFood - 30;
     }
+    
+    /**
+     * Method to decrease the amount of cat food the player has.
+     */
     public static void takeCatFood()
     {
         numCatFood--;
     }
 
+    /**
+     * Method to increase the amount of wood the player has.
+     */
     public static void addWood()
     {
         numWood++;
     }
 
+    /**
+     * Method to increase the amount of stone the player has.
+     */
     public static void addStone()
     {
         numStone++;
     }
 
+    /**
+     * Method to decrease the amount of metal the player has.
+     */
     public static void takeMetal()
     {
         numMetal--;
     }
 
+    /**
+     * Getter method which returns the amount of metal that the player has.
+     */
     public static int getMetal()
     {
         return numMetal;
     }
 
+    /**
+     * Method to decrease the amount of wood the player has.
+     */
     public static void takeWood()
     {
         numWood--;
     }
 
+    /**
+     * Getter method which returns the amount of wood that the player has.
+     */
     public static int getWood()
     {
         return numWood;
     }
 
+    /**
+     * Sets upgrading to true if a tower is being upgraded.
+     */
     public static void upgrading()
     {
         upgrading = true;
     }
 
+    /**
+     * Method to decrease the amount of stone the player has.
+     */
     public static void takeStone()
     {
         numStone--;
     }
 
+    /**
+     * Getter method to see whether or not a tower is upgrading.
+     */
     public static boolean isUpgrading()
     {
         return upgrading;
     }
 
+    /**
+     * Sets upgrading to false after the tower is done upgrading.
+     */
     public static void stopUpgrading()
     {
         upgrading = false;
     }
 
+    /**
+     * Getter method which returns the amount of stone the player has.
+     */
     public static int getStone()
     {
         return numStone;
     }
 
+    /**
+     * Getter method which returns the round number.
+     */
     public static int getRound()
     {
         return round;
     }
+    
+    /**
+     * Method used to immediately send the user to the last round.
+     */
     public static void cheatRound(){
         round = 10;
     }
