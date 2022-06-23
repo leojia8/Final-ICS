@@ -49,8 +49,8 @@ public class WaterTower extends Tower
         {
 
             Square s = (Square)getOneIntersectingObject(Square.class);
-
-            if(s != null)
+            Tower t = (Tower)getOneIntersectingObject(Tower.class);
+            if(s != null || t != null)
             {
                 getWorld().removeObject(this);
             }
