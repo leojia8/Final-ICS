@@ -14,13 +14,13 @@ public class Counter extends Actor
      * Sets the image to text displaying the number of resources.
      */
     public Counter(){
-        setImage(new GreenfootImage("Stone: "+ w.getStone() + "     Wood: " + w.getWood() + "     Metal: " + w.getMetal() ,40, Color.BLACK, new Color(0, 176, 225)));
+        setImage(new GreenfootImage("Stone: "+ w.getStone() + "     Wood: " + w.getWood() + "     Metal: " + w.getMetal() + "        Dog Food: " + w.getCatFood() ,40, Color.BLACK, new Color(0, 176, 225)));
     }
     /**
      * Updates the counter bar.
      */
     public void act()
     {
-        setImage(new GreenfootImage("Stone: "+ w.getStone() + "     Wood: " + w.getWood() + "     Metal: " + w.getMetal() ,40, Color.BLACK, new Color(0, 176, 225)));
+        setImage(new GreenfootImage("Stone: "+ w.getStone() + "     Wood: " + w.getWood() + "     Metal: " + w.getMetal() + "        Dog Food: " + w.getCatFood(),40, Color.BLACK, new Color(0, 176, 225)));
     }
 }
