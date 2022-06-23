@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=GameWorld
 comment0.text=\r\n\ Here\ we\ will\ need\ to\ implement\ many\ things\ including\ resource\ spawning,\ cat\ spawning,\ and\ how\ the\ lane\ is\ going\ to\ orient.\ \r\n\ \r\n\ Current\ bugs\ \!\!\r\n\ the\ boss\ for\ some\ reason\ starts\ moving\ in\ the\ opposite\ direction\r\n\ the\ player\ needs\ to\ be\ smaller\ (idk\ how\ to\ rescale\ a\ gif)\ \ \r\n\ \r\n\ \r\n\ New\ features\ \!\!\r\n\ add\ story\ \r\n\ add\ a\ tutorial\ reel\r\n\ more\ towers\ (factory\ tower,\ slow\ tower)\r\n\ tower\ select\ (when\ the\ tower\ is\ selected\ it\ changes\ hue?\ and\ thats\ how\ you\ know\ what\ you\ are\ placing)\r\n\ more\ rounds\r\n\ add\ better\ graphics\r\n\ upgrade\ feature\ (UI\ pop\ up\ menu)\r\n\ \r\n\ Balance\ changes\ \!\!\r\n\ the\ resourses\ should\ have\ lower\ health\ (forces\ the\ players\ to\ move\ more)\r\n\ resources\ should\ spawn\ more\r\n\ boss\ is\ kinda\ too\ OP\ (but\ this\ is\ without\ upgrades\ and\ w/o\ other\ features)\r\n\ \r\n\ \r\n\ Thomas\ Yang,\ Ivan\ Cai,\ Angus\ Feng,\ Leo\ Jia\ \r\n\ THURSDAY\ JUNE\ 16,\ 2022\r\n
-comment1.params=startingRound
-comment1.target=GameWorld(int)
+comment1.params=
+comment1.target=GameWorld()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ GameWorld\r\n\ this\ adds\ the\ player\ into\ the\ game\r\n\ This\ sets\ up\ the\ game\ with\ starter\ materials\ setting\ the\ round\ and\ health\ \r\n
 comment10.params=
 comment10.target=void\ levelConstructor()

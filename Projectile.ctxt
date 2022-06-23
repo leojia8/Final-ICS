@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Projectile
-comment0.text=\r\n\ Superclass\ of\ projectiles\ fired\ by\ towers\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Bullet\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=Projectile()
 comment2.params=
@@ -9,5 +9,4 @@ comment3.params=
 comment3.target=void\ turnTowardsTarget()
 comment4.params=
 comment4.target=void\ targetClosest()
-comment4.text=\r\n\ This\ method\ makes\ the\ bullet\ target\ the\ object\ it\ is\ created\ to\ target\ if\ there\ are\ no\ cats\ in\ the\ world.\ \r\n\ This\ method\ is\ borrrowed\ from\ Mr.\ Cohen's\ bug\ simluation\ project.\ \r\n
 numComments=5

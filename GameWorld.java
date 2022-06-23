@@ -85,7 +85,7 @@ public class GameWorld  extends World
      * this adds the player into the game
      * This sets up the game with starter materials setting the round and health 
      */
-    public GameWorld(int startingRound)
+    public GameWorld()
     {
         super(1200, 800, 1, false);
         addObject(new Player(), 500, 400);
@@ -99,7 +99,7 @@ public class GameWorld  extends World
         numWood = 5;
         numMetal = 5;
         numCatFood = 30;
-        round = startingRound;
+        round = 1;
         health = 10;
         resourceChance = 100;
         normalMusic = new GreenfootSound("gamemusic.mp3");
