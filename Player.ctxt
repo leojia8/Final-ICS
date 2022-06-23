@@ -1,9 +1,10 @@
 #BlueJ class context
 comment0.target=Player
-comment0.text=\r\n\ This\ class\ will\ be\ the\ player\ class\ who\ the\ user\ will\ control.\ \r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ The\ player\ class,\ a\ entity\ that\ the\ user\ can\ move\ around\ to\ play\ the\ game\ by\ collecting\ resources\ and\ placing\ towers.\r\n\ <p>\ Uses\ WASD\ to\ move,\ space\ bar\ to\ collect\ resources,\ and\ has\ different\ GIF\ images\ depending\ on\ whether\ or\ not\ the\ user\ is\ collecting\ resources.\r\n\ <p>\ Has\ sound\ effects\ when\ walking\ and\ placing\ towers.\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=Player()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Dog\r\n
+comment1.text=\r\n\ Initializes\ and\ resizes\ the\ active\ and\ idle\ images,\ initializes\ and\ sets\ the\ volume\ of\ the\ sound\ effects\ and\ \r\n\ sets\ necessary\ variables\ for\ resource\ colecting/placing\ towers,\ health\ and\ the\ immunity\ counter.\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Checks\ for\ input\ to\ allow\ the\ player\ to\ move\ around\ using\ WASD\ and\ collect\ resources\ with\ space\ bar.\r\n
 numComments=3

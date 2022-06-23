@@ -9,35 +9,63 @@ import greenfoot.*;
 public class FactoryTower extends Tower
 {
     private int counter;
-    
+    private static GifImage master = new GifImage("DogFoodTower.gif");
+    private GifImage gifImage;
+    private int x;
+    private int y;
+    private boolean addedToWorld;
+
     /**
      * Constructor for objects of class FactoryTower
      */
     public FactoryTower()
     {
-        
+        gifImage = new GifImage(master);
+        gifImage.resizeImages(100, 120);
         counter = 0;
-        
+        addedToWorld = false;
         type = 2;
     }
-    
+
     public void act()
     {
-        counter--;
-        if(counter <= 0)
+        if(addedToWorld == false)
         {
-            GameWorld.addCatFood();
-           
-            counter = 600;
+
+            Square s = (Square)getOneIntersectingObject(Square.class);
+
+            if(s != null)
+            {
+                getWorld().removeObject(this);
+            }
+            else
+            {
+                x = getX();
+                y = getY();
+                addedToWorld = true;
+                GameWorld.takeWood();
+                GameWorld.takeMetal();
+                GameWorld.takeMetal();
+                GameWorld.takeStone();
+                GameWorld.takeStone();
+                
+                
+
+            }
+
         }
-        
-        
-        
-        
+        else
+        {
+            setImage( gifImage.getCurrentImage() );
+            counter--;
+            if(counter <= 0)
+            {
+                GameWorld.addCatFood();
+
+                counter = 600;
+            }
+        }
+
     }
-    
-    
-   
-    
 
 }

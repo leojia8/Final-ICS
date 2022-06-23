@@ -33,7 +33,10 @@ public class Radius extends Actor
             
             
         }
-
+        
+        
+        
+        
         if(!foundHost)
         {
             player = (Player)getOneIntersectingObject(Player.class);

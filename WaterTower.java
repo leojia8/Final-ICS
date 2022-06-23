@@ -31,9 +31,7 @@ public class WaterTower extends Tower
     public WaterTower(){
         gifImage = new GifImage(master);
         gifImage.resizeImages(100, 120);
-            
-        image.scale(100,100);
-        image.rotate(270);
+
         type = 0;
         upgraded = false;
         paragonCounter = -1;
@@ -73,12 +71,14 @@ public class WaterTower extends Tower
                 GameWorld.takeStone();
                 GameWorld.takeStone();
                 setImage(image);   
+                image.scale(100,100);
+                image.rotate(270);
             }
 
         }
         else
         {
-            
+
             if(paragonCounter >= 0)
             {
                 GameWorld.upgrading();
@@ -200,6 +200,5 @@ public class WaterTower extends Tower
         }
 
     }
-    
 
 }
