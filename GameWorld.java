@@ -861,17 +861,33 @@ public class GameWorld  extends World
     public static void cheatRound(){
         round = 10;
     }
+    
+    /**
+     * Used when the factory button is clicked
+     */
     public static void toggleFactory(){
         factoryTowerToggle = true;
         waterTowerToggle = false;
     }
+    
+    /**
+     * Used when the water button is clicked
+     */
     public static void toggleWater(){
         waterTowerToggle = true;
         factoryTowerToggle = false;
     }
+    
+    /**
+     * Returns whether or not the water tower button has been toggled
+     */
     public static boolean getWater(){
         return waterTowerToggle;
     }
+    
+    /**
+     * Returns whther or not the factory tower button has been toggled
+     */
     public static boolean getFactory(){
         return factoryTowerToggle;
     }
