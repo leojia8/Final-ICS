@@ -40,7 +40,7 @@ public class WaterTowerButton extends TowerButton
     {
         if(Greenfoot.mouseClicked(this))
         {
-            w.cheatRound();
+            w.toggleFactory();
         }
     }
     public void onHover()

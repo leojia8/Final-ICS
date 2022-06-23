@@ -11,6 +11,7 @@ public class Radius extends Actor
     private GreenfootImage image;
     private boolean foundHost;
     private Player player;
+    
     /**
      * Initializes and resizes the image, then sets the transparancy to 50.
      */
@@ -28,7 +29,7 @@ public class Radius extends Actor
     public void act()
     {
 
-        if (Greenfoot.mouseClicked(this) && GameWorld.getWood()>=5 && GameWorld.getMetal() >=2 && GameWorld.getStone() >=4){
+        if (Greenfoot.mouseClicked(this) && GameWorld.getWood()>=5 && GameWorld.getMetal() >=2 && GameWorld.getStone() >=4 && GameWorld.getWater() && GameWorld.getFactory() == false){
             getWorld().addObject(new WaterTower(), Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
             
             
