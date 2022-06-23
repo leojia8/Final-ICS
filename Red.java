@@ -1,17 +1,17 @@
 import greenfoot.*;
 
 /**
- * Write a description of class WhiteOut here.
+ * A translucent red rectangle that fades over time that covers the entire game world, to be shown if the player takes damage.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class Red extends Actor
 {
     private int counter;
     private GreenfootImage image;
     /**
-     * Constructor for objects of class WhiteOut
+     * Setting and scaling the image, as well as initializing the counter for length and transparancy. 
      */
     public Red()
     {
@@ -26,7 +26,9 @@ public class Red extends Actor
         setImage(image);
     }
     
-    
+    /**
+     * Makes the image more transparent over time, until the counter is under 0, at which point it is removed from the world.
+     */
     public void act()
     {
         image.setTransparency(counter);

@@ -1,11 +1,12 @@
-/**
- * Write a description of class Resources here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-
 import greenfoot.*;
+
+/**
+ * A class representing resources that are spawned randomly across the world that the player collects to build towers. Has 3 different types/subclasses:
+ * Metal(ore), Stone(rock) and Wood(tree).
+ * 
+ * @author Thomas Yang, Angus Feng, Leo Jia
+ * @version June 2022
+ */
 public abstract class Resources extends Actor
 {
     protected int resourcesLeft;
@@ -16,12 +17,21 @@ public abstract class Resources extends Actor
     protected int timer;
     
     protected StatBar hpBar;
+    
+    /**
+     * Sets necessary variables to ensure the resource does not spawn on the path, the player, other resources or the tower select buttons.
+     */
     public Resources()
     {
         foundLocation = false;
         timer = 0;
     }
 
+    /**
+     * Method used by all resource subclasses to ensure the resource does not spawn on other entities. If after 100 acts the resource still has not
+     * found a spot, it will be removed from the world. Also, if the ore/rock/tree cannot be harvested any further (the player has harvested all 
+     * possible ressources from it), it will be removed from the world.
+     */
     public void act()
     {
         if(foundLocation == false)
@@ -79,6 +89,9 @@ public abstract class Resources extends Actor
         
     }
     
+    /**
+     * Used by player to collect resources - decreases the amount of resources that can be collected from the ore/rock/tree, and updates it's hp bar.
+     */
     public void takeResources()
     {
 
@@ -87,6 +100,9 @@ public abstract class Resources extends Actor
         hpBar.update((int)resourcesLeft);
     }
 
+    /**
+     * Returns the type of resource.
+     */
     public int getType()
     {
         return resourceType;

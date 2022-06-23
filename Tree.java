@@ -1,16 +1,17 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Tree here.
+ * Subclass of resource, which spawns trees that can be collected for wood used to create towers.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class Tree extends Resources
 {
     
     /**
-     * Constructor for objects of class Tree
+     * Sets the resource type, the amount of resources that can be harvested, sets and scales the image, and initializes the health bar that acts
+     * as a visual representation of the amount of resources left to be harvested for the user.
      */
     public Tree()
     {

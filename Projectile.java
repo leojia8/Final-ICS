@@ -3,10 +3,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Write a description of class Bullet here.
+ * Superclass of projectiles fired by towers
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 public abstract class Projectile extends Actor
 {
@@ -51,7 +51,11 @@ public abstract class Projectile extends Actor
 
         turnTowards(targetCat.getX(), targetCat.getY());
     }
-    //This method makes the bullet target the object it is created to target if there are no cats in the world. This method is borrrowed from Mr. Cohen's bug simluation project. 
+    
+    /**
+     * This method makes the bullet target the object it is created to target if there are no cats in the world. 
+     * This method is borrrowed from Mr. Cohen's bug simluation project. 
+     */
     private void targetClosest()
     {
         double closestTargetDistance = 0;

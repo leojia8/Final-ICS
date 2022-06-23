@@ -1,17 +1,18 @@
 import greenfoot.*;
 
 /**
- * Ores are resources that are required to create towers
+ * Subclass of resource, which spawns ores that can be collected for metal used to create towers.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class Ore extends Resources
 {
     
 
     /**
-     * Constructor for objects of class Ore
+     * Sets the resource type, the amount of resources that can be harvested, sets and scales the image, and initializes the health bar that acts
+     * as a visual representation of the amount of resources left to be harvested for the user.
      */
     public Ore()
     {

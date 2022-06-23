@@ -1,9 +1,10 @@
 #BlueJ class context
 comment0.target=Red
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ WhiteOut\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ A\ translucent\ red\ rectangle\ that\ fades\ over\ time\ that\ covers\ the\ entire\ game\ world,\ to\ be\ shown\ if\ the\ player\ takes\ damage.\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=Red()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ WhiteOut\r\n
+comment1.text=\r\n\ Setting\ and\ scaling\ the\ image,\ as\ well\ as\ initializing\ the\ counter\ for\ length\ and\ transparancy.\ \r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Makes\ the\ image\ more\ transparent\ over\ time,\ until\ the\ counter\ is\ under\ 0,\ at\ which\ point\ it\ is\ removed\ from\ the\ world.\r\n
 numComments=3

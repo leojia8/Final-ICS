@@ -1,10 +1,10 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Rock here.
+ * Subclass of resource, which spawns rocks that can be collected for stone used to create towers.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class Rock extends Resources
 {
@@ -12,7 +12,8 @@ public class Rock extends Resources
     private int x;
 
     /**
-     * Constructor for objects of class Rock
+     * Sets the resource type, the amount of resources that can be harvested, sets and scales the image, and initializes the health bar that acts
+     * as a visual representation of the amount of resources left to be harvested for the user.
      */
     public Rock()
     {
@@ -28,15 +29,4 @@ public class Rock extends Resources
         hpBar = new StatBar(resourcesLeft, resourcesLeft, this, 30, 5, 40, Color.GREEN, new Color(255, 204, 203), false, Color.WHITE, 1);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
 }
