@@ -46,8 +46,11 @@ public class FactoryTower extends Tower
                 GameWorld.takeWood();
                 GameWorld.takeMetal();
                 GameWorld.takeMetal();
+                GameWorld.takeMetal();
                 GameWorld.takeStone();
                 GameWorld.takeStone();
+               
+                
                 
                 
 
@@ -62,7 +65,7 @@ public class FactoryTower extends Tower
             {
                 GameWorld.addCatFood();
 
-                counter = 600;
+                counter = 1000;
             }
         }
 
