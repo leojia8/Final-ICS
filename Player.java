@@ -2,10 +2,12 @@ import greenfoot.*;
 import java.util.*;
 
 /**
- * This class will be the player class who the user will control. 
+ * The player class, a entity that the user can move around to play the game by collecting resources and placing towers.
+ * <p> Uses WASD to move, space bar to collect resources, and has different GIF images depending on whether or not the user is collecting resources.
+ * <p> Has sound effects when walking and placing towers.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang, Angus Feng
+ * @version June 2022
  */
 public class Player extends Actor  
 {
@@ -26,8 +28,10 @@ public class Player extends Actor
     private GreenfootImage activeImage;
     private int immuneCounter;
     private GreenfootSound collectingSound;
+    
     /**
-     * Constructor for objects of class Dog
+     * Initializes and resizes the active and idle images, initializes and sets the volume of the sound effects and 
+     * sets necessary variables for resource colecting/placing towers, health and the immunity counter.
      */
     public Player()
     {
@@ -51,6 +55,9 @@ public class Player extends Actor
         //let the player start looking down 
     }
 
+    /**
+     * Checks for input to allow the player to move around using WASD and collect resources with space bar.
+     */
     public void act()
     {
         //followMouse();
