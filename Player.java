@@ -28,7 +28,7 @@ public class Player extends Actor
     private GreenfootImage activeImage;
     private int immuneCounter;
     private GreenfootSound collectingSound;
-    
+
     /**
      * Initializes and resizes the active and idle images, initializes and sets the volume of the sound effects and 
      * sets necessary variables for resource colecting/placing towers, health and the immunity counter.
@@ -48,7 +48,7 @@ public class Player extends Actor
         collectingSound.setVolume(70);
         stepSound = new GreenfootSound("stepsound.wav");
         stepSound.setVolume(83);
-        
+
         health = 100;
         moving = false;
         immuneCounter = 120;
@@ -102,59 +102,34 @@ public class Player extends Actor
         if(Greenfoot.isKeyDown("S") && getY() < 780 )
         {
             stepSound.play();
-            TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
-            if(a != null)
-            {
 
-            }
-            else 
-            {
-                setLocation(getX(), getY() + 5);
-                orientation = 3;
-            }
+            setLocation(getX(), getY() + 5);
+            orientation = 3;
 
         }
         else if(Greenfoot.isKeyDown("W") && getY() > 20)
         {
-             stepSound.play();
-            TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
-            if(a != null)
-            {
+            stepSound.play();
 
-            }
-            else 
-            {
-                setLocation(getX(), getY() - 5);
-                orientation = 1;
-            }
+            setLocation(getX(), getY() - 5);
+            orientation = 1;
+
         }
         else if(Greenfoot.isKeyDown("A") && getX() > 20)
         {
-             stepSound.play();
-            TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
-            if(a != null)
-            {
+            stepSound.play();
 
-            }
-            else 
-            {
-                setLocation(getX() - 5, getY());
-                orientation = 4;
-            }
+            setLocation(getX() - 5, getY());
+            orientation = 4;
+
         }
         else if(Greenfoot.isKeyDown("D") && getX() < 1180)
         {
-             stepSound.play();
-            TowerButton a = (TowerButton)getOneObjectAtOffset(0, 50, TowerButton.class);
-            if(a != null)
-            {
+            stepSound.play();
 
-            }
-            else 
-            {
-                setLocation(getX() + 5, getY());
-                orientation = 2;
-            }
+            setLocation(getX() + 5, getY());
+            orientation = 2;
+
         }
         else if(collecting && collectingCounter <= 0)
         {
@@ -199,6 +174,5 @@ public class Player extends Actor
         }
 
     }
-
 
 }
