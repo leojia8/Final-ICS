@@ -37,7 +37,8 @@ public class HealthActor extends Actor
         
         if(added == false)
         {
-            getWorld().addObject(hpBar, getX(), getY() + 20);
+            setLocation(160 , 100);
+            getWorld().addObject(hpBar, getX()  , getY() + 20);
             added = true;
         }
     }
