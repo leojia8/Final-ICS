@@ -1,7 +1,17 @@
 import greenfoot.*;
+
+/**
+ * Gif image of the word defeat, to be shown in the lose world if the player loses. 
+ * 
+ * @author Thomas Yang
+ * @version June 2022
+ */
 public class Defeat extends Actor
 {
     private GifImage gifImage;
+    /**
+     * Initializes and resizes the image.
+     */
     public Defeat()
     {
         
@@ -11,7 +21,9 @@ public class Defeat extends Actor
         
     }
     
-    
+    /**
+     * Sets the next image every act.
+     */
     public void act()
     {
         setImage( gifImage.getCurrentImage() );

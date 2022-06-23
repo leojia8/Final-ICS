@@ -2,6 +2,9 @@ import greenfoot.*;
 
 /**
  * This class creates an explosion effect
+ * 
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class Explosion extends Actor 
 {

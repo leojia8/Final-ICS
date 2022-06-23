@@ -2,10 +2,10 @@ import greenfoot.*;
 
 
 /**
- * Write a description of class HealthActor here.
+ * A health bar in the top left of the screen, displaying the amount of HP the player has left.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class HealthActor extends Actor
 {
@@ -14,7 +14,7 @@ public class HealthActor extends Actor
     private GreenfootImage image;
     private boolean added;
     /**
-     * Constructor for objects of class HealthActor
+     * Sets the max hp of the player + initializes the player's health bar.
      */
     public HealthActor()
     {
@@ -27,6 +27,9 @@ public class HealthActor extends Actor
         added = false;
     }
 
+    /**
+     * Adds the bar to the world, and updates it every act.
+     */
     public void act()
     {
         HP = GameWorld.getHP();

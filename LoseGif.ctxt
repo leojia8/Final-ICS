@@ -1,7 +1,10 @@
 #BlueJ class context
 comment0.target=LoseGif
+comment0.text=\r\n\ Gif\ image\ of\ a\ cat\ drawing\ on\ some\ schematics,\ to\ be\ shown\ in\ the\ lose\ world\ if\ the\ player\ loses.\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=LoseGif()
+comment1.text=\r\n\ Initializes\ and\ resizes\ the\ image.\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Sets\ the\ next\ image\ every\ act.\r\n
 numComments=3
