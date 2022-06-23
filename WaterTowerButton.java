@@ -1,23 +1,23 @@
 import greenfoot.*;
 
 /**
- * Write a description of class WaterTower here.
+ * A button used to place water towers.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class WaterTowerButton extends TowerButton
 {
     
-    /**
-     * Constructor for objects of class WaterTower
-     */
     private GreenfootImage[] images = new GreenfootImage[2];
     private boolean toggleWaterGun;
     private boolean toggle;
     private boolean clickTwice;
     GameWorld w;
     
+    /**
+     * Initializes and scales regular and dark water buttons - dark gets used when hovered over by user.
+     */
     public WaterTowerButton()
     {
         super();
@@ -32,10 +32,18 @@ public class WaterTowerButton extends TowerButton
         //setImage(image);
         
     }
+    
+    /**
+     * Checks whether or not the button is being hovered over or was clicked on.
+     */
     public void act(){
         onHover();
         onClick();
     }
+    
+    /**
+     * If clicked, toggle so that the world knows you are placing factories.
+     */
     public void onClick()
     {
         if(Greenfoot.mouseClicked(this))
@@ -43,6 +51,10 @@ public class WaterTowerButton extends TowerButton
             w.toggleWater();
         }
     }
+    
+    /**
+     * If hovered, change image to darker image as visual effect.
+     */
     public void onHover()
     {
         if (Greenfoot.mouseMoved(this))

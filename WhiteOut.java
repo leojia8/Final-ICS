@@ -1,17 +1,17 @@
 import greenfoot.*;
 
 /**
- * Write a description of class WhiteOut here.
+ * Whiteout effect that covers the world, similar to the red effect when taking damage. Becomes transparent over time.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class WhiteOut extends Actor
 {
     private int counter;
     private GreenfootImage image;
     /**
-     * Constructor for objects of class WhiteOut
+     * Initializes and scales the image, then initializes counter for length and transparency.
      */
     public WhiteOut()
     {
@@ -26,7 +26,9 @@ public class WhiteOut extends Actor
         setImage(image);
     }
     
-    
+    /**
+     * Makes the image more transparent over time, until the counter is under 0, at which point it is removed from the world.
+     */
     public void act()
     {
         image.setTransparency(counter);

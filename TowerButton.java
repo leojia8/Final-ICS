@@ -2,10 +2,10 @@ import greenfoot.*;
 
 
 /**
- * Write a description of class TowerButton here.
+ * Superclass of buttons used to place towers - skeleton class
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Thomas Yang
+ * @version June 2022
  */
 public abstract class TowerButton extends Actor 
 {

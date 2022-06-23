@@ -1,7 +1,10 @@
 #BlueJ class context
 comment0.target=Victory
+comment0.text=\r\n\ Gif\ image\ of\ the\ word\ victory,\ to\ be\ shown\ in\ the\ win\ world\ if\ the\ player\ wins.\ \r\n
 comment1.params=
 comment1.target=Victory()
+comment1.text=\r\n\ Initializes\ and\ resizes\ the\ image.\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Sets\ the\ next\ image\ every\ act.\r\n
 numComments=3
