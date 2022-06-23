@@ -768,4 +768,8 @@ public class GameWorld  extends World
     {
         return round;
     }
+    public static void cheatRound(){
+        round = 10;
+    }
+    
 }

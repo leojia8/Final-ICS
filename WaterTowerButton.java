@@ -16,6 +16,8 @@ public class WaterTowerButton extends TowerButton
     private boolean toggleWaterGun;
     private boolean toggle;
     private boolean clickTwice;
+    GameWorld w;
+    
     public WaterTowerButton()
     {
         super();
@@ -38,7 +40,7 @@ public class WaterTowerButton extends TowerButton
     {
         if(Greenfoot.mouseClicked(this))
         {
-            
+            w.cheatRound();
         }
     }
     public void onHover()
