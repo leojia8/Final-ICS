@@ -350,6 +350,7 @@ public class GameWorld  extends World
         //addObject(new Grey(), 1000, 720);
         addObject(new HealthActor(), 180, 100);
         addObject(w, 1100, 720);
+        addObject(new FactoryTowerButton(), 950, 720);
         upgrading = false;
 
     }

@@ -6,7 +6,7 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class WaterTowerButton extends TowerButton
+public class FactoryTowerButton extends TowerButton
 {
     
     /**
@@ -18,12 +18,12 @@ public class WaterTowerButton extends TowerButton
     private boolean clickTwice;
     GameWorld w;
     
-    public WaterTowerButton()
+    public FactoryTowerButton()
     {
         super();
         type = 0;
-        images[0] = new GreenfootImage("waterButtoner.png"); 
-        images[1] = new GreenfootImage("darkButtonV2.png"); 
+        images[0] = new GreenfootImage("factoryButton.png"); 
+        images[1] = new GreenfootImage("darkFactory.png"); 
         
         //image = new GreenfootImage("darkButton.png");
         images[0].scale(100,100);
@@ -40,7 +40,7 @@ public class WaterTowerButton extends TowerButton
     {
         if(Greenfoot.mouseClicked(this))
         {
-            w.toggleWater();
+            w.toggleFactory();
         }
     }
     public void onHover()
