@@ -64,7 +64,7 @@ public class WaterTower extends Tower
                 GameWorld.takeWood();
                 GameWorld.takeWood();
                 GameWorld.takeWood();
-                GameWorld.takeWood();
+                //GameWorld.takeWood();
                 GameWorld.takeWood();
                 GameWorld.takeMetal();
                 GameWorld.takeMetal();
@@ -200,26 +200,6 @@ public class WaterTower extends Tower
         }
 
     }
-    /**
-     * public void addedToWorld(World w){
-    if (checked() != true){
-    getWorld().removeObject(this);
-    }
-    else{
-    setImage(image);       
-    image.scale(100,100);
-    }
-
-    }
-    private boolean checked(){
-    Square square = (Square)getOneIntersectingObject(Square.class);
-    Player player = (Player)getOneIntersectingObject(Player.class);
-    Resources r = (Resources)getOneIntersectingObject(Resources.class);
-    if (square != null || player != null || r != null){
-    return false;
-    }
-    return true;
-    }
-     */
+    
 
 }

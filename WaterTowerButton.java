@@ -38,8 +38,7 @@ public class WaterTowerButton extends TowerButton
     {
         if(Greenfoot.mouseClicked(this))
         {
-            setImage(images[1]);
-            toggle = true;
+            
         }
     }
     public void onHover()
@@ -53,9 +52,6 @@ public class WaterTowerButton extends TowerButton
             setImage(images[0]); //Light
         }
 
-    }
-    public boolean getToggle(){
-        return toggleWaterGun;
     }
     
     

@@ -91,8 +91,7 @@ public class GameWorld  extends World
         addObject(new Player(), 500, 400);
 
         upgrading = false;
-        //addObject(new TallCat(), 400, 700);
-        //addObject(new BossCat(), 400, 300);
+        
         levelConstructor();
 
         spawnTimer = 1500;
@@ -346,20 +345,20 @@ public class GameWorld  extends World
         r10.add(new TallCat());
         addTowerButtons();
 
-        addObject(new Grey(), 1000, 720);
+        //addObject(new Grey(), 1000, 720);
         addObject(new HealthActor(), 180, 100);
-
+        addObject(w, 1100, 720);
         upgrading = false;
 
     }
     public void act()
     {
-        //showText("EHEHE" + numStone + "S" + numWood + "" + numMetal,600 ,50 );
+        
         spawnResources();
-        //addInTowers();
+        
 
         spawnCats();
-        w.getToggle();
+        
         if(health <= 0)
         {
             bossMusic.stop();
@@ -687,7 +686,7 @@ public class GameWorld  extends World
     private void addTowerButtons()
     {
 
-        addObject(w, 1100, 720);
+        
 
         //addObject(new FactoryTowerButton(), 1000, 720);
     }

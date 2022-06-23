@@ -9,6 +9,4 @@ comment3.params=
 comment3.target=void\ onClick()
 comment4.params=
 comment4.target=void\ onHover()
-comment5.params=
-comment5.target=boolean\ getToggle()
-numComments=6
+numComments=5
