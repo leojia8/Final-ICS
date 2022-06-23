@@ -100,7 +100,7 @@ public class GameWorld  extends World
         numStone = 5;
         numWood = 5;
         numMetal = 5;
-        numCatFood = 30;
+        numCatFood = 0;
         round = 1;
         health = 10;
         resourceChance = 100;
