@@ -80,6 +80,8 @@ public class GameWorld  extends World
     private int resourceChance;
     private WaterTowerButton w = new WaterTowerButton();
     private static boolean upgrading;
+    private static boolean waterTowerToggle = true;
+    private static boolean factoryTowerToggle = false;
     /**
      * Constructor for objects of class GameWorld
      * this adds the player into the game
@@ -98,7 +100,7 @@ public class GameWorld  extends World
         numStone = 5;
         numWood = 5;
         numMetal = 5;
-        numCatFood = 0;
+        numCatFood = 30;
         round = 1;
         health = 10;
         resourceChance = 100;
@@ -857,6 +859,20 @@ public class GameWorld  extends World
      */
     public static void cheatRound(){
         round = 10;
+    }
+    public static void toggleFactory(){
+        factoryTowerToggle = true;
+        waterTowerToggle = false;
+    }
+    public static void toggleWater(){
+        waterTowerToggle = true;
+        factoryTowerToggle = false;
+    }
+    public static boolean getWater(){
+        return waterTowerToggle;
+    }
+    public static boolean getFactory(){
+        return factoryTowerToggle;
     }
     
 }
