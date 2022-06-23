@@ -109,7 +109,7 @@ public class GameWorld  extends World
         //normalMusic.setVolume(50);
         bossMusic.setVolume(20);
 
-        addObject(counter, 600, 40);
+        addObject(counter, 700, 40);
         stoppedMusic = false;
         setPaintOrder(ParagonButton.class, UpgradeButton.class, CancelButton.class, Missile.class, Counter.class, BossCat.class, Cat.class, StatBar.class, Red.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, WhiteOut.class, Square.class, Grey.class  );
         r1.add(new NormalCat());
