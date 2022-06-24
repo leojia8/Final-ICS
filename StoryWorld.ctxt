@@ -3,4 +3,6 @@ comment0.target=StoryWorld
 comment0.text=\r\n\ A\ story\ menu\ for\ the\ simulation.\ Tells\ users\ the\ story\ of\ the\ game,\ as\ well\ as\ how\ to\ play.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=StoryWorld()
-numComments=2
+comment2.params=
+comment2.target=void\ act()
+numComments=3

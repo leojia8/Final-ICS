@@ -89,7 +89,7 @@ public class GameWorld  extends World
      */
     public GameWorld()
     {
-        super(1200, 800, 1, false);
+        super(1200, 800, 1, false); 
         addObject(new Player(), 500, 400);
 
         upgrading = false;

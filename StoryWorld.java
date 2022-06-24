@@ -8,15 +8,21 @@ import greenfoot.*;
  */
 public class StoryWorld extends World
 {
-    
+    private GreenfootImage image;
     
     public StoryWorld() 
     {
         super(1200, 800, 1);
         
+        image = new GreenfootImage("storyworld.png");
+        image.scale(1200, 800);
+        setBackground(image);
     }
 
-    
+    public void act()
+    {
+        
+    }
     
     
     
