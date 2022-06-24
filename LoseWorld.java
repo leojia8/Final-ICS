@@ -28,6 +28,7 @@ public class LoseWorld extends World
         addObject(new Defeat(), 600, 100);
         addObject(new LoseGif(), 600, 500);
         addObject(begin, 600, 700);
+        addObject(score, 600, 800);
     }
     
     /**

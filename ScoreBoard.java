@@ -94,7 +94,7 @@ public class ScoreBoard extends Actor
             getImage().fillRect(left + 5, y - GAP + 1, right - left - 10, 50 + 2*GAP - 1);
 
             int x = left + 10;
-            drawString("#" + Integer.toString(playerData.getRank()), x, y+18, MAIN_COLOR, 14);
+            drawString("#" + 100, x, y+18, MAIN_COLOR, 14);
             x += 50;
             drawString(Integer.toString(playerData.getScore()), x, y+18, SCORE_COLOR, 14);
             x += 80;

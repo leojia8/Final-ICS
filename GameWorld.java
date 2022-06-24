@@ -370,8 +370,8 @@ public class GameWorld  extends World
         {
             bossMusic.stop();
             normalMusic.stop();
-            //Greenfoot.setWorld(new LoseWorld());
-            addObject (new ScoreBoard(720, 480), 400, 320);
+            Greenfoot.setWorld(new LoseWorld());
+            
         }
     }
 
