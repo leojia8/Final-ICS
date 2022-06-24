@@ -1,9 +1,8 @@
 #BlueJ class context
 comment0.target=Missile
-comment0.text=\r\n\ This\ class\ creates\ missle\ objects\ that\ target\ and\ follow\ instances\ of\ the\ cat\ class.\ \r\n
+comment0.text=\r\n\ This\ class\ creates\ missle\ objects\ that\ target\ and\ follow\ instances\ of\ the\ Jeep\ class.\ \r\n
 comment1.params=
 comment1.target=Missile()
-comment1.text=\r\n\ Initializes,\ scales\ and\ rotates\ the\ image,\ and\ sets\ necessary\ variables\ such\ as\ speed.\r\n
 comment2.params=
 comment2.target=void\ targetClosestCat()
 comment2.text=\r\n\ Private\ method,\ called\ by\ act(),\ that\ constantly\ checks\ for\ closer\ targets.\ Borrowed\ from\r\n\ Mr.\ Cohen's\ bug\ simulation\ project.\ \r\n
