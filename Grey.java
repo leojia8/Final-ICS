@@ -1,10 +1,10 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Grey here.
+ * Grey box used to hold tower buttons - unused now
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Angus Feng
+ * @version June 2022
  */
 public class Grey  extends Actor
 {
