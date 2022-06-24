@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=TowerButton
-comment0.text=\r\n\ Superclass\ of\ buttons\ used\ to\ place\ towers\ -\ skeleton\ class\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ Superclass\ of\ buttons\ used\ to\ place\ towers\ -\ skeleton\ class\r\n\ This\ Superclass\ has\ become\ redundant\ as\ of\ 6/23/2022\ because\ \r\n\ we\ just\ coded\ it\ different.\ Although\ we\ did\ not\ delete\ it\ because\ \r\n\ there\ are\ some\ lines\ of\ code\ that\ still\ reference\ TowerButton\ as\ a\ \r\n\ \r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=TowerButton()
 comment2.params=

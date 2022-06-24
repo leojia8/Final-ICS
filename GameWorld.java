@@ -431,7 +431,7 @@ public class GameWorld  extends World
      */
     private void spawnCats()
     {
-        showText("Round " + round, 1100, 25);
+        showText("Round " + round, 1100, 50);
         spawnTimer--;
         if(spawnTimer <= 0)
         {
