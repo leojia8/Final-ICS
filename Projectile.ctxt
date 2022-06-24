@@ -7,6 +7,7 @@ comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ turnTowardsTarget()
+comment3.text=\r\n\ Method\ to\ allow\ the\ projectile\ to\ turn\ towards\ the\ target\ cat.\r\n
 comment4.params=
 comment4.target=void\ targetClosest()
 comment4.text=\r\n\ This\ method\ makes\ the\ bullet\ target\ the\ object\ it\ is\ created\ to\ target\ if\ there\ are\ no\ cats\ in\ the\ world.\ \r\n\ This\ method\ is\ borrrowed\ from\ Mr.\ Cohen's\ bug\ simluation\ project.\ \r\n

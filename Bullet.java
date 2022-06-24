@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Bullet here.
+ * Projectiles shot by water towers and paragons. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Angus Feng, Thomas Yang
+ * @version June 2022
  */
 public class Bullet extends Projectile
 {
@@ -12,6 +12,13 @@ public class Bullet extends Projectile
     private int speed;
     private GreenfootImage image;
     private GreenfootSound shootSound;
+    
+    /**
+     * Takes in damage and speed parameters from the enemyDetector() methods in the tower classes. Initializes the image and sound effect.
+     * 
+     * @param damage    Damage of bullet, set in enemyDetector() methods.
+     * @param speed     Speed of bullet, set in enemyDetector() methods.
+     */
     public Bullet(int damage, int speed)
     {
         this.damage = damage;
@@ -23,14 +30,16 @@ public class Bullet extends Projectile
         shootSound.play();
     }
     /**
-     * Act - do whatever the Bullet wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Moves in the direction it was shot.
      */
     public void act()
     {
        move(speed);
     }
     
+    /**
+     * Returns the damage value of the bullet
+     */
     public int getDamage()
     {
         return damage;

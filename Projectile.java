@@ -44,6 +44,9 @@ public abstract class Projectile extends Actor
 
     }
 
+    /**
+     * Method to allow the projectile to turn towards the target cat.
+     */
     private void turnTowardsTarget()
     {
 

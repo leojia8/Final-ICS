@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.*;
 import greenfoot.GreenfootImage;
 
-/*
- * This class creates missle objects that target and follow instances of the Jeep class. 
+/**
+ * This class creates missle objects that target and follow instances of the cat class. 
  */
 public class Missile extends SuperSmoothMover
 {
@@ -17,6 +17,10 @@ public class Missile extends SuperSmoothMover
     private GreenfootImage image;
     private GreenfootSound launchSound;
     private int timer;
+    
+    /**
+     * Initializes, scales and rotates the image, and sets necessary variables such as speed.
+     */
     public Missile()
     {
         //Setting image
