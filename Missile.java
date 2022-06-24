@@ -5,7 +5,10 @@ import java.util.*;
 import greenfoot.GreenfootImage;
 
 /**
- * This class creates missle objects that target and follow instances of the cat class. 
+ * This class creates missle objects that target and follow instances of the cat class.
+ * 
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class Missile extends SuperSmoothMover
 {

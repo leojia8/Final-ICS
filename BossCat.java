@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * 
  * <p> Has a lot of extra functionality including the ability to stun towers, the ability to spawn more cats and multiple extra visual effects
  * 
- * @author Thomas Yang
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class BossCat extends Cat

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BossAttack
-comment0.text=\r\n\ A\ red\ circle\ that\ grows\ bigger\ every\ act,\ and\ faster\ over\ time,\ until\ it\ reaches\ a\ certain\ size,\ at\ which\ point\ it\ is\ removed\ from\ the\ world.\ \r\n\ Acts\ as\ a\ visual\ indicator\ of\ a\ stun\ attack,\ by\ BossCat.\ \r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ A\ red\ circle\ that\ grows\ bigger\ every\ act,\ and\ faster\ over\ time,\ until\ it\ reaches\ a\ certain\ size,\ at\ which\ point\ it\ is\ removed\ from\ the\ world.\ \r\n\ Acts\ as\ a\ visual\ indicator\ of\ a\ stun\ attack,\ by\ BossCat.\ \r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng,\ Leo\ Jia\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=BossAttack()
 comment1.text=\r\n\ Sets\ it's\ image\ to\ the\ red\ stun\ circle,\ and\ initializes\ some\ variables\r\n

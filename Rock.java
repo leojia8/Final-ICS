@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * Subclass of resource, which spawns rocks that can be collected for stone used to create towers.
  * 
- * @author Thomas Yang
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class Rock extends Resources

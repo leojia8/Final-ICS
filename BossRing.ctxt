@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BossRing
-comment0.text=\r\n\ A\ faint\ yellow\ circle\ that\ fades\ in\ and\ out\ around\ the\ boss\ for\ visual\ effect\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ A\ faint\ yellow\ circle\ that\ fades\ in\ and\ out\ around\ the\ boss\ for\ visual\ effect\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng,\ Leo\ Jia\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=BossRing()
 comment1.text=\r\n\ Sets\ the\ master\ GIF\ image,\ resizes\ it\ to\ fit\ around\ the\ boss\ and\ sets\ variables\ for\ the\ fading\ effect\r\n

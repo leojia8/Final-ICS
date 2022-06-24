@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Superclass of projectiles fired by towers
  * 
- * @author Thomas Yang
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public abstract class Projectile extends Actor

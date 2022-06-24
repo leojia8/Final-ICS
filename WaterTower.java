@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Subclass of tower - attacks cats, can be upgraded into a much stronger version (paragon).
  * 
- * @author Thomas Yang, Angus Feng
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class WaterTower extends Tower

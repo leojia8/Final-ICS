@@ -6,7 +6,7 @@ import java.util.*;
  * <p> Uses WASD to move, space bar to collect resources, and has different GIF images depending on whether or not the user is collecting resources.
  * <p> Has sound effects when walking and placing towers.
  * 
- * @author Thomas Yang, Angus Feng
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class Player extends Actor  

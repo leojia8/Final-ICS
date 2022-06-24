@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * A button used to place factory towers
  * 
- * @author Thomas Yang, Angus Feng
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class FactoryTowerButton extends TowerButton

@@ -5,7 +5,7 @@ import greenfoot.*;
  * A red circle that grows bigger every act, and faster over time, until it reaches a certain size, at which point it is removed from the world. 
  * Acts as a visual indicator of a stun attack, by BossCat. 
  * 
- * @author Thomas Yang
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class BossAttack extends Actor

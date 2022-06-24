@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * Subclass of resource, which spawns ores that can be collected for metal used to create towers.
  * 
- * @author Thomas Yang
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class Ore extends Resources

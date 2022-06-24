@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Radius
-comment0.text=\r\n\ A\ translucent\ grey\ circle\ that\ is\ centered\ on\ and\ follows\ the\ user.\ Represents\ the\ range\ in\ which\ the\ user\ can\ build\ towers.\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ A\ translucent\ grey\ circle\ that\ is\ centered\ on\ and\ follows\ the\ user.\ Represents\ the\ range\ in\ which\ the\ user\ can\ build\ towers.\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng,\ Leo\ Jia\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=Radius()
 comment1.text=\r\n\ Initializes\ and\ resizes\ the\ image,\ then\ sets\ the\ transparancy\ to\ 50.\r\n

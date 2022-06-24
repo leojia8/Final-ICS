@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * A button used to place water towers.
  * 
- * @author Thomas Yang
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class WaterTowerButton extends TowerButton

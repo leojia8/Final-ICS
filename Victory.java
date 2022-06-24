@@ -2,6 +2,9 @@ import greenfoot.*;
 
 /**
  * Gif image of the word victory, to be shown in the win world if the player wins. 
+ * 
+ * @author Thomas Yang
+ * @version June 2022
  */
 public class Victory extends Actor
 {

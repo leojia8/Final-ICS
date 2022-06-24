@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Bullet
-comment0.text=\r\n\ Projectiles\ shot\ by\ water\ towers\ and\ paragons.\ \r\n\ \r\n\ @author\ Angus\ Feng,\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ Projectiles\ shot\ by\ water\ towers\ and\ paragons.\ \r\n\ \r\n\ @author\ Angus\ Feng,\ Thomas\ Yang,\ Leo\ Jia\r\n\ @version\ June\ 2022\r\n
 comment1.params=damage\ speed
 comment1.target=Bullet(int,\ int)
 comment1.text=\r\n\ Takes\ in\ damage\ and\ speed\ parameters\ from\ the\ enemyDetector()\ methods\ in\ the\ tower\ classes.\ Initializes\ the\ image\ and\ sound\ effect.\r\n\ \r\n\ @param\ damage\ \ \ \ Damage\ of\ bullet,\ set\ in\ enemyDetector()\ methods.\r\n\ @param\ speed\ \ \ \ \ Speed\ of\ bullet,\ set\ in\ enemyDetector()\ methods.\r\n

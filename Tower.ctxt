@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Tower
-comment0.text=\r\n\ The\ abstract\ superclass\ for\ towers,\ which\ the\ player\ places\ to\ defend\ themselves\ from\ the\ cat\ hordes.\ Has\ functionality\ to\ upgrade\ towers\ using\ \r\n\ "cat\ food",\ as\ well\ as\ a\ method\ to\ track\ and\ set\ the\ duration\ of\ the\ stun\ effect\ created\ by\ the\ Boss\ Cat.\r\n\ \r\n\ <p>\ As\ our\ towers\ (factory\ tower,\ which\ makes\ cat\ food,\ and\ water\ tower/paragon,\ which\ attacks\ cats)\ are\ very\ different,\ they\ don't\ have\ a\ lot\ of\r\n\ shared\ functionality.\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng\ \r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ The\ abstract\ superclass\ for\ towers,\ which\ the\ player\ places\ to\ defend\ themselves\ from\ the\ cat\ hordes.\ Has\ functionality\ to\ upgrade\ towers\ using\ \r\n\ "cat\ food",\ as\ well\ as\ a\ method\ to\ track\ and\ set\ the\ duration\ of\ the\ stun\ effect\ created\ by\ the\ Boss\ Cat.\r\n\ \r\n\ <p>\ As\ our\ towers\ (factory\ tower,\ which\ makes\ cat\ food,\ and\ water\ tower/paragon,\ which\ attacks\ cats)\ are\ very\ different,\ they\ don't\ have\ a\ lot\ of\r\n\ shared\ functionality.\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng\ ,\ Leo\ Jia\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=Tower()
 comment1.text=\r\n\ Scales\ the\ image,\ and\ sets\ damage\ for\ the\ attacking\ towers.\r\n

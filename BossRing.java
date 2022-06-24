@@ -4,7 +4,7 @@ import java.util.ArrayList;
 /**
  * A faint yellow circle that fades in and out around the boss for visual effect
  * 
- * @author Thomas Yang
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class BossRing extends Actor

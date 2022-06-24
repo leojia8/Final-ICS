@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Victory
-comment0.text=\r\n\ Gif\ image\ of\ the\ word\ victory,\ to\ be\ shown\ in\ the\ win\ world\ if\ the\ player\ wins.\ \r\n
+comment0.text=\r\n\ Gif\ image\ of\ the\ word\ victory,\ to\ be\ shown\ in\ the\ win\ world\ if\ the\ player\ wins.\ \r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=Victory()
 comment1.text=\r\n\ Initializes\ and\ resizes\ the\ image.\r\n

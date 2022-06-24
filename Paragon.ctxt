@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Paragon
-comment0.text=\r\n\ The\ ultimate\ tower\ of\ destruction,\ the\ one\ who\ will\ exterminate\ the\ cats,\ there\ can\ be\ \r\n\ only\ one.\ Stats\ based\ on\ number\ of\ towers\ on\ screen.\ Inspired\ by\ btd6\ paragons.\ \r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ The\ ultimate\ tower\ of\ destruction,\ the\ one\ who\ will\ exterminate\ the\ cats,\ there\ can\ be\ \r\n\ only\ one.\ Stats\ based\ on\ number\ of\ towers\ on\ screen.\ Inspired\ by\ btd6\ paragons.\ \r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng,\ Leo\ Jia\r\n\ @version\ June\ 2022\r\n
 comment1.params=speed\ damage
 comment1.target=Paragon(int,\ int)
 comment1.text=\r\n\ Constructor\ for\ paragon,\ which\ sets,\ scales\ and\ rotates\ the\ upgraded\ image,\ as\ well\ as\ setting\ speed\ and\ damage\ which\ get\ passed\ in\ based\r\n\ on\ the\ amount\ of\ nearby\ towers\ sacrificed\r\n\ \r\n\ @param\ speed\ \ \ \ \ Speed\ of\ projectiles\ fired\ by\ the\ paragon,\ decided\ by\ the\ amount\ of\ towers\ sacrificed\r\n\ @param\ damage\ \ \ \ Damage\ value\ of\ projectiles\ fired\ by\ the\ paragon,\ decided\ by\ the\ amount\ of\ towers\ sacrificed\r\n

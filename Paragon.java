@@ -5,7 +5,7 @@ import java.util.List;
  * The ultimate tower of destruction, the one who will exterminate the cats, there can be 
  * only one. Stats based on number of towers on screen. Inspired by btd6 paragons. 
  * 
- * @author Thomas Yang
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class Paragon extends Tower

@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * <p> As our towers (factory tower, which makes cat food, and water tower/paragon, which attacks cats) are very different, they don't have a lot of
  * shared functionality.
  * 
- * @author Thomas Yang, Angus Feng 
+ * @author Thomas Yang, Angus Feng , Leo Jia
  * @version June 2022
  */
 public abstract class Tower extends Actor

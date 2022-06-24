@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * A translucent grey circle that is centered on and follows the user. Represents the range in which the user can build towers.
  * 
- * @author Thomas Yang
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class Radius extends Actor 

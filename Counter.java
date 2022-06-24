@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * The Counter Bar: The White Bar in the top middle of the screen which displays the amount of resources the player has.
  * 
- * @author Thomas Yang, Angus Feng
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class Counter extends Actor

@@ -4,7 +4,7 @@ import greenfoot.*;
 /**
  * A health bar in the top left of the screen, displaying the amount of HP the player has left.
  * 
- * @author Thomas Yang
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class HealthActor extends Actor

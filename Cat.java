@@ -10,7 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  *  <p>- Speed
  *  <p>- Sprites
  * 
- * @author Thomas Yang, Angus Feng
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public abstract class Cat extends SuperSmoothMover

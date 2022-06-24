@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Projectiles shot by water towers and paragons. 
  * 
- * @author Angus Feng, Thomas Yang
+ * @author Angus Feng, Thomas Yang, Leo Jia
  * @version June 2022
  */
 public class Bullet extends Projectile

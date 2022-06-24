@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * Gif image of the word defeat, to be shown in the lose world if the player loses. 
  * 
- * @author Thomas Yang
+ * @author Thomas Yang, Angus Feng, Leo Jia
  * @version June 2022
  */
 public class Defeat extends Actor
