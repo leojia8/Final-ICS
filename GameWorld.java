@@ -411,6 +411,8 @@ public class GameWorld  extends World
 
     /**
      * Returns the amount of cat food that the player has.
+     * 
+     * @return The amount of cat food.
      */
     public static int getCatFood()
     {
@@ -419,6 +421,8 @@ public class GameWorld  extends World
 
     /**
      * Returns the HP of the player.
+     * 
+     * @return The amount of HP of the player.
      */
     public static int getHP()
     {
@@ -795,6 +799,8 @@ public class GameWorld  extends World
 
     /**
      * Getter method which returns the amount of metal that the player has.
+     * 
+     * @return The amount of metal the player has.
      */
     public static int getMetal()
     {
@@ -811,6 +817,8 @@ public class GameWorld  extends World
 
     /**
      * Getter method which returns the amount of wood that the player has.
+     * 
+     * @return The amount of wood the player has.
      */
     public static int getWood()
     {
@@ -835,6 +843,8 @@ public class GameWorld  extends World
 
     /**
      * Getter method to see whether or not a tower is upgrading.
+     * 
+     * @return Whether or not the tower is being upgraded.
      */
     public static boolean isUpgrading()
     {
@@ -851,6 +861,8 @@ public class GameWorld  extends World
 
     /**
      * Getter method which returns the amount of stone the player has.
+     * 
+     * @return The amount of stone the user has.
      */
     public static int getStone()
     {
@@ -859,6 +871,8 @@ public class GameWorld  extends World
 
     /**
      * Getter method which returns the round number.
+     * 
+     * @return The round number.
      */
     public static int getRound()
     {
@@ -890,6 +904,8 @@ public class GameWorld  extends World
     
     /**
      * Returns whether or not the water tower button has been toggled
+     * 
+     * @return Whether or not the water tower button was toggled.
      */
     public static boolean getWater(){
         return waterTowerToggle;
@@ -897,6 +913,8 @@ public class GameWorld  extends World
     
     /**
      * Returns whther or not the factory tower button has been toggled
+     * 
+     * @return Whether or not the factory tower button has been toggled.
      */
     public static boolean getFactory(){
         return factoryTowerToggle;
