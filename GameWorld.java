@@ -1,34 +1,40 @@
-
 import greenfoot.*;
 import java.util.Queue;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Here we will need to implement many things including resource spawning, cat spawning, and how the lane is going to orient. 
+ * Battle Cats Tower Defense x Survival Game!!!
  * 
- * Current bugs !!
- * the boss for some reason starts moving in the opposite direction
- * the player needs to be smaller (idk how to rescale a gif)  
+ * Features:
+ *  - Story explaining background of game + instructions.
+ *  - Cats try to traverse the path to get to the other side, which damages the player.
+ *  - There are 4 subclasses of Cat: BossCat, TallCat, EggCat and NormalCat, each with their own stats.
+ *  - BossCat is the boss spawned on round 10, the last round. It has many extra functionalities and abilities, including a stun
+ *  effect, a spawning effect and several cool visual effects. There is a button to skip directly too it in the welcome world.
+ *  - The player moves around using WASD, and uses space bar to collect resources, which spawn randomly around the map.
+ *  - The player can use those resources to make towers to defend themselves against the evil cat hordes. Some towers attack, while others generate
+ *  income.
+ *  - One tower, the factory tower, creates a special resource called cat food, which is used to upgrade the water tower into a Paragon, which is
+ *  imperative to your success.
+ *  - The Paragon absorbs other towers when it is created. The more towers sacrificed, the more powerful it is.
+ *  - Towers are placed with LMB, and an upgrade menu will pop up if you click on them and you have enough cat food for the upgrades - 1 cat food
+ *  for 3x damage, and 30 cat food to become a Paragon. There are icons in the bottom right that you can click to toggle between which towers you 
+ *  are currently able to place.
+ *  - Towers can only be placed in the grey circle around the player, and cannot touch any other entities (including the path) at all.
+ *  - If the cats touch the player, the player will be damaged. The player loses if they lose all of their health or the boss cat gets to the end.
+ *  - The player wins by eliminating the cat menace.
+ *  
+ * Credit:
+ *  - 
+ * 
+ * Bugs:
+ *  - If the world does not initialize on it's own, initialize the WelcomeWorld to start the game.
  * 
  * 
- * New features !!
- * add story 
- * add a tutorial reel
- * more towers (factory tower, slow tower)
- * tower select (when the tower is selected it changes hue? and thats how you know what you are placing)
- * more rounds
- * add better graphics
- * upgrade feature (UI pop up menu)
  * 
- * Balance changes !!
- * the resourses should have lower health (forces the players to move more)
- * resources should spawn more
- * boss is kinda too OP (but this is without upgrades and w/o other features)
- * 
- * 
- * Thomas Yang, Ivan Cai, Angus Feng, Leo Jia 
- * THURSDAY JUNE 16, 2022
+ * @author Thomas Yang, Ivan Cai, Angus Feng, Leo Jia 
+ * @version June 2022
  */
 public class GameWorld  extends World
 {
