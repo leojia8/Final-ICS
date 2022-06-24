@@ -22,6 +22,6 @@ public class Counter extends Actor
      */
     public void act()
     {
-        setImage(new GreenfootImage("Stone: "+ w.getStone() + "     Wood: " + w.getWood() + "     Metal: " + w.getMetal() + "        Cat Food: " + w.getCatFood(),40, Color.BLACK, new Color(0, 176, 225)));
+        setImage(new GreenfootImage("Stone: "+ w.getStone() + "     Wood: " + w.getWood() + "     Metal: " + w.getMetal() + "        Cat Food: " + w.getCatFood(),40, Color.BLACK, new Color(255, 255, 255)));
     }
 }
