@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=StoryWorld
-comment0.text=\r\n\ A\ story\ menu\ for\ the\ simulation.\ Tells\ users\ the\ story\ of\ the\ game,\ as\ well\ as\ how\ to\ play.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ A\ story\ menu\ for\ the\ simulation.\ Tells\ users\ the\ story\ of\ the\ game.\r\n\ \r\n\ @author\ Leo\ Jia\ \r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=StoryWorld()
+comment1.text=\r\n\ Sets\ and\ scales\ the\ story\ image.\ Adds\ a\ button\ to\ allow\ the\ user\ to\ go\ to\ the\ instructions\ world\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Sends\ the\ user\ to\ the\ instructions\ world\ when\ the\ next\ button\ is\ clicked.\r\n
 numComments=3
