@@ -44,9 +44,14 @@ public class FactoryTower extends Tower
                 y = getY();
                 addedToWorld = true;
                 GameWorld.takeWood();
+                GameWorld.takeWood();
+                GameWorld.takeWood();
+                
                 GameWorld.takeMetal();
                 GameWorld.takeMetal();
-                GameWorld.takeMetal();
+                
+                GameWorld.takeStone();
+                GameWorld.takeStone();
                 GameWorld.takeStone();
                 GameWorld.takeStone();
                

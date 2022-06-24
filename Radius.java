@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * A translucent grey circle that is centered on and follows the user. Represents the range in which the user can build towers.
  * 
- * @author Thomas Yang, Angus Feng, Leo Jia
+ * @author Thomas Yang, Angus, Leo
  * @version June 2022
  */
 public class Radius extends Actor 
@@ -29,12 +29,12 @@ public class Radius extends Actor
     public void act()
     {
 
-        if (Greenfoot.mouseClicked(this) && GameWorld.getWood()>=5 && GameWorld.getMetal() >=2 && GameWorld.getStone() >=4 && GameWorld.getWater() == true && GameWorld.getFactory() == false){
+        if (Greenfoot.mouseClicked(this) && GameWorld.getWood()>=4 && GameWorld.getMetal() >=2 && GameWorld.getStone() >=2 && GameWorld.getWater() == true && GameWorld.getFactory() == false){
             getWorld().addObject(new WaterTower(), Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
             
             
         }
-        else if (Greenfoot.mouseClicked(this) && GameWorld.getWood()>=5 && GameWorld.getMetal() >=2 && GameWorld.getStone() >=4 && GameWorld.getWater() == false && GameWorld.getFactory() == true){
+        else if (Greenfoot.mouseClicked(this) && GameWorld.getWood()>=3 && GameWorld.getMetal() >=2 && GameWorld.getStone() >=4 && GameWorld.getWater() == false && GameWorld.getFactory() == true){
             getWorld().addObject(new FactoryTower(), Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
             
         

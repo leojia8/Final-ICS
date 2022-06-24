@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Cat
-comment0.text=\r\n\ The\ abstract\ superclass\ for\ cats.\ Contains\ all\ necessary\ methods\ for\ it's\ subclasses\ (aside\ from\ BossCat,\ which\ has\ some\ extra\ functionality).\ \r\n\ \r\n\ <p>\ Has\ an\ empty\ constructor\ because\ each\ cat\ subclass\ sets\ its\ own\ health,\ speed,\ type,\ etc.\r\n\ \r\n\ <p>All\ cats\ have\:\r\n\ \ <p>-\ Health\ (and\ a\ corresponding\ health\ bar)\r\n\ \ <p>-\ Speed\r\n\ \ <p>-\ Sprites\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng,\ Leo\ Jia\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ The\ abstract\ superclass\ for\ cats.\ Contains\ all\ necessary\ methods\ for\ it's\ subclasses\ (aside\ from\ BossCat,\ which\ has\ some\ extra\ functionality).\ \r\n\ \r\n\ <p>\ Has\ an\ empty\ constructor\ because\ each\ cat\ subclass\ sets\ its\ own\ health,\ speed,\ type,\ etc.\r\n\ \r\n\ <p>All\ cats\ have\:\r\n\ \ <p>-\ Health\ (and\ a\ corresponding\ health\ bar)\r\n\ \ <p>-\ Speed\r\n\ \ <p>-\ Sprites\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=Cat()
 comment2.params=

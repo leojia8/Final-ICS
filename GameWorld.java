@@ -9,21 +9,39 @@ import java.util.List;
  * Features:
  *  - Story explaining background of game + instructions.
  *  - Cats try to traverse the path to get to the other side, which damages the player.
+ *  - Cats spawn every round and there is a rest period in between rounds
+ *  
+ *  CHEAT FEATURE MR COHEN!!!
+ *  There is a button in the WelcomeWorld to skip to the boss. There is a wait period for you to prepare your resources before it spawns
+ *  
  *  - There are 4 subclasses of Cat: BossCat, TallCat, EggCat and NormalCat, each with their own stats.
  *  - BossCat is the boss spawned on round 10, the last round. It has many extra functionalities and abilities, including a stun
- *  effect, a spawning effect and several cool visual effects. There is a button to skip directly too it in the welcome world.
+ *  effect, a spawning effect and several cool visual effects. There is a button to skip directly too it in the Welcome World.
+ *  effect, a spawning effect, teleportation, etc. There is a button to skip directly too it in the welcome world.
  *  - The player moves around using WASD, and uses space bar to collect resources, which spawn randomly around the map.
- *  - The player can use those resources to make towers to defend themselves against the evil cat hordes. Some towers attack, while others generate
+ *  - The player can use those resources to make towers to defend themselves against the evil cat hordes. Some towers attack, while others generate catfood
+ *  - The player can use those resources to make towers to defend themselves against the evil cat hordes. The penguin towers attack, while the factory generates
  *  income.
  *  - One tower, the factory tower, creates a special resource called cat food, which is used to upgrade the water tower into a Paragon, which is
- *  imperative to your success.
+ *  imperative to your success (Catfood can also be used to upgrade the damage of a tower)
+ *  - IMPORTANT NOTE: The upgrade option will not show unless you have the required Catfood
  *  - The Paragon absorbs other towers when it is created. The more towers sacrificed, the more powerful it is.
  *  - Towers are placed with LMB, and an upgrade menu will pop up if you click on them and you have enough cat food for the upgrades - 1 cat food
  *  for 3x damage, and 30 cat food to become a Paragon. There are icons in the bottom right that you can click to toggle between which towers you 
  *  are currently able to place.
- *  - Towers can only be placed in the grey circle around the player, and cannot touch any other entities (including the path) at all.
- *  - If the cats touch the player, the player will be damaged. The player loses if they lose all of their health or the boss cat gets to the end.
- *  - The player wins by eliminating the cat menace.
+ *  - Towers can only be placed in the grey circle around the player, and be placed on any entities (including the path) at all.
+ *  - The player wins by eliminating the cat boss.
+ *  - If the cats touch the player, the player will be damaged. 
+ *  - If a cat gets to the other side, the player will be damaged
+ *  - You lose if you hit 0 HP
+ *  - The boss cat will insta kill you if it reaches the other side
+ *  - The player wins by eliminating the Boss Cat (Round 10).
+ *  
+ *  Strategy:
+ *  IF YOU WANT TO BEAT THE BOSS. You need a lot of DPS. The best way to do this is to spam Penguin Towers and have one of them
+ *  upgrade to a Paragon absorbing all the other Penguin Towers. Paragons increase in DPS exponentially with the number of Penguin Towers
+ *  absorbed. Since you need CatFood to create a Paragon, you will have to place down FactoryTowers to have a stable income of CatFood.
+ *  Make sure you don't get too focused on income, you might not have enough Penguins down to fend off the cats!
  *  
  * Credit:
  *  - All tower graphics drawn by Ivan Cai.
@@ -33,6 +51,8 @@ import java.util.List;
  * 
  * Bugs:
  *  - If the world does not initialize on it's own, initialize the WelcomeWorld to start the game.
+ *  - Save Feature: Save the highscore (We could not get this to work but you said we could skip this part without any deductions)
+ * 
  * 
  * 
  * 

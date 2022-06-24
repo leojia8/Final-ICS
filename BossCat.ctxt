@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BossCat
-comment0.text=\r\n\ Subclass\ of\ cat\ -\ the\ ultimate\ boss\ enemy,\ spawned\ during\ round\ 10.\r\n\ \r\n\ <p>\ Has\ a\ lot\ of\ extra\ functionality\ including\ the\ ability\ to\ stun\ towers,\ the\ ability\ to\ spawn\ more\ cats\ and\ multiple\ extra\ visual\ effects\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng,\ Leo\ Jia\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ Subclass\ of\ cat\ -\ the\ ultimate\ boss\ enemy,\ spawned\ during\ round\ 10.\r\n\ \r\n\ <p>\ Has\ a\ lot\ of\ extra\ functionality\ including\ the\ ability\ to\ stun\ towers,\ the\ ability\ to\ spawn\ more\ cats\ and\ multiple\ extra\ visual\ effects\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=BossCat()
 comment1.text=\r\n\ Sets\ Hp,\ type,\ speed,\ initializes\ an\ hp\ bar\ and\ sets\ the\ GIF\ image.\ Also\ has\ some\ other\ variables\ for\ the\ extra\ functionalities\r\n

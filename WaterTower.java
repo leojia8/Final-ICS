@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Subclass of tower - attacks cats, can be upgraded into a much stronger version (paragon).
  * 
- * @author Thomas Yang, Angus Feng, Leo Jia
+ * @author Thomas Yang, Angus Feng
  * @version June 2022
  */
 public class WaterTower extends Tower
@@ -62,14 +62,14 @@ public class WaterTower extends Tower
                 GameWorld.takeWood();
                 GameWorld.takeWood();
                 GameWorld.takeWood();
-                //GameWorld.takeWood();
                 GameWorld.takeWood();
+                
                 GameWorld.takeMetal();
                 GameWorld.takeMetal();
+                
                 GameWorld.takeStone();
                 GameWorld.takeStone();
-                GameWorld.takeStone();
-                GameWorld.takeStone();
+                
                 setImage(image);   
                 image.scale(100,100);
                 image.rotate(270);

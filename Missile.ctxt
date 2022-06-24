@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Missile
-comment0.text=\r\n\ This\ class\ creates\ missle\ objects\ that\ target\ and\ follow\ instances\ of\ the\ cat\ class.\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ This\ class\ creates\ missle\ objects\ that\ target\ and\ follow\ instances\ of\ the\ cat\ class.\ \r\n
 comment1.params=
 comment1.target=Missile()
 comment1.text=\r\n\ Initializes,\ scales\ and\ rotates\ the\ image,\ and\ sets\ necessary\ variables\ such\ as\ speed.\r\n

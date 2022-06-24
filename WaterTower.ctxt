@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=WaterTower
-comment0.text=\r\n\ Subclass\ of\ tower\ -\ attacks\ cats,\ can\ be\ upgraded\ into\ a\ much\ stronger\ version\ (paragon).\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng,\ Leo\ Jia\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ Subclass\ of\ tower\ -\ attacks\ cats,\ can\ be\ upgraded\ into\ a\ much\ stronger\ version\ (paragon).\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=WaterTower()
 comment1.text=\r\n\ Setting,\ scaling,\ resizing\ and\ rotating\ the\ GIF\ image,\ as\ well\ as\ initializing\ some\ necessary\ variables\ for\ upgrades\r\n

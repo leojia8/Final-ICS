@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Player
-comment0.text=\r\n\ The\ player\ class,\ a\ entity\ that\ the\ user\ can\ move\ around\ to\ play\ the\ game\ by\ collecting\ resources\ and\ placing\ towers.\r\n\ <p>\ Uses\ WASD\ to\ move,\ space\ bar\ to\ collect\ resources,\ and\ has\ different\ GIF\ images\ depending\ on\ whether\ or\ not\ the\ user\ is\ collecting\ resources.\r\n\ <p>\ Has\ sound\ effects\ when\ walking\ and\ placing\ towers.\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng,\ Leo\ Jia\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ The\ player\ class,\ a\ entity\ that\ the\ user\ can\ move\ around\ to\ play\ the\ game\ by\ collecting\ resources\ and\ placing\ towers.\r\n\ <p>\ Uses\ WASD\ to\ move,\ space\ bar\ to\ collect\ resources,\ and\ has\ different\ GIF\ images\ depending\ on\ whether\ or\ not\ the\ user\ is\ collecting\ resources.\r\n\ <p>\ Has\ sound\ effects\ when\ walking\ and\ placing\ towers.\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=Player()
 comment1.text=\r\n\ Initializes\ and\ resizes\ the\ active\ and\ idle\ images,\ initializes\ and\ sets\ the\ volume\ of\ the\ sound\ effects\ and\ \r\n\ sets\ necessary\ variables\ for\ resource\ colecting/placing\ towers,\ health\ and\ the\ immunity\ counter.\r\n
