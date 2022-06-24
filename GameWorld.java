@@ -26,7 +26,10 @@ import java.util.List;
  *  - The player wins by eliminating the cat menace.
  *  
  * Credit:
- *  - 
+ *  - All tower graphics drawn by Ivan Cai.
+ *  - Player graphics all drawn by Ivan Cai.
+ *  - Cat graphics courtesy of Battle Cats Fandom, https://battle-cats.fandom.com/wiki/Battle_Cats_Wiki
+ *  - Most other graphics of resources, projectiles, etc. designed by our group (mostly Ivan).
  * 
  * Bugs:
  *  - If the world does not initialize on it's own, initialize the WelcomeWorld to start the game.
