@@ -17,7 +17,7 @@ public class StoryWorld extends World
     {
         super(1200, 800, 1);
         
-        image = new GreenfootImage("storyworldtext.png");
+        image = new GreenfootImage("storyworldtextv2.png");
         image.scale(1200, 800);
         setBackground(image);
         
