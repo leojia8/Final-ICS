@@ -352,7 +352,7 @@ public class GameWorld  extends World
         addObject(w, 1100, 720);
         addObject(new FactoryTowerButton(), 950, 720);
         upgrading = false;
-
+        startedT();
     }
     
     /**
@@ -378,7 +378,7 @@ public class GameWorld  extends World
     /**
      * Plays boss music if there is a boss, otherwise plays the regular music.
      */
-    public void started()
+    public void startedT()
     {
         if(stoppedMusic)
         {
