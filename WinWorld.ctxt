@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=WinWorld
-comment0.text=\r\n\ A\ class\ representing\ a\ end\ screen\ for\ the\ game,\ to\ be\ shown\ if\ the\ player\ wins.\ \r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
+comment0.text=\n\ A\ class\ representing\ a\ end\ screen\ for\ the\ game,\ to\ be\ shown\ if\ the\ player\ wins.\ \n\ \n\ @author\ Thomas\ Yang\n\ @version\ June\ 2022\n
 comment1.params=
 comment1.target=WinWorld()
-comment1.text=\r\n\ Creates\ a\ new\ world,\ sets\ and\ resizes\ the\ background\ and\ adds\ a\ button\ that\ allows\ the\ user\ to\ replay\ the\ game.\r\n
+comment1.text=\n\ Creates\ a\ new\ world,\ sets\ and\ resizes\ the\ background\ and\ adds\ a\ button\ that\ allows\ the\ user\ to\ replay\ the\ game.\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Restarts\ the\ simulation\ by\ setting\ the\ world\ back\ to\ the\ welcome\ world\ if\ the\ "restart"\ button\ is\ clicked.\ \r\n
+comment2.text=\n\ Restarts\ the\ simulation\ by\ setting\ the\ world\ back\ to\ the\ welcome\ world\ if\ the\ "restart"\ button\ is\ clicked.\ \n
 numComments=3
