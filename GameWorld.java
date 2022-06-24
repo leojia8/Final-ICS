@@ -111,7 +111,7 @@ public class GameWorld  extends World
 
         addObject(counter, 700, 40);
         stoppedMusic = false;
-        setPaintOrder(ParagonButton.class, UpgradeButton.class, CancelButton.class, Missile.class, Counter.class, BossCat.class, Cat.class, StatBar.class, Red.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, WhiteOut.class, Square.class, Grey.class  );
+        setPaintOrder(ScoreBoard.class, ParagonButton.class, UpgradeButton.class, CancelButton.class, Missile.class, Counter.class, BossCat.class, Cat.class, StatBar.class, Red.class, Projectile.class,Player.class, TowerButton.class,BossRing.class, BossAttack.class, Explosion.class, Tower.class, WhiteOut.class, Square.class, Grey.class  );
         r1.add(new NormalCat());
         r1.add(new NormalCat());
         r1.add(new NormalCat());

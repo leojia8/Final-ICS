@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=HealthActor
-comment0.text=\n\ A\ health\ bar\ in\ the\ top\ left\ of\ the\ screen,\ displaying\ the\ amount\ of\ HP\ the\ player\ has\ left.\n\ \n\ @author\ Thomas\ Yang\n\ @version\ June\ 2022\n
+comment0.text=\r\n\ A\ health\ bar\ in\ the\ top\ left\ of\ the\ screen,\ displaying\ the\ amount\ of\ HP\ the\ player\ has\ left.\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=HealthActor()
-comment1.text=\n\ Sets\ the\ max\ hp\ of\ the\ player\ +\ initializes\ the\ player's\ health\ bar.\n
+comment1.text=\r\n\ Sets\ the\ max\ hp\ of\ the\ player\ +\ initializes\ the\ player's\ health\ bar.\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\n\ Adds\ the\ bar\ to\ the\ world,\ and\ updates\ it\ every\ act.\n
+comment2.text=\r\n\ Adds\ the\ bar\ to\ the\ world,\ and\ updates\ it\ every\ act.\r\n
 numComments=3

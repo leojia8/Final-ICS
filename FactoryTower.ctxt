@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=FactoryTower
-comment0.text=\n\ Subclass\ of\ tower\ -\ creates\ "cat\ food",\ a\ secondary\ resource\ used\ to\ upgrade\ towers\n\ \n\ @author\ Thomas\ Yang\n\ @version\ June\ 2022\n
+comment0.text=\r\n\ Subclass\ of\ tower\ -\ creates\ "cat\ food",\ a\ secondary\ resource\ used\ to\ upgrade\ towers\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=FactoryTower()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ FactoryTower\n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ FactoryTower\r\n
 comment2.params=
 comment2.target=void\ act()
 numComments=3

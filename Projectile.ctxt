@@ -1,13 +1,14 @@
 #BlueJ class context
 comment0.target=Projectile
-comment0.text=\n\ Superclass\ of\ projectiles\ fired\ by\ towers\n\ \n\ @author\ Thomas\ Yang\n\ @version\ June\ 2022\n
+comment0.text=\r\n\ Superclass\ of\ projectiles\ fired\ by\ towers\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=Projectile()
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ turnTowardsTarget()
+comment3.text=\r\n\ Method\ to\ allow\ the\ projectile\ to\ turn\ towards\ the\ target\ cat.\r\n
 comment4.params=
 comment4.target=void\ targetClosest()
-comment4.text=\n\ This\ method\ makes\ the\ bullet\ target\ the\ object\ it\ is\ created\ to\ target\ if\ there\ are\ no\ cats\ in\ the\ world.\ \n\ This\ method\ is\ borrrowed\ from\ Mr.\ Cohen's\ bug\ simluation\ project.\ \n
+comment4.text=\r\n\ This\ method\ makes\ the\ bullet\ target\ the\ object\ it\ is\ created\ to\ target\ if\ there\ are\ no\ cats\ in\ the\ world.\ \r\n\ This\ method\ is\ borrrowed\ from\ Mr.\ Cohen's\ bug\ simluation\ project.\ \r\n
 numComments=5

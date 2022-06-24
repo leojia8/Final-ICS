@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=Counter
-comment0.text=\n\ The\ Counter\ Bar\:\ The\ White\ Bar\ in\ the\ top\ middle\ of\ the\ screen\ which\ displays\ the\ amount\ of\ resources\ the\ player\ has.\n\ \n\ @author\ Thomas\ Yang,\ Angus\ Feng\n\ @version\ June\ 2022\n
+comment0.text=\r\n\ The\ Counter\ Bar\:\ The\ White\ Bar\ in\ the\ top\ middle\ of\ the\ screen\ which\ displays\ the\ amount\ of\ resources\ the\ player\ has.\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=Counter()
-comment1.text=\n\ Sets\ the\ image\ to\ text\ displaying\ the\ number\ of\ resources.\n
+comment1.text=\r\n\ Sets\ the\ image\ to\ text\ displaying\ the\ number\ of\ resources.\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\n\ Updates\ the\ counter\ bar.\n
+comment2.text=\r\n\ Updates\ the\ counter\ bar.\r\n
 numComments=3

@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=TallCat
-comment0.text=\n\ Subclass\ of\ cat\ -\ faster,\ weaker\ enemy.\n\ \n\ @author\ Thomas\ Yang,\ Leo\ Jia,\ Angus\ Feng\n\ @version\ June\ 2022\n
+comment0.text=\r\n\ Subclass\ of\ cat\ -\ faster,\ weaker\ enemy.\r\n\ \r\n\ @author\ Thomas\ Yang,\ Leo\ Jia,\ Angus\ Feng\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=TallCat()
-comment1.text=\n\ Sets\ Hp\ and\ type\ variables,\ initializes\ an\ HP\ bar,\ and\ sets\ the\ GIF\ image.\n
+comment1.text=\r\n\ Sets\ Hp\ and\ type\ variables,\ initializes\ an\ HP\ bar,\ and\ sets\ the\ GIF\ image.\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\n\ Updates\ the\ Hp\ bar\ to\ track\ damage\ done\ and\ moves\ the\ tall\ cat\ along\ the\ path\ at\ a\ set\ speed.\n\ \n\ <p>\ Uses\ the\ superclass\ act\ method\ to\ check\ if\ the\ cat\ needs\ to\ be\ removed\ from\ the\ world.\n
+comment2.text=\r\n\ Updates\ the\ Hp\ bar\ to\ track\ damage\ done\ and\ moves\ the\ tall\ cat\ along\ the\ path\ at\ a\ set\ speed.\r\n\ \r\n\ <p>\ Uses\ the\ superclass\ act\ method\ to\ check\ if\ the\ cat\ needs\ to\ be\ removed\ from\ the\ world.\r\n
 comment3.params=speed
 comment3.target=void\ moveAlongPathCat(int)
 numComments=4

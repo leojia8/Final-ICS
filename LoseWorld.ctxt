@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=LoseWorld
-comment0.text=\n\ A\ class\ representing\ a\ end\ screen\ for\ the\ game,\ to\ be\ shown\ if\ the\ player\ loses.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ A\ class\ representing\ a\ end\ screen\ for\ the\ game,\ to\ be\ shown\ if\ the\ player\ loses.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=LoseWorld()
-comment1.text=\n\ Creates\ a\ new\ world,\ then\ sets\ its\ background\ to\ the\ appropriate\ image.\n
+comment1.text=\r\n\ Creates\ a\ new\ world,\ then\ sets\ its\ background\ to\ the\ appropriate\ image.\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\n\ Restarts\ the\ simulation\ by\ setting\ the\ world\ back\ to\ the\ welcome\ world\ if\ the\ "restart"\ button\ is\ clicked.\ \n
+comment2.text=\r\n\ Restarts\ the\ simulation\ by\ setting\ the\ world\ back\ to\ the\ welcome\ world\ if\ the\ "restart"\ button\ is\ clicked.\ \r\n
 numComments=3

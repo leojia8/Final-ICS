@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=BossRing
-comment0.text=\n\ A\ faint\ yellow\ circle\ that\ fades\ in\ and\ out\ around\ the\ boss\ for\ visual\ effect\n\ \n\ @author\ Thomas\ Yang\n\ @version\ June\ 2022\n
+comment0.text=\r\n\ A\ faint\ yellow\ circle\ that\ fades\ in\ and\ out\ around\ the\ boss\ for\ visual\ effect\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=BossRing()
-comment1.text=\n\ Sets\ the\ master\ GIF\ image,\ resizes\ it\ to\ fit\ around\ the\ boss\ and\ sets\ variables\ for\ the\ fading\ effect\n
+comment1.text=\r\n\ Sets\ the\ master\ GIF\ image,\ resizes\ it\ to\ fit\ around\ the\ boss\ and\ sets\ variables\ for\ the\ fading\ effect\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\n\ If\ there\ is\ a\ Boss\ Cat\ in\ the\ world,\ follows\ the\ Boss\ Cat\ while\ fading\ in\ and\ out\ -\ else\ removes\ itself\ from\ the\ world\n
+comment2.text=\r\n\ If\ there\ is\ a\ Boss\ Cat\ in\ the\ world,\ follows\ the\ Boss\ Cat\ while\ fading\ in\ and\ out\ -\ else\ removes\ itself\ from\ the\ world\r\n
 numComments=3

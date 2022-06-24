@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=WelcomeWorld
-comment0.text=\n\ A\ start\ world\ for\ the\ game.\ has\ a\ "Begin\!"\ button\ that\ allows\ the\ user\ to\ move\ forward\ into\ the\ story\ world.\n\ \n\ @author\ Thomas\ Yang\ \n\ @version\ June\ 2022\n
+comment0.text=\r\n\ A\ start\ world\ for\ the\ game.\ has\ a\ "Begin\!"\ button\ that\ allows\ the\ user\ to\ move\ forward\ into\ the\ story\ world.\r\n\ \r\n\ @author\ Thomas\ Yang\ \r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=WelcomeWorld()
-comment1.text=\n\ Creates\ a\ new\ world,\ sets\ and\ resizes\ the\ background\ and\ adds\ a\ button\ that,\ when\ pressed,\ moves\ the\ user\ forward\ to\ the\ story\ world.\n
+comment1.text=\r\n\ Creates\ a\ new\ world,\ sets\ and\ resizes\ the\ background\ and\ adds\ a\ button\ that,\ when\ pressed,\ moves\ the\ user\ forward\ to\ the\ story\ world.\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\n\ Starts\ the\ simulation\ when\ the\ start\ button\ is\ clicked.\n
+comment2.text=\r\n\ Starts\ the\ simulation\ when\ the\ start\ button\ is\ clicked.\r\n
 numComments=3
