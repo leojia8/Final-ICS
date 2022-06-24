@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=Radius
-comment0.text=\r\n\ A\ translucent\ grey\ circle\ that\ is\ centered\ on\ and\ follows\ the\ user.\ Represents\ the\ range\ in\ which\ the\ user\ can\ build\ towers.\r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
+comment0.text=\n\ A\ translucent\ grey\ circle\ that\ is\ centered\ on\ and\ follows\ the\ user.\ Represents\ the\ range\ in\ which\ the\ user\ can\ build\ towers.\n\ \n\ @author\ Thomas\ Yang\n\ @version\ June\ 2022\n
 comment1.params=
 comment1.target=Radius()
-comment1.text=\r\n\ Initializes\ and\ resizes\ the\ image,\ then\ sets\ the\ transparancy\ to\ 50.\r\n
+comment1.text=\n\ Initializes\ and\ resizes\ the\ image,\ then\ sets\ the\ transparancy\ to\ 50.\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Makes\ sure\ that\ the\ Radius\ is\ following\ the\ user,\ else\ follows\ user.\ If\ the\ radius\ is\ clicked\ on\ and\ the\ user\ has\ enough\ resources,\ build\ a\ tower.\r\n
+comment2.text=\n\ Makes\ sure\ that\ the\ Radius\ is\ following\ the\ user,\ else\ follows\ user.\ If\ the\ radius\ is\ clicked\ on\ and\ the\ user\ has\ enough\ resources,\ build\ a\ tower.\n
 numComments=3

@@ -1,18 +1,18 @@
 #BlueJ class context
 comment0.target=Tower
-comment0.text=\r\n\ The\ abstract\ superclass\ for\ towers,\ which\ the\ player\ places\ to\ defend\ themselves\ from\ the\ cat\ hordes.\ Has\ functionality\ to\ upgrade\ towers\ using\ \r\n\ "cat\ food",\ as\ well\ as\ a\ method\ to\ track\ and\ set\ the\ duration\ of\ the\ stun\ effect\ created\ by\ the\ Boss\ Cat.\r\n\ \r\n\ <p>\ As\ our\ towers\ (factory\ tower,\ which\ makes\ cat\ food,\ and\ water\ tower/paragon,\ which\ attacks\ cats)\ are\ very\ different,\ they\ don't\ have\ a\ lot\ of\r\n\ shared\ functionality.\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng\ \r\n\ @version\ June\ 2022\r\n
+comment0.text=\n\ The\ abstract\ superclass\ for\ towers,\ which\ the\ player\ places\ to\ defend\ themselves\ from\ the\ cat\ hordes.\ Has\ functionality\ to\ upgrade\ towers\ using\ \n\ "cat\ food",\ as\ well\ as\ a\ method\ to\ track\ and\ set\ the\ duration\ of\ the\ stun\ effect\ created\ by\ the\ Boss\ Cat.\n\ \n\ <p>\ As\ our\ towers\ (factory\ tower,\ which\ makes\ cat\ food,\ and\ water\ tower/paragon,\ which\ attacks\ cats)\ are\ very\ different,\ they\ don't\ have\ a\ lot\ of\n\ shared\ functionality.\n\ \n\ @author\ Thomas\ Yang,\ Angus\ Feng\ \n\ @version\ June\ 2022\n
 comment1.params=
 comment1.target=Tower()
-comment1.text=\r\n\ Scales\ the\ image,\ and\ sets\ damage\ for\ the\ attacking\ towers.\r\n
+comment1.text=\n\ Scales\ the\ image,\ and\ sets\ damage\ for\ the\ attacking\ towers.\n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ upgrade()
-comment3.text=\r\n\ Functionality\ to\ upgrade\ towers\ -\ If\ a\ water\ tower\ has\ been\ upgraded,\ increase\ the\ damage\ by\ a\ set\ amount.\r\n
+comment3.text=\n\ Functionality\ to\ upgrade\ towers\ -\ If\ a\ water\ tower\ has\ been\ upgraded,\ increase\ the\ damage\ by\ a\ set\ amount.\n
 comment4.params=
 comment4.target=void\ addDamage()
-comment4.text=\r\n\ Applies\ the\ damage\ multiplier\ to\ upgraded\ towers.\r\n
+comment4.text=\n\ Applies\ the\ damage\ multiplier\ to\ upgraded\ towers.\n
 comment5.params=
 comment5.target=void\ stun()
-comment5.text=\r\n\ Stuns\ towers,\ which\ makes\ them\ stop\ working\ for\ a\ set\ period\ of\ time.\r\n
+comment5.text=\n\ Stuns\ towers,\ which\ makes\ them\ stop\ working\ for\ a\ set\ period\ of\ time.\n
 numComments=6

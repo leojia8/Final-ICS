@@ -1,18 +1,18 @@
 #BlueJ class context
 comment0.target=Resources
-comment0.text=\r\n\ A\ class\ representing\ resources\ that\ are\ spawned\ randomly\ across\ the\ world\ that\ the\ player\ collects\ to\ build\ towers.\ Has\ 3\ different\ types/subclasses\:\r\n\ Metal(ore),\ Stone(rock)\ and\ Wood(tree).\r\n\ \r\n\ @author\ Thomas\ Yang,\ Angus\ Feng,\ Leo\ Jia\r\n\ @version\ June\ 2022\r\n
+comment0.text=\n\ A\ class\ representing\ resources\ that\ are\ spawned\ randomly\ across\ the\ world\ that\ the\ player\ collects\ to\ build\ towers.\ Has\ 3\ different\ types/subclasses\:\n\ Metal(ore),\ Stone(rock)\ and\ Wood(tree).\n\ \n\ @author\ Thomas\ Yang,\ Angus\ Feng,\ Leo\ Jia\n\ @version\ June\ 2022\n
 comment1.params=
 comment1.target=Resources()
-comment1.text=\r\n\ Sets\ necessary\ variables\ to\ ensure\ the\ resource\ does\ not\ spawn\ on\ the\ path,\ the\ player,\ other\ resources\ or\ the\ tower\ select\ buttons.\r\n
+comment1.text=\n\ Sets\ necessary\ variables\ to\ ensure\ the\ resource\ does\ not\ spawn\ on\ the\ path,\ the\ player,\ other\ resources\ or\ the\ tower\ select\ buttons.\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Method\ used\ by\ all\ resource\ subclasses\ to\ ensure\ the\ resource\ does\ not\ spawn\ on\ other\ entities.\ If\ after\ 100\ acts\ the\ resource\ still\ has\ not\r\n\ found\ a\ spot,\ it\ will\ be\ removed\ from\ the\ world.\ Also,\ if\ the\ ore/rock/tree\ cannot\ be\ harvested\ any\ further\ (the\ player\ has\ harvested\ all\ \r\n\ possible\ ressources\ from\ it),\ it\ will\ be\ removed\ from\ the\ world.\r\n
+comment2.text=\n\ Method\ used\ by\ all\ resource\ subclasses\ to\ ensure\ the\ resource\ does\ not\ spawn\ on\ other\ entities.\ If\ after\ 100\ acts\ the\ resource\ still\ has\ not\n\ found\ a\ spot,\ it\ will\ be\ removed\ from\ the\ world.\ Also,\ if\ the\ ore/rock/tree\ cannot\ be\ harvested\ any\ further\ (the\ player\ has\ harvested\ all\ \n\ possible\ ressources\ from\ it),\ it\ will\ be\ removed\ from\ the\ world.\n
 comment3.params=w
 comment3.target=void\ addedToWorld(greenfoot.World)
 comment4.params=
 comment4.target=void\ takeResources()
-comment4.text=\r\n\ Used\ by\ player\ to\ collect\ resources\ -\ decreases\ the\ amount\ of\ resources\ that\ can\ be\ collected\ from\ the\ ore/rock/tree,\ and\ updates\ it's\ hp\ bar.\r\n
+comment4.text=\n\ Used\ by\ player\ to\ collect\ resources\ -\ decreases\ the\ amount\ of\ resources\ that\ can\ be\ collected\ from\ the\ ore/rock/tree,\ and\ updates\ it's\ hp\ bar.\n
 comment5.params=
 comment5.target=int\ getType()
-comment5.text=\r\n\ Returns\ the\ type\ of\ resource.\r\n
+comment5.text=\n\ Returns\ the\ type\ of\ resource.\n
 numComments=6

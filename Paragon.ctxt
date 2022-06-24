@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=Paragon
-comment0.text=\r\n\ The\ ultimate\ tower\ of\ destruction,\ the\ one\ who\ will\ exterminate\ the\ cats,\ there\ can\ be\ \r\n\ only\ one.\ Stats\ based\ on\ number\ of\ towers\ on\ screen.\ Inspired\ by\ btd6\ paragons.\ \r\n\ \r\n\ @author\ Thomas\ Yang\r\n\ @version\ June\ 2022\r\n
+comment0.text=\n\ The\ ultimate\ tower\ of\ destruction,\ the\ one\ who\ will\ exterminate\ the\ cats,\ there\ can\ be\ \n\ only\ one.\ Stats\ based\ on\ number\ of\ towers\ on\ screen.\ Inspired\ by\ btd6\ paragons.\ \n\ \n\ @author\ Thomas\ Yang\n\ @version\ June\ 2022\n
 comment1.params=speed\ damage
 comment1.target=Paragon(int,\ int)
-comment1.text=\r\n\ Constructor\ for\ paragon,\ which\ sets,\ scales\ and\ rotates\ the\ upgraded\ image,\ as\ well\ as\ setting\ speed\ and\ damage\ which\ get\ passed\ in\ based\r\n\ on\ the\ amount\ of\ nearby\ towers\ sacrificed\r\n\ \r\n\ @param\ speed\ \ \ \ \ Speed\ of\ projectiles\ fired\ by\ the\ paragon,\ decided\ by\ the\ amount\ of\ towers\ sacrificed\r\n\ @param\ damage\ \ \ \ Damage\ value\ of\ projectiles\ fired\ by\ the\ paragon,\ decided\ by\ the\ amount\ of\ towers\ sacrificed\r\n
+comment1.text=\n\ Constructor\ for\ paragon,\ which\ sets,\ scales\ and\ rotates\ the\ upgraded\ image,\ as\ well\ as\ setting\ speed\ and\ damage\ which\ get\ passed\ in\ based\n\ on\ the\ amount\ of\ nearby\ towers\ sacrificed\n\ \n\ @param\ speed\ \ \ \ \ Speed\ of\ projectiles\ fired\ by\ the\ paragon,\ decided\ by\ the\ amount\ of\ towers\ sacrificed\n\ @param\ damage\ \ \ \ Damage\ value\ of\ projectiles\ fired\ by\ the\ paragon,\ decided\ by\ the\ amount\ of\ towers\ sacrificed\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Can\ be\ stunned\ for\ a\ certain\ period\ of\ time,\ otherwise\ fire\ missiles\ and\ do\ the\ stardard\ enemy\ check\ found\ in\ Water\ Tower\ to\ find\ and\ attack\r\n\ cats\ in\ the\ area.\r\n
+comment2.text=\n\ Can\ be\ stunned\ for\ a\ certain\ period\ of\ time,\ otherwise\ fire\ missiles\ and\ do\ the\ stardard\ enemy\ check\ found\ in\ Water\ Tower\ to\ find\ and\ attack\n\ cats\ in\ the\ area.\n
 comment3.params=
 comment3.target=void\ spawnMissles()
-comment3.text=\r\n\ Method\ to\ spawn\ 5\ missiles\ on\ the\ paragon,\ which\ target\ the\ nearest\ cat.\r\n
+comment3.text=\n\ Method\ to\ spawn\ 5\ missiles\ on\ the\ paragon,\ which\ target\ the\ nearest\ cat.\n
 comment4.params=
 comment4.target=void\ enemyDetector()
-comment4.text=\r\n\ A\ method\ that\ allows\ the\ paragon\ to\ detect\ cats\ through\ use\ of\ iterative\ loop\ -\ different\ from\ the\ enemy\ detector\ in\ Water\ Tower,\ as\ it\r\n\ cannot\ be\ upgraded\ and\ bullet\ speed\ is\ more\ fluid\ (depending\ on\ the\ amount\ of\ towers\ sacrificed).\r\n
+comment4.text=\n\ A\ method\ that\ allows\ the\ paragon\ to\ detect\ cats\ through\ use\ of\ iterative\ loop\ -\ different\ from\ the\ enemy\ detector\ in\ Water\ Tower,\ as\ it\n\ cannot\ be\ upgraded\ and\ bullet\ speed\ is\ more\ fluid\ (depending\ on\ the\ amount\ of\ towers\ sacrificed).\n
 numComments=5
