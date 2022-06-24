@@ -18,7 +18,7 @@ public class InstructionsWorld extends World
     {    
         super(1200, 800, 1); 
         
-        image = new GreenfootImage("instructionsworld.png");
+        image = new GreenfootImage("instructionsworldv2.png");
         image.scale(1200, 800);
         setBackground(image);
         
